@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+	<xmlType>Content</xmlType>
+
+	<settings>
+		<inactivityTimerMax>60</inactivityTimerMax>
+		<stillThereTimeMax>10</stillThereTimeMax>
+
+		<folderPng>img/png</folderPng>
+		<folderJson>img/json</folderJson>
+
+	</settings>
+
+	<badges>
+
+<!-- ROW C -->
+		<badge>
+			<ref>C01</ref>
+			<name>HMS <em>Rainbow</em></name>
+			<objectID>AAA1943</objectID>
+			<date>1930-40</date>
+			<type>Submarine</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 165 x 165 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+					Ship's badge of HMS <em>Rainbow</em> 1930-40.
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C02</ref>
+			<name>HMS <em>Fisgard</em></name>
+			<objectID>AAA1965</objectID>
+			<date>1920-83</date>
+			<type>Training ship and shore establishment for engineers and artificiers</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+					Ship's badge of HMS <em>Fisgard</em> 1910.
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Fisgard.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Fisgard.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C03</ref>
+			<name>HMS <em>Bee</em></name>
+			<objectID>AAA1944</objectID>
+			<date>1915-38</date>
+			<type>River gunboat</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 165 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+					Ship's badge of HMS <em>Bee</em> 1924-39.
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C04</ref>
+			<name>HMS <em>Maidstone</em></name>
+			<objectID>AAA1901</objectID>
+			<date>1912-29</date>
+			<type>Submarine depot ship</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+					Ship's badge of HMS <em>Maidstone</em> 1912-29.
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C05</ref>
+			<name>HMS <em>Sandhurst</em></name>
+			<objectID>AAA1906</objectID>
+			<date>1915-46</date>
+			<type>Fleet repair ship</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C06</ref>
+			<name>HMS <em>Egmont</em></name>
+			<objectID>AAA1936</objectID>
+			<date>1923-33</date>
+			<type>Base ship at Malta</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C07</ref>
+			<name>HMS <em>Chrysanthemum</em></name>
+			<objectID>AAA1916</objectID>
+			<date>1917-95</date>
+			<type>Sloop</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C08</ref>
+			<name>HMS <em>Dryad</em></name>
+			<objectID>AAA1913</objectID>
+			<date>1919-2004</date>
+			<type>Training establishment, navigation school</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C09</ref>
+			<name>HMS <em>Wild Swan</em></name>
+			<objectID>AAA1982</objectID>
+			<date>1919-45</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 130 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C10</ref>
+			<name>HMS <em>Malcolm</em></name>
+			<objectID>AAA1985</objectID>
+			<date>1919-45</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 130 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C11</ref>
+			<name>HMS <em>Voyager</em></name>
+			<objectID>AAA1986</objectID>
+			<date>1916-42</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 130 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C12</ref>
+			<name>HMS <em>Wyvern</em></name>
+			<objectID>AAA1978</objectID>
+			<date>1919-48</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 135 x 125 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>C13</ref>
+			<name>HMS <em>Whitehall</em></name>
+			<objectID>AAA1983</objectID>
+			<date>1919-45</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 135 x 125 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+<!-- ROW D -->
+		<badge>
+			<ref>D01</ref>
+			<name>HMS <em>Argus</em></name>
+			<objectID>AAA1972</objectID>
+			<date>1917-46</date>
+			<type>Aircraft carrier</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 165 x 165 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D02</ref>
+			<name>HMS <em>Osprey</em></name>
+			<objectID>AAA1940</objectID>
+			<date>1924-41</date>
+			<type>Training establishment, torpedo and anti-submarine school</type>
+			<materials>coating: paint; copper alloy</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Fisgard.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Fisgard.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D03</ref>
+			<name>HMS <em>Beaufort</em></name>
+			<objectID>AAA1941</objectID>
+			<date>1919-38</date>
+			<type>Minesweeper</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D04</ref>
+			<name>HMS <em>St Vincent</em></name>
+			<objectID>AAA1903</objectID>
+			<date>1927-69</date>
+			<type>Training establishment</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D05</ref>
+			<name>HMS <em>Seamew</em></name>
+			<objectID>AAA1917</objectID>
+			<date>1928-47</date>
+			<type>River gunboat</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D06</ref>
+			<name>HMS <em>Pandora</em></name>
+			<objectID>AAA1939</objectID>
+			<date>1914-39</date>
+			<type>Submarine depot ship</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 165 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D07</ref>
+			<name>HMS <em>Penzance</em></name>
+			<objectID>AAA1915</objectID>
+			<date>1930-40</date>
+			<type>Sloop</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D08</ref>
+			<name>HMS <em>Ormonde</em></name>
+			<objectID>AAA1912</objectID>
+			<date>1918-37</date>
+			<type>Sloop</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D09</ref>
+			<name>HMS <em>Sterling</em></name>
+			<objectID>AAA1979</objectID>
+			<date>1918-32</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 130 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D10</ref>
+			<name>HMS <em>Windsor</em></name>
+			<objectID>AAA1975</objectID>
+			<date>1918-47</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 130 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D11</ref>
+			<name>HMS <em>Trusty</em></name>
+			<objectID>AAA1881</objectID>
+			<date>1918-36</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 135 x 130 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D12</ref>
+			<name>HMS <em>Winchelsea</em></name>
+			<objectID>AAA1973</objectID>
+			<date>1917-45</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 125 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>D13</ref>
+			<name>HMS <em>Warwick</em></name>
+			<objectID>AAA1974</objectID>
+			<date>1917-44</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 125 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+	</badges>
+
+
+
+</document>

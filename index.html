@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Square - Ship's badges interactive</title>
+	<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="lib/bodymovin.js"></script>
+	<script type="text/javascript" src="js/badges.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts_CeraPRO.css">
+	<link rel="stylesheet" type="text/css" href="css/badges.css">
+	<link rel="stylesheet" type="text/css" href="css/attractor.css">
+</head>
+<body>
+
+	<div id="container">
+		
+		<!-- ATTRACT SCREEN -->
+		<div id="attractScreen" class="screen" hidden>
+			<div class="attractorTextbox">
+				<div class="barViewport aboveBarViewport">
+
+					<div class="barContent aboveBar attractorAnim">
+						<span class="attractorHeadline">Placeholder</span>
+					</div>
+
+				</div>
+
+				<div class="dividerBar attractorAnim"></div>
+
+				<div class="barViewport belowBarViewport">
+
+					<div class="barContent belowBar attractorAnim">
+						<span class="attractorBodyText">Placeholder</span>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="touchToStartBtn"><span class="dot"></span>Touch the screen to start</div>
+			<div class="textBackdropDiv"></div>
+			<div class="categoryIconDiv attractorAnim">
+				<img src="img/category.svg" class="attractorAnim">
+			</div>
+			<video autoplay loop class="attractorVid">
+				<source src="media/attractor2.webm" type="video/webm">
+			</video>
+		</div>
+
+
+		<!-- STILL THERE SCREEN -->
+		<div id="stillThereScreen" class="screen" hidden>
+			<h1>Are you still there?</h1>
+			<h3>Touch the screen or I will restart in <span id="stillThereSpan">X</span> second<span 	id="stillThereSpanS">s</span></h3>
+			<button id="stillThereBtn" class="animated pulse infinite">Continue</button>
+		</div>
+
+
+		<!--	CONTENT SCREEN -->
+		<div id="contentScreen">
+
+			<!--	Common content -->
+			<div id="sidebar"></div>
+
+			
+			<!--	Menu screen content -->
+			<div id="menuSidebar">
+				<h1>Ship's badges</h1>
+			</div>
+
+			<div id="infoPopup">
+				<img src="img/Info-Icon.svg">
+				<span>Tap a badge to discover more</span>
+			</div>
+
+			<!-- Canvas element holds 'touchpoints' for figurehead menu graphics -->
+			<canvas id="menuCanvas" width="1280" height="1080"></canvas>
+
+			<!-- Image Div element holds visible badge menu graphic svgs -->
+			<div id="menuBadges">
+				<div id="rowA" class="row"></div>
+				<div id="rowB" class="row"></div>
+				<div id="rowC" class="row"></div>
+				<div id="rowD" class="row"></div>
+				<div id="rowE" class="row"></div>
+			</div>
+
+
+			<!--	Focused content -->
+			<div id="focusPanel" class="hidden">
+				<div id="focusText">
+					<h2 id="figureheadName"></h2>
+					<img class="subtextIcon" src="img/Magnifier.svg">
+					<span class="subtext" id="objectID">TEST123</span>
+					<img class="subtextIcon" src="img/Calendar.svg">
+					<span class="subtext" id="date">2131</span>
+					<div class="underliner"></div>
+					<div id="focusDescription"></div>
+				</div>
+				<button class="btn backToMenuBtn"></button>
+				<div class="focusBg">
+					<div class="focusBgMain"></div>
+					<div class="focusBgShadow"></div>
+				</div>
+			</div>
+
+			<div id="pngImg" class="hidden"></div>
+
+			<button id="leftArrowBtn" class="btn arrowBtn hidden"></button>
+			<button id="rightArrowBtn" class="btn arrowBtn hidden"></button>
+
+		</div>
+
+
+
+	</div>
+
+
+
+</body>
+</html>

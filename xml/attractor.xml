@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+	<xmlType>Attractor</xmlType>
+
+	<attractorHeadline>Ship's badges</attractorHeadline>
+	<attractorBodyText>Discover more about the ship badges displayed here.</attractorBodyText>
+	<attractorVidPath>media/attractor2.webm</attractorVidPath>
+
+</document>

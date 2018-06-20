@@ -14,6 +14,250 @@
 
 	<badges>
 
+<!-- ROW A -->
+		<badge>
+			<ref>A01</ref>
+			<name>HMS <em>Benbow</em></name>
+			<objectID>AAA1762</objectID>
+			<date>1913-31</date>
+			<type>Battleship</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 665 x 520 x 45 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>circleBig</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>A02</ref>
+			<name>HMS <em>Renown</em></name>
+			<objectID>AAA1861</objectID>
+			<date>1916-48</date>
+			<type>Battlecruiser</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 670 x 530 x 45 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>circleBig</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>A03</ref>
+			<name>HMS <em>Marlborough</em></name>
+			<objectID>AAA1763</objectID>
+			<date>1912-32</date>
+			<type>Battleship</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 675 x 525 x 45 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Fisgard.json</file>
+				<type>circleBig</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>A04</ref>
+			<name>HMS <em>Kenilworth Castle</em></name>
+			<objectID>AAA1578</objectID>
+			<date>1943-56</date>
+			<type>Corvette</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 465 x 360 x 35 mm</measurements>
+			<description>
+				<paragraph1>
+					Ship's badge of HMS <em>Rainbow</em> 1930-40.
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>circleMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>A05</ref>
+			<name>HMS <em>Loch More</em></name>
+			<objectID>AAA1690</objectID>
+			<date>1944-63</date>
+			<type>Frigate</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 465 x 360 x 35 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>circleMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+<!-- ROW B -->
+		<badge>
+			<ref>B01</ref>
+			<name>HMS <em>Rocket</em></name>
+			<objectID>AAA1990</objectID>
+			<date>1916-26</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 390 x 250 x 30 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Fisgard.json</file>
+				<type>shieldMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>B02</ref>
+			<name>HMS <em>Sirdar</em></name>
+			<objectID>AAA1550</objectID>
+			<date>1918-34</date>
+			<type>Destroyer</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 385 x 250 x 30 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>shieldMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>B03</ref>
+			<name>HMS <em>Moorhen</em></name>
+			<objectID>AAA1602</objectID>
+			<date>1901-33</date>
+			<type>River gunboat</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 480 x 450 x 30 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Fisgard.json</file>
+				<type>diamondMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>B04</ref>
+			<name>HMS <em>Dahlia</em></name>
+			<objectID>AAA1813</objectID>
+			<date>1915-32</date>
+			<type>Sloop</type>
+			<materials>coating: paint; copper alloy</materials>
+			<measurements>Overall: 480 x 445 x 30 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>B05</ref>
+			<name>HMS <em>Glow-worm</em></name>
+			<objectID>AAA1601</objectID>
+			<date>1916-28</date>
+			<type>River gunboat</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 480 x 450 x 35 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>diamondMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>B06</ref>
+			<name>HMS <em>Oxley</em></name>
+			<objectID>AAA1525</objectID>
+			<date>1926-39</date>
+			<type>Submarine (Australian navy, 1927-31)</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 480 x 450 x 35 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondMedium</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
 <!-- ROW C -->
 		<badge>
 			<ref>C01</ref>
@@ -582,6 +826,293 @@
 			<json>
 				<file>HMS_Bee.json</file>
 				<type>shieldSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+<!-- ROW D -->
+		<badge>
+			<ref>E01</ref>
+			<name>HMS <em>Folkestone</em></name>
+			<objectID>AAA1954</objectID>
+			<date>1930-47</date>
+			<type>Sloop</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Rainbow.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E02</ref>
+			<name>HMS <em>Hecla</em></name>
+			<objectID>AAA1964</objectID>
+			<date>1878-1926</date>
+			<type>Destroyer depot ship</type>
+			<materials>coating: paint; copper alloy</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Fisgard.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E03</ref>
+			<name>HMS <em>Hermes</em></name>
+			<objectID>AAA1899</objectID>
+			<date>1919-42</date>
+			<type>Aircraft carrier</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Fisgard.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E04</ref>
+			<name>HMS <em>Resource</em></name>
+			<objectID>AAA1904</objectID>
+			<date>1928-54</date>
+			<type>Fleet repair ship</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E05</ref>
+			<name>HMS <em>Sandwich</em></name>
+			<objectID>AAA1909</objectID>
+			<date>1928-46</date>
+			<type>Sloop</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Rainbow.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E06</ref>
+			<name>HMS <em>Hastings</em></name>
+			<objectID>AAA1911</objectID>
+			<date>1930-46</date>
+			<type>Sloop</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E07</ref>
+			<name>HMS <em>Dundalk</em></name>
+			<objectID>AAA1914</objectID>
+			<date>1919-40</date>
+			<type>Minesweeper</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 160 x 160 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Fisgard.json</file>
+				<type>diamondSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E08</ref>
+			<name>HMS <em>Curlew</em></name>
+			<objectID>AAA1891</objectID>
+			<date>1917-40</date>
+			<type>Light cruiser</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 145 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>pentagonSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E09</ref>
+			<name>HMS <em>Raleigh</em></name>
+			<objectID>AAA1892</objectID>
+			<date>1919-22</date>
+			<type>Heavy cruiser</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 145 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>pentagonSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E10</ref>
+			<name>HMS <em>Centaur</em></name>
+			<objectID>AAA1907</objectID>
+			<date>1916-34</date>
+			<type>Light cruiser</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 140 x 145 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>pentagonSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E11</ref>
+			<name>HMS <em>Delhi</em></name>
+			<objectID>AAA1908</objectID>
+			<date>1918-48</date>
+			<type>Light cruiser</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 135 x 140 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>pentagonSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E12</ref>
+			<name>HMS <em>Calcutta</em></name>
+			<objectID>AAA1920</objectID>
+			<date>1918-41</date>
+			<type>Light cruiser</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 135 x 145 x 20 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>pentagonSmall</type>
+			</json>
+			<png>
+				<file>HMS_Bee.png</file>
+			</png>
+		</badge>
+
+		<badge>
+			<ref>E13</ref>
+			<name>HMS <em>Caradoc</em></name>
+			<objectID>AAA1918</objectID>
+			<date>1916-46</date>
+			<type>Light cruiser</type>
+			<materials>paint; metal: alloy, copper</materials>
+			<measurements>Overall: 135 x 140 x 15 mm</measurements>
+			<description>
+				<paragraph1>
+
+				</paragraph1>
+			</description>
+			<json>
+				<file>HMS_Bee.json</file>
+				<type>pentagonSmall</type>
 			</json>
 			<png>
 				<file>HMS_Bee.png</file>

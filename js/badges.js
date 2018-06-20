@@ -4,9 +4,9 @@ $(function() {
 	var $stillThereScreen = $('#stillThereScreen'),
 			$attractScreen = $('#attractScreen'),
 			$contentScreen = $('#contentScreen'),
-			$menuBadges = $('#menuBadges'),
-			$menuCanvas = $('#menuCanvas'),
-			menuCanvasCtx = $menuCanvas.get(0).getContext('2d');
+			$menuBadges = $('#menuBadges');
+			// $menuCanvas = $('#menuCanvas'),
+			// menuCanvasCtx = $menuCanvas.get(0).getContext('2d');
 
 	//	XML
 	var xmlPath_Content = "xml/content.xml";
@@ -147,15 +147,17 @@ $(function() {
 				autoplay: false,
 				path: folderJson + '/' + badgeArray[i].json.file
 			});
+			$('*[data-ref="' + badgeArray[i].ref + '"]').click(function() {
+				var badge = getBadge($(this).attr('data-ref'));
+				console.log(badge.name);
+			});
 		}
 	}
 
 	function cycleMenuBadgeAnimations() {
 		var time = Math.floor(Math.random() * menuBadgeAnimTimeMultiplier + menuBadgeAnimTimeMin);
-		console.log("Next anim in " + time + " ms...");
 		var nextBadge = badgeArray[Math.floor(Math.random() * badgeArray.length)];
 		menuBadgeAnimHandler = setTimeout(function() {
-			console.log(nextBadge.name);
 			nextBadge.anim.play();
 			$('*[data-ref="' + nextBadge.ref + '"]').addClass('highlight');
 			nextBadge.anim.addEventListener('complete', function() {
@@ -169,7 +171,6 @@ $(function() {
 	function stopMenuBadgeAnimations() {
 		clearTimeout(menuBadgeAnimHandler);
 	}
-
 
 	//	Timers
 	//	Inactivity timer

@@ -4,15 +4,6 @@ $sidebarWidth: 640px;
 
 $defaultTransition: all 1s ease-in;
 
-$transShowFocusContent: all 0.3s 0.2s cubic-bezier(0.0, 0.0, 0.2, 1);
-$transHideFocusContent: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
-$transMenuContent: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-$transImageSelection: all 0.4s cubic-bezier(0.0, 0.0, 0.2, 1);
-$transShowNavBtns: all 0.2s 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
-$transHideNavBtns: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
-$transOldFocus: all 0.6s cubic-bezier(0.0, 0.0, 0.2, 1);
-$transNewFocus: all 0.6s cubic-bezier(0.0, 0.0, 0.2, 1);
-
 body {
 	margin: 0;
 	padding: 0;
@@ -39,17 +30,20 @@ body {
 	z-index: 40;
 	background: rgba(0,0,0,0.7);
 	text-align: center;
-} #stillThereScreen h1 {
-	margin-top: 380px;
-	font-family: CeraProMedium;
-	font-size: 81px;
-} #stillThereScreen h3 {
-	margin-top: 30px;
-	margin-left: 635px;
-	text-align: left;
-	font-family: CeraProLight;
-	font-size: 30px;
-} #stillThereBtn {
+	h1 {
+		margin-top: 380px;
+		font-family: CeraProMedium;
+		font-size: 81px;
+	}
+	h3 {
+		margin-top: 30px;
+		margin-left: 635px;
+		text-align: left;
+		font-family: CeraProLight;
+		font-size: 30px;
+	}
+}
+#stillThereBtn {
 	border: none;
 	margin-top: 70px;
 	padding: 20px 50px;
@@ -60,6 +54,10 @@ body {
 	font-family: CeraProRegular;
 }
 
+/*	Content screen */
+#contentScreen {
+	margin: 0;
+}
 #sidebar {
 	position: absolute;
 	left: 0;
@@ -74,97 +72,13 @@ body {
 		width: 60px;
 		background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(208,82,39,1) 100%);
 	}
+	h1 {
+    font-family: CeraProBlack;
+    color: black;
+    font-size: 160px;
+	}
 }
 
-#menuSidebar {
-	z-index: 1;
-	height: 100%;
-	width: $sidebarWidth;
-	top: 0;
-	left: 0;
-	padding: 86px;
-	box-sizing: border-box;
-	position: absolute;
-	opacity: 1;
-	transition: $transMenuContent;
-	&.hidden {
-		left: -200px;		
-		opacity: 0;
-	}
-	h1 {
-		font-family: CeraProBlack;
-		color: black;
-		font-size: 160px;
-	}
-	table {
-		table-layout: fixed;
-		width: 468px;
-		border-spacing: 0;
-		td {
-			box-sizing: border-box;
-			position: relative;
-			border-top: 1px solid $tableBorderColor;
-			border-left: 1px solid $tableBorderColor;
-			padding: 15px 0 15px 40px;
-			.numSpan {
-				color: $mainColor;
-				position: absolute;
-				width: 30px;
-				text-align: center;
-				left: 7px;
-				top: 18px;
-				font-weight: bold;
-				font-size: 14px;
-			}
-		}
-		td:last-child {
-			border-right: 1px solid $tableBorderColor;
-		}
-		tr:last-of-type td {
-			border-bottom: 1px solid $tableBorderColor;
-		}
-		td:before {
-			content: '';
-			background: white;
-			display: block;
-			position: absolute;
-			border-radius: 20px;
-			height: 25px;
-			width: 25px;
-			margin-top: -4px;
-			margin-left: -30px;
-		}
-		td.emptyCell {
-			border-right: none;
-			border-bottom: none !important;
-			&:before {
-				background: none;
-			}
-		}
-		.chevron {
-			position: absolute;
-			right: 10px;
-			top: 20px;
-			&:before {
-				border-style: solid;
-				border-width: 0.05em 0.05em 0 0;
-				content: '';
-				display: inline-block;
-				height: 0.45em;
-				position: relative;
-				transform: rotate(-45deg);
-				vertical-align: top;
-				width: 0.45em;					
-				transform: rotate(45deg);
-			}
-		}
-	}
-}
-#menuTable {
-	&.disabled {
-		pointer-events: none;
-	}
-}
 #infoPopup {
 	position: absolute;
 	display: flex;
@@ -177,7 +91,6 @@ body {
 	line-height: 100%;
 	background: #15232e;
 	vertical-align: middle;
-	transition: $transMenuContent;
 	&.hidden {
 		bottom: -100px;
 	}
@@ -205,329 +118,35 @@ body {
 	}
 }
 
-//	Focused content
-#focusPanel, #oldFocusPanel {
-	color: black;
-	position: absolute;
-	top: 140px;
-	left: 343px;
-	height: 810px;
-	width: 1022px;
-	z-index: 21;
-	pointer-events: none;
-	&.hidden {
-		transition: $transHideFocusContent !important;
-		opacity: 0;
-		left: 360px;
-	}
-	&.left {
-		left: -1577px !important;
-	}
-	&.right {
-		left: 2263px !important;
-	}
-	&.transOld {
-		transition: $transOldFocus;
-	}
-	&.transNew {
-		transition: $transNewFocus;
-	}
-	&.transZoom {
-		transition: $transShowFocusContent;
-	}
-} 
-.focusBg {
-	position: relative;
-	height: 810px;
-	width: 1022px;
-}
-.focusBgMain {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	border-radius: 10px;
-	background: white;
-	width: 100%;
-	height: 100%;
-}
-.focusBgShadow {
-	position: absolute;
-	height: 100px;
-	width: 800px;
-	bottom: -10px;
-	left: 111px;
-	background: rgba(0,0,0,0.3);
-	z-index: -2;
-	filter: blur(20px);
-	transition: $transShowFocusContent;
-	&.hidden {
-		opacity: 0;
-	}
-}
-
-.noTransition {
-	transition: none !important;
-}
-
-#pngImg, #oldPngImg {
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 20;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: right;
-	pointer-events: none;
-	&.animated {
-		transition: $transImageSelection;
-	}
-	&.animDelay {
-		transition-delay: 0.2s !important;
-	}
-	&.hidden {
-		right: -300px;
-		opacity: 0;
-	}
-}
-#bigSvgDiv, #oldSvgDiv {
-	position: absolute;
-	z-index: 22;
-	left: $sidebarWidth;
-	height: 700px;
-	width: 550px;
-	&.left {
-		left: calc(#{$sidebarWidth} - 1940px) !important;
-		opacity: 0;
-	}
-	&.right {
-		left: calc(#{$sidebarWidth} + 1940px) !important;
-		opacity: 0;
-	}
-	&.animOut {
-		transition: $transOldFocus;
-	}
-	&.animIn {
-		transition: $transNewFocus;
-	}
-}
-.bigSvgImg {
-	position: absolute;
-	transition: $transImageSelection;
-	&.hidden {
-		transition: $transHideFocusContent !important;
-		opacity: 0;
-	}
-}
-#focusText {
-	position: absolute;
-	font-family: CeraProRegular;
-	left: 300px;
-	padding-right: 80px;
-	padding-top: 130px;
-	font-size: 22px;
-	line-height: 1.6;
-	h2 {
-		margin: 0;
-		font-family: CeraProMedium;
-		font-size: 68px;
-		line-height: 1.2;
-		padding-bottom: 0;
-	}
-	.subtext {
-		font-size: 18px;
-		color: #bfbfbf;
-		padding-right: 50px;
-	}
-	.subtextIcon {
-		position: relative;
-		top: 2px;
-		padding-right: 5px;
-		display: inline-block;
-		height: 16px;
-	}
-	.underliner {
-		margin-top: 20px;
-		height: 7px;
-		width: 210px;
-		background: $mainColor;
-	}
-}
-.backToMenuBtn {
-	pointer-events: auto;
-  position: absolute;
-  top: -35px;
-  right: -52.5px;
-  display: inline-block;
-  width: 105px;
-  height: 105px;
-  overflow: hidden;
-  background: $mainColor;
-  border-radius: 100px;
-  box-shadow: 0 7px 16px rgba(244, 97, 46, 0.5);
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 40px;
-    top: 56px;
-    left: 33px;
-    margin-top: -6px;
-    background: white;
-    border-radius: 5px;
-  }
-  &::before {
-    transform: rotate(45deg);
-  }
-  &::after {
-    transform: rotate(-45deg);
-  }
-}
-.btn {
-	border: none;
-	outline: none;
-	&:active {
-		transition: none !important;
-		transition-delay: none !important;
-	 	transform: scale(0.9);
-	}
-}
-#figureheadImages {
-	position: absolute;
-	right: 0;
-	height: 100%;
-	width: 1280px;
-	text-align: right;
-	pointer-events: none;
-	transition: $transMenuContent;
-	&.hidden {
-		opacity: 0;
-	}
-	img {
-		position: absolute;
-		&.focused {
-			transition: none !important;
-			opacity: 0;
-		}
-	}
-}
-.labelLine {
-	position: absolute;
-	background: #bfbfbf;
-	// background: red;
-	height: 2px;
-	width: 40px;
-	&:before {
-		position: absolute;
-		top: -20px;
-		content: attr(data-label);
-		color: #bfbfbf;
-	}
-}
-.labelLine.left:before {
-	left: 0px;
-}
-.labelLine.right:before {
-	right: 0px;
-}
-
-.arrowBtn {
-	position: absolute;
-	top: 453px;
-	height: 166px;
-	width: 95px;
-	border-radius: 100px;
-	background: white;
-	z-index: 25;
-	box-shadow: 0 0 10px rgba(0,0,0,0.15), 4px 15px 15px rgba(0,0,0,0.15);
-	&.hidden {
-		transition: $transHideNavBtns !important;
-	}
-	&.shown {
-		transition: $transShowNavBtns;
-	}
-} .arrowBtn:before {
-	border-style: solid;
-	border-width: 5px 5px 0 0;
-	border-color: #58595b;
-	content: '';
-	display: inline-block;
-	height: 40px;
-	position: relative;
-	vertical-align: top;
-	width: 40px;					
-}
-#leftArrowBtn {
-	left: 40px;
-	&:before {
-		transform: rotate(-135deg);
-		left: 10px;
-	}
-	&.hidden {
-		left: -100px;
-	}
-}
-#rightArrowBtn {
-	right: 40px;
-	&:before {
-		transform: rotate(45deg);
-		left: -10px;
-	}
-	&.hidden {
-		right: -100px;
-	}
-}
-
-#thumbnails {
-	position: absolute;
-	bottom: 80px;
-	left: 120px;
-	height: 300px;
-	width: 200px;
-	background: grey;
-	.thumbTouch {
-		position: absolute;
-		filter: grayscale(100%);
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	.selectedThumb {
-		filter: none;
-	}
-}
 
 .pulse {
 	animation-duration: 2s;
 }
 
 #menuBadges {
-	width: 1920px;
-	height: 1080px;
+	padding-top: 50px;
 	.row {
 		width: 100%;
 		padding-left: 300px;
 		&#rowA {
-			height: 400px;
+			height: 350px;
 			// background: rgba(0,255,255,0.3);
 		}
 		&#rowB {
 			height: 250px;
 		}
 		&#rowC {
-			height: 150px;
-			line-height: 150px;
+			height: 130px;
+			line-height: 130px;
 			// background: rgba(0,255,255,0.3);
 		}
 		&#rowD {
-			height: 150px;
-			line-height: 150px;
+			height: 130px;
+			line-height: 130px;
 		}
 		&#rowE {
-			height: 150px;
-			line-height: 150px;
+			height: 130px;
+			line-height: 130px;
 			// background: rgba(0,255,255,0.3);
 		}
 	}

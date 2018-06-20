@@ -18,23 +18,16 @@
 		<div id="attractScreen" class="screen" hidden>
 			<div class="attractorTextbox">
 				<div class="barViewport aboveBarViewport">
-
 					<div class="barContent aboveBar attractorAnim">
 						<span class="attractorHeadline">Placeholder</span>
 					</div>
-
 				</div>
-
 				<div class="dividerBar attractorAnim"></div>
-
 				<div class="barViewport belowBarViewport">
-
 					<div class="barContent belowBar attractorAnim">
 						<span class="attractorBodyText">Placeholder</span>
 					</div>
-
 				</div>
-
 			</div>
 			<div class="touchToStartBtn"><span class="dot"></span>Touch the screen to start</div>
 			<div class="textBackdropDiv"></div>
@@ -59,21 +52,15 @@
 		<div id="contentScreen">
 
 			<!--	Common content -->
-			<div id="sidebar"></div>
-
-			
-			<!--	Menu screen content -->
-			<div id="menuSidebar">
+			<div id="sidebar">
 				<h1>Ship's badges</h1>
 			</div>
-
+			
+			<!--	Menu screen content -->
 			<div id="infoPopup">
 				<img src="img/Info-Icon.svg">
 				<span>Tap a badge to discover more</span>
 			</div>
-
-			<!-- Canvas element holds 'touchpoints' for figurehead menu graphics -->
-			<canvas id="menuCanvas" width="1280" height="1080"></canvas>
 
 			<!-- Image Div element holds visible badge menu graphic svgs -->
 			<div id="menuBadges">
@@ -83,30 +70,6 @@
 				<div id="rowD" class="row"></div>
 				<div id="rowE" class="row"></div>
 			</div>
-
-
-			<!--	Focused content -->
-			<div id="focusPanel" class="hidden">
-				<div id="focusText">
-					<h2 id="figureheadName"></h2>
-					<img class="subtextIcon" src="img/Magnifier.svg">
-					<span class="subtext" id="objectID">TEST123</span>
-					<img class="subtextIcon" src="img/Calendar.svg">
-					<span class="subtext" id="date">2131</span>
-					<div class="underliner"></div>
-					<div id="focusDescription"></div>
-				</div>
-				<button class="btn backToMenuBtn"></button>
-				<div class="focusBg">
-					<div class="focusBgMain"></div>
-					<div class="focusBgShadow"></div>
-				</div>
-			</div>
-
-			<div id="pngImg" class="hidden"></div>
-
-			<button id="leftArrowBtn" class="btn arrowBtn hidden"></button>
-			<button id="rightArrowBtn" class="btn arrowBtn hidden"></button>
 
 		</div>
 

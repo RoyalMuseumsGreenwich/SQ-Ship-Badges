@@ -339,11 +339,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Maidstone.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Maidstone.png</file>
 			</png>
 		</badge>
 
@@ -361,11 +361,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Sandhurst.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Sandhurst.png</file>
 			</png>
 		</badge>
 
@@ -383,11 +383,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Egmont.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Egmont.png</file>
 			</png>
 		</badge>
 
@@ -405,11 +405,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Chrysanthemum.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Chrysanthemum.png</file>
 			</png>
 		</badge>
 
@@ -427,11 +427,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Dryad.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Dryad.png</file>
 			</png>
 		</badge>
 
@@ -560,11 +560,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Argus.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Argus.png</file>
 			</png>
 		</badge>
 
@@ -582,11 +582,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Fisgard.json</file>
+				<file>HMS_Osprey.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Fisgard.png</file>
+				<file>HMS_Osprey.png</file>
 			</png>
 		</badge>
 
@@ -604,11 +604,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Beaufort.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Beaufort.png</file>
 			</png>
 		</badge>
 
@@ -626,11 +626,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_St_Vincent.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_St_Vincent.png</file>
 			</png>
 		</badge>
 
@@ -648,11 +648,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Seamew.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Seamew.png</file>
 			</png>
 		</badge>
 
@@ -670,11 +670,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Pandora.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Pandora.png</file>
 			</png>
 		</badge>
 
@@ -692,11 +692,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Penzance.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Penzance.png</file>
 			</png>
 		</badge>
 
@@ -847,11 +847,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Folkestone.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Folkestone.png</file>
 			</png>
 		</badge>
 
@@ -869,11 +869,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Hecla.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Fisgard.png</file>
+				<file>HMS_Hecla.png</file>
 			</png>
 		</badge>
 
@@ -891,11 +891,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Fisgard.json</file>
+				<file>HMS_Hermes.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Hermes.png</file>
 			</png>
 		</badge>
 
@@ -913,11 +913,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Resource.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Resource.png</file>
 			</png>
 		</badge>
 
@@ -935,11 +935,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Sandwich.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Sandwich.png</file>
 			</png>
 		</badge>
 
@@ -957,11 +957,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Hastings.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Hastings.png</file>
 			</png>
 		</badge>
 
@@ -979,11 +979,11 @@
 				</paragraph1>
 			</description>
 			<json>
-				<file>HMS_Fisgard.json</file>
+				<file>HMS_Dundalk.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Dundalk.png</file>
 			</png>
 		</badge>
 

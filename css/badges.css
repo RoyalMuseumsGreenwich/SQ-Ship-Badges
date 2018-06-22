@@ -120,8 +120,11 @@ body {
 .badge {
   position: relative;
   display: inline-block;
-  transition: all 0.5s ease-out;
+  transition: all 0.4s ease-out;
   vertical-align: middle; }
+  .badge svg {
+    transition: all 0.4s ease-out;
+    transform: scale3D(1, 1, 1); }
   .badge.diamondSmall {
     width: 120px;
     height: 120px; }
@@ -147,7 +150,8 @@ body {
     height: 320px; }
   .badge.highlight {
     z-index: 1;
-    filter: drop-shadow(0 0 20px #f4612e);
-    transform: scale(1.2); }
+    filter: drop-shadow(0 0 20px #f4612e); }
+    .badge.highlight svg {
+      transform: scale3D(1.25, 1.25, 1.25); }
 
 /*# sourceMappingURL=badges.css.map */

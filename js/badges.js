@@ -137,21 +137,26 @@ $(function() {
 
 	function addBadges() {
 		//	Add menu SVG images
-		for(var i = 0; i < badgeArray.length; i++) {
-			var row = "row" + badgeArray[i].ref.substr(0,1);
-			$('#' + row).append('<div data-ref="' + badgeArray[i].ref + '" class="badge ' + badgeArray[i].json.type + '">');
-			badgeArray[i].anim = bodymovin.loadAnimation({
-				container: document.querySelectorAll('[data-ref="' + badgeArray[i].ref + '"]')[0],
+		badgeArray.forEach(function(badge) {
+			var row = "row" + badge.ref.substr(0,1);
+			$('#' + row).append('<div data-ref="' + badge.ref + '" class="badge ' + badge.json.type + '">');
+			badge.anim = bodymovin.loadAnimation({
+				container: document.querySelectorAll('[data-ref="' + badge.ref + '"]')[0],
 				renderer: 'svg',
 				loop: false,
 				autoplay: false,
-				path: folderJson + '/' + badgeArray[i].json.file
+				path: folderJson + '/' + badge.json.file
 			});
-			$('*[data-ref="' + badgeArray[i].ref + '"]').click(function() {
-				var badge = getBadge($(this).attr('data-ref'));
+			$('*[data-ref="' + badge.ref + '"]').click(function() {
+				$('*[data-ref="' + badge.ref + '"]').addClass('highlight');
+				badge.anim.play();
 				console.log(badge.name);
 			});
-		}
+			badge.anim.addEventListener('complete', function() {
+				badge.anim.stop();
+				$('*[data-ref="' + badge.ref + '"]').removeClass('highlight');
+			})
+		})
 	}
 
 	function cycleMenuBadgeAnimations() {
@@ -159,15 +164,12 @@ $(function() {
 		var nextBadge = badgeArray[Math.floor(Math.random() * badgeArray.length)];
 		menuBadgeAnimHandler = setTimeout(function() {
 			nextBadge.anim.play();
-			$('*[data-ref="' + nextBadge.ref + '"]').addClass('highlight');
-			nextBadge.anim.addEventListener('complete', function() {
-				nextBadge.anim.stop();
-				$('*[data-ref="' + nextBadge.ref + '"]').removeClass('highlight');
-			});
 			cycleMenuBadgeAnimations();
 		}, time);
 	}
-	
+
+
+
 	function stopMenuBadgeAnimations() {
 		clearTimeout(menuBadgeAnimHandler);
 	}

@@ -2,7 +2,7 @@ $tableBorderColor: #f68d68;
 $mainColor: #f4612e;
 $sidebarWidth: 640px;
 
-$defaultTransition: all 1s ease-in;
+$defaultTransition: all 0.4s ease-out;
 
 body {
 	margin: 0;
@@ -156,8 +156,12 @@ body {
 .badge {
 	position: relative;
 	display: inline-block;
-	transition: all 0.5s ease-out;
+	transition: $defaultTransition;
 	vertical-align: middle;
+	svg {
+		transition: $defaultTransition;
+		transform: scale3D(1,1,1);
+	}
 	&.diamondSmall {
 		width: 120px;
 		height: 120px;
@@ -191,6 +195,16 @@ body {
 	&.highlight {
 		z-index: 1;
 		filter: drop-shadow(0 0 20px $mainColor);
-		transform: scale(1.2);
+		svg {
+			transform: scale3D(1.25,1.25,1.25);
+		}
+		// width: 120%;
+		// height: 120%;
 	}
 }
+
+// svg {
+//   -webkit-backface-visibility: hidden;
+//   -webkit-transform: translateZ(0) scale(1.0, 1.0);
+//   transform: translateZ(0);
+// }

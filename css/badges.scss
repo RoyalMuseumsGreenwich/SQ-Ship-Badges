@@ -1,8 +1,17 @@
 $tableBorderColor: #f68d68;
 $mainColor: #f4612e;
+$textColor: #15232e;
+$textGrey: #a4a4a4;
 $sidebarWidth: 640px;
-
 $defaultTransition: all 0.4s ease-out;
+$badgeZoomTransition: all 1s ease-out;
+
+$badgeSelect: all 0.4s ease-out;
+$badgeDeselect: all 0.1s ease-out;
+
+
+$transShowNavBtns: all 0.2s 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
+$transHideNavBtns: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 
 body {
 	margin: 0;
@@ -62,24 +71,37 @@ body {
 	position: absolute;
 	left: 0;
 	height: 100%;
+	padding-left: 100px;
+	padding-top: 100px;
+	box-sizing: border-box;
 	width: $sidebarWidth;
-	background: $mainColor;
-	&:after {
-		content: '';
-		position: absolute;
-		right: 0;
-		height: 100%;
-		width: 60px;
-		background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(208,82,39,1) 100%);
-	}
-	h1 {
-    font-family: CeraProBlack;
-    color: black;
-    font-size: 160px;
+	background: linear-gradient(to right, $mainColor 0%, $mainColor 90%, rgba(208,82,39,1) 100%);
+	z-index: 0;
+	#sidebarContent {
+		h1, h3 {
+			color: $textColor;
+			z-index: 2;
+		}
+		h1 {
+	    font-family: CeraProBlack;
+	    width: 650px;
+	    letter-spacing: -5px;
+	    line-height: 1;
+	    margin: 0;
+	    font-size: 142px;
+		}
+		h3 {
+			margin-top: 50px;
+			font-size: 24px;
+			width: 470px;
+			line-height: 1.5;
+			font-weight: normal;
+			font-family: CeraProRegular;
+		}
 	}
 }
 
-#infoPopup {
+#infoPane {
 	position: absolute;
 	display: flex;
 	justify-content: flex-start;
@@ -87,7 +109,7 @@ body {
 	height: 100px;
 	width: 615px;
 	bottom: 0;
-	left: 85px;
+	right: 50px;
 	line-height: 100%;
 	background: #15232e;
 	vertical-align: middle;
@@ -105,20 +127,6 @@ body {
 	}
 }
 
-#menuCanvas {
-	position: absolute;
-	z-index: 30;
-	top: 0;
-	right: 0;
-	//	Canvas should not be visible but contains colours to handle area detection	
-	opacity: 0;
-	// opacity: 0.15;
-	&.disabled {
-		top: 1080px;
-	}
-}
-
-
 .pulse {
 	animation-duration: 2s;
 }
@@ -127,27 +135,19 @@ body {
 	padding-top: 50px;
 	.row {
 		width: 100%;
-		padding-left: 300px;
+		padding-left: 640px;
 		&#rowA {
 			height: 350px;
-			// background: rgba(0,255,255,0.3);
 		}
 		&#rowB {
 			height: 250px;
+			// margin-left: 20px;
 		}
-		&#rowC {
+		&#rowC, &#rowD, &#rowE {
 			height: 130px;
 			line-height: 130px;
-			// background: rgba(0,255,255,0.3);
-		}
-		&#rowD {
-			height: 130px;
-			line-height: 130px;
-		}
-		&#rowE {
-			height: 130px;
-			line-height: 130px;
-			// background: rgba(0,255,255,0.3);
+			margin-left: 30px;
+			margin-top: -25px;
 		}
 	}
 }
@@ -156,55 +156,297 @@ body {
 .badge {
 	position: relative;
 	display: inline-block;
-	transition: $defaultTransition;
+	transition: $badgeDeselect;
 	vertical-align: middle;
 	svg {
-		transition: $defaultTransition;
-		transform: scale3D(1,1,1);
+		transition: $badgeDeselect;
+		transform: scale(1);
 	}
-	&.diamondSmall {
-		width: 120px;
-		height: 120px;
+	&.circleBig {
+		width: 330px;
+		height: 330px;
+		margin-right: -60px;
+	}
+	&.circleMedium {
+		width: 250px;
+		height: 250px;
+		margin-right: -60px;
+		margin-top: 30px;
+	}
+	&.shieldMedium {
+		width: 200px;
+		height: 200px;
+		margin-right: -50px;
 	}
 	&.diamondMedium {
+		margin-left: 20px;
+		margin-right: -20px;
 		width: 230px;
 		height: 230px;
 	}
 	&.shieldSmall {
-		width: 120px;
-		height: 120px;
-		padding-left: 5px; 
+		width: 95px;
+		height: 95px;
+		margin-right: -10px;
 	}
-	&.shieldMedium {
-		width: 240px;
-		height: 240px;
+	&.diamondSmall {
+		width: 95px;
+		height: 95px;
 	}
 	&.pentagonSmall {
-		width: 110px;
-		height: 110px;
-		padding-left: 15px; 
-	}
-	&.circleMedium {
-		width: 270px;
-		height: 270px;
-	}
-	&.circleBig {
-		width: 320px;
-		height: 320px;
+		width: 97px;
+		height: 97px;
+		margin-left: -5px;
+		margin-right: -3px;
 	}
 	&.highlight {
-		z-index: 1;
 		filter: drop-shadow(0 0 20px $mainColor);
+		transition: $badgeSelect;
 		svg {
-			transform: scale3D(1.25,1.25,1.25);
+			transition: $badgeSelect;
 		}
-		// width: 120%;
-		// height: 120%;
+	}
+	&.onTop {
+		z-index: 1;
+	}
+	&.noTransition {
+		transition: none !important;
+		svg {
+			transition: none !important;
+		}
+	}
+	&.circleBig.zoomed {
+		svg {
+			transform: scale(1.1);
+		}
+	}
+	&.circleMedium.zoomed, &.shieldMedium.zoomed, &.diamondMedium.zoomed {
+		svg {
+			transform: scale(1.25);
+		}
+	}
+	&.diamondSmall.zoomed, &.shieldSmall.zoomed, &.pentagonSmall.zoomed {
+		svg {
+			transform: scale(2);
+		}
 	}
 }
 
-// svg {
-//   -webkit-backface-visibility: hidden;
-//   -webkit-transform: translateZ(0) scale(1.0, 1.0);
-//   transform: translateZ(0);
-// }
+#popupImageDiv {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.pngImg {
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+	&.small {
+		transform: scale(2);
+	}
+	&.medium {
+		transform: scale(1.25);
+	}
+	&.big {
+		transform: scale(1.1);
+	}
+}
+#outlineImg {
+	opacity: 1;
+	&.focused {
+		opacity: 0;
+	}
+}
+#colorImg {
+	opacity: 0;
+	&.focused {
+		opacity: 1;
+	}
+}
+.focused {
+	transition: $badgeZoomTransition;
+	transform: scale(1) !important;
+}
+
+#popupDiv {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	top: 100px;
+	color: #2a2426;
+	// background: rgba(255,0,0,0.3);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease-out;
+	&.displayed {
+		transition: all 1s ease-out;
+		transform: translateY(-100px);
+		opacity: 1;
+	}
+	#popupCard {
+		width: 1200px;
+		height: 940px;
+		margin-top: 70px;
+		margin-left: 500px;
+		padding-left: 400px;
+		padding-right: 100px;
+		padding-top: 40px;
+		box-sizing: border-box;
+		background: white;
+		border-radius: 8px;
+		font-size: 20px;
+		line-height: 1.6;
+		h1 {
+			margin-top: 0;
+			font-size: 64px;
+			font-family: CeraProBold;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		h5 {
+			font-size: 16px;
+			color: $textGrey;
+			margin: 0;
+		}
+		.popupHeaderDiv {
+			font-weight: bold;
+			width: 100%;
+			display: flex;
+			margin: 20px 0;
+			.popupHeaderDivUnderline {
+				flex-grow: 1;
+				border-bottom: 1px solid #f4f4f4;
+				margin-left: 10px;
+				margin-bottom: 10px;
+			}
+		}
+		#badgeNameUnderline {
+			width: 250px;
+			height: 7px;
+			margin-top: -40px;
+			margin-bottom: 30px;
+			background: $mainColor;
+		}
+		#topTrumpTable {
+			width: 100%;
+			margin-bottom: 10px;
+			td {
+				vertical-align: top;
+				padding-bottom: 10px;
+				padding-right: 10px;
+			}
+			.cell1 {
+				width: 26%;
+			}
+			.cell2 {
+				width: 34%;
+			}
+			.cell3 {
+				width: 40%;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+.backToMenuBtn {
+	pointer-events: auto;
+  position: absolute;
+  top: 25px;
+  right: 168px;
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  overflow: hidden;
+  background: $mainColor;
+  border-radius: 100px;
+  box-shadow: 0 7px 16px rgba(244, 97, 46, 0.5);
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    top: 56px;
+    left: 33px;
+    margin-top: -6px;
+    background: white;
+    border-radius: 5px;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+.btn {
+	border: none;
+	outline: none;
+	&:active {
+		transition: none !important;
+		transition-delay: none !important;
+	 	transform: scale(0.9);
+	}
+}
+.arrowBtn {
+	position: absolute;
+	top: 453px;
+	height: 166px;
+	width: 95px;
+	border-radius: 100px;
+	background: white;
+	z-index: 25;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15), 4px 15px 15px rgba(0,0,0,0.15);
+	&.hidden {
+		transition: $transHideNavBtns !important;
+	}
+	&.shown {
+		transition: $transShowNavBtns;
+	}
+} .arrowBtn:before {
+	border-style: solid;
+	border-width: 5px 5px 0 0;
+	border-color: #58595b;
+	content: '';
+	display: inline-block;
+	height: 40px;
+	position: relative;
+	vertical-align: top;
+	width: 40px;					
+}
+#leftArrowBtn {
+	left: 40px;
+	&:before {
+		transform: rotate(-135deg);
+		left: 10px;
+	}
+	&.hidden {
+		left: -100px;
+	}
+}
+#rightArrowBtn {
+	right: 40px;
+	&:before {
+		transform: rotate(45deg);
+		left: -10px;
+	}
+	&.hidden {
+		right: -100px;
+	}
+}

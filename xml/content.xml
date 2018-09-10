@@ -4,296 +4,288 @@
 	<xmlType>Content</xmlType>
 
 	<settings>
-		<inactivityTimerMax>60</inactivityTimerMax>
+		<inactivityTimerMax>600</inactivityTimerMax>
 		<stillThereTimeMax>10</stillThereTimeMax>
 
 		<folderPng>img/png</folderPng>
 		<folderJson>img/json</folderJson>
+		<folderOutlines>img/outlines</folderOutlines>
 
 	</settings>
 
 	<badges>
 
+<!-- SIDE -->
+<!--
+		<badge ref="S01">
+			<name>SS <em>Nicolas Bowater</em></name>
+			<objectID>FHD1721</objectID>
+			<description>The ship badge shows a profile portrait of Nicolas Bowater, the schoolboy son of the ship’s owner Sir Eric Bowater. His fleet also included ships named after his daughters, Margaret and Sarah.</description>
+			<type>general cargo carrier</type>
+			<launched>18 February 1958</launched>
+			<builder>William Denny and Brothers, Dumbarton</builder>
+			<length>419 feet (127 metres)</length>
+			<speed></speed>
+			<crew></crew>
+			<career>The <em>Nicolas Bowater</em> was built for Bowater’s, a major papermaking firm. The ship was used to transport raw materials and finished newsprint, huge rolls of cheap paper used by the press. It was sold in 1973 to a Liberian-registered company and renamed the <i>Vall Comet</i>. It retired from service and was broken up in 1978.</career>
+			<json>
+				<file>HMS_Benbow.json</file>
+				<type>circleBig</type>
+			</json>
+			<png>
+				<file>HMS_Moorhen.png</file>
+			</png>
+		</badge>
+-->
 <!-- ROW A -->
-		<badge>
-			<ref>A01</ref>
+		<badge ref="A01">
 			<name>HMS <em>Benbow</em></name>
 			<objectID>AAA1762</objectID>
-			<date>1913-31</date>
-			<type>Battleship</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 665 x 520 x 45 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows a gold harpy, a mythical creature, half bird and half woman. The ship was named after Vice-Admiral Sir John Benbow (1653–1702), a famous English naval officer. A harpy formed part of his coat of arms.</description>
+			<type>battleship</type>
+			<launched>12 November 1913</launched>
+			<builder>William Beardmore and Co., Glasgow</builder>
+			<length>623 feet (190 metres)</length>
+			<speed>21.25 knots</speed>
+			<crew>995–1022 officers and men</crew>
+			<career>HMS <em>Benbow</em> saw action in the First World War and was present at the Battle of Jutland in 1916. After the war, it was deployed in the Mediterranean and the Atlantic. HMS <em>Benbow</em> was decommissioned in 1929 and sold for scrap in March 1931.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Benbow.json</file>
 				<type>circleBig</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Benbow.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>A02</ref>
+		<badge ref="A02">
 			<name>HMS <em>Renown</em></name>
 			<objectID>AAA1861</objectID>
-			<date>1916-48</date>
-			<type>Battlecruiser</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 670 x 530 x 45 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge follows a classical design, combining the torch of fame and the laurel wreath of victory. These allude to the ship’s name and its Latin motto: <i>Antiguae Famae Custos</i> (Guardians of Ancient Renown).</description>
+			<type>battlecruiser</type>
+			<launched>4 March 1916</launched>
+			<builder>Fairfield Shipbuilding Co., Govan</builder>
+			<length>794 feet (242 metres)</length>
+			<speed>32.5 knots</speed>
+			<crew>953–1223 officers and men</crew>
+			<career>Although built during the First World War, HMS <em>Renown</em> saw no action in the conflict. After the war, the ship was used to take the Prince of Wales on a royal tour of India and Japan in 1921–22. Following an extensive refit in 1936, HMS <em>Renown</em> was extensively deployed in the Second World War, being engaged in the North Sea, the Atlantic, the Mediterranean and the Indian Ocean. The ship was decommissioned and sold for scrap in 1948.</career>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Renown.json</file>
 				<type>circleBig</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>A03</ref>
+		<badge ref="A03">
 			<name>HMS <em>Marlborough</em></name>
 			<objectID>AAA1763</objectID>
-			<date>1912-32</date>
-			<type>Battleship</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 675 x 525 x 45 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows a red wyvern, a winged mythological creature. The ship was named after the famous British military commander John Churchill, 1st Duke of Marlborough (1650–1722). A wyvern forms part of the Marlborough coat of arms.</description>
+			<type>battleship</type>
+			<launched>24 October 1912</launched>
+			<builder>Devonport Dockyard, Plymouth</builder>
+			<length>623 feet (190 metres)</length>
+			<speed>21.25 knots</speed>
+			<crew>995–1022 officers and men</crew>
+			<career>HMS <em>Marlborough</em> was the flagship of the 1st Battle Squadron at the Battle of Jutland in 1916. The ship was hit by a German torpedo during the engagement, causing significant damage and reducing its speed. After the war, HMS <em>Marlborough</em> was deployed the Mediterranean and the Black Sea, where it evacuated members of the deposed Russian royal family in 1919. The ship was decommissioned and sold for scrap in 1932.</career>
 			<json>
-				<file>HMS_Fisgard.json</file>
+				<file>HMS_Marlborough.json</file>
 				<type>circleBig</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>A04</ref>
+		<badge ref="A04">
 			<name>HMS <em>Kenilworth Castle</em></name>
 			<objectID>AAA1578</objectID>
-			<date>1943-56</date>
-			<type>Corvette</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 465 x 360 x 35 mm</measurements>
-			<description>
-				<paragraph1>
-					Ship's badge of HMS <em>Rainbow</em> 1930-40.
-				</paragraph1>
-			</description>
+			<description>The ship badge comprises a white castle on a mound with a three-pointed heraldic ‘label’ above and gold diamond or ‘lozenge’ below. The ruins of Kenilworth Castle are in Warwickshire.</description>
+			<type>corvette</type>
+			<launched>17 August 1943</launched>
+			<builder>Smiths Dock Co., Middlesbrough</builder>
+			<length>252 feet (77 metres)</length>
+			<speed>16.5 knots</speed>
+			<crew>112 officers and men</crew>
+			<career>HMS <i>Kenilworth Castle</i> was employed as a convoy escort during the Second World War. It took part in the sinking of two German U-boats. A total of 44 Castle-class corvettes were built during the war. HMS <i>Kenilworth Castle</i> was scrapped in 1959.</career>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Kenilworth.json</file>
 				<type>circleMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>A05</ref>
+		<badge ref="A05">
 			<name>HMS <em>Loch More</em></name>
 			<objectID>AAA1690</objectID>
-			<date>1944-63</date>
-			<type>Frigate</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 465 x 360 x 35 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge features a gold sheaf of corn tied with a red ribbon against a white wavy band. The sheaf design comes from the coat of arms of the Dukes of Westminster, who own land at Loch More in Caithness, northern Scotland.</description>
+			<type>frigate</type>
+			<launched>3 October 1944</launched>
+			<builder>Caledon Shipbuilding Co., Dundee</builder>
+			<length>308 feet (94 metres)</length>
+			<speed>20 knots</speed>
+			<crew>114 officers and men</crew>
+			<career>HMS <em>Loch More</em> was used on anti-submarine duties toward the end of the Second World War. The ship saw action in the Atlantic, the Indian Ocean and the Far East, being based at Singapore. However, its active career was short. In 1946 HMS <em>Loch More</em> was put into reserve and eventually broken up in 1963.</career>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Lochmore.json</file>
 				<type>circleMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
 <!-- ROW B -->
-		<badge>
-			<ref>B01</ref>
+		<badge ref="B01">
 			<name>HMS <em>Rocket</em></name>
 			<objectID>AAA1990</objectID>
-			<date>1916-26</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 390 x 250 x 30 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows George Stephenson’s pioneering railway locomotive the Rocket. It won the Rainhill Trials in 1829, which were held by the Liverpool and Manchester Railway to find the best engine for the line.</description>
+			<type>destroyer</type>
+			<launched>2 July 1916</launched>
+			<builder>William Denny and Brothers, Dumbarton</builder>
+			<length>276 feet (84 metres)</length>
+			<speed>34 knots</speed>
+			<crew>82 officers and men</crew>
+			<career>A total of 62 R-class destroyers were built for the Royal Navy between 1916 and 1917. HMS <em>Rocket</em> was attached to the 15th Destroyer Flotilla. The ship was sold for breaking up in 1926.</career>
 			<json>
-				<file>HMS_Fisgard.json</file>
+				<file>HMS_Rocket.json</file>
 				<type>shieldMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>B02</ref>
+		<badge ref="B02">
 			<name>HMS <em>Sirdar</em></name>
 			<objectID>AAA1550</objectID>
-			<date>1918-34</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 385 x 250 x 30 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows the Order of British India, an order of merit awarded to members of the Indian Army for long service and gallantry. Holders of the award could use the title <em>Sirdar Bahadur</em> (heroic leader). It was abolished in 1947 when India gained its independence from Britain.</description>
+			<type>destroyer</type>
+			<launched>6 July 1918</launched>
+			<builder>Fairfield Shipbuilding Co., Govan</builder>
+			<length>265 feet (81 metres)</length>
+			<speed>36 knots</speed>
+			<crew>90 officers and men</crew>
+			<career>Completed as the First World War ended, HMS <em>Sirdar</em> saw service in the Mediterranean and on the China Station in the 1920s. The ship was one of 67 S-class destroyers built for the Royal Navy. It was sold for scrap in 1934.</career>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Sirdar.json</file>
 				<type>shieldMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>B03</ref>
+		<badge ref="B03">
 			<name>HMS <em>Moorhen</em></name>
 			<objectID>AAA1602</objectID>
-			<date>1901-33</date>
-			<type>River gunboat</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 480 x 450 x 30 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows a moorhen, a water bird of the rail family.</description>
+			<type>river gunboat</type>
+			<launched>18 August 1901</launched>
+			<builder>Yarrow and Co., London</builder>
+			<length>145 feet (44 metres)</length>
+			<speed>13 knots</speed>
+			<crew></crew>
+			<career>HMS <i>Moorhen</i> was built to patrol the rivers and inland waterways of China, part of the Royal Navy’s global deployment. The ship remained in China until 1933, when it was sold for scrap.</career>
 			<json>
-				<file>HMS_Fisgard.json</file>
+				<file>HMS_Moorhen.json</file>
 				<type>diamondMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>B04</ref>
+		<badge ref="B04">
 			<name>HMS <em>Dahlia</em></name>
 			<objectID>AAA1813</objectID>
-			<date>1915-32</date>
-			<type>Sloop</type>
-			<materials>coating: paint; copper alloy</materials>
-			<measurements>Overall: 480 x 445 x 30 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows a red ‘glow’ dahlia. The choice of this particular variety of flower may refer to the ship’s motto <i>Dum ferveo floreo</i> (While I glow I flourish).</description>
+			<type>sloop</type>
+			<launched>21 April 1915</launched>
+			<builder>Barclay Curle and Co., Glasgow</builder>
+			<length>250 feet (76 metres)</length>
+			<speed>17 knots</speed>
+			<crew>77 officers and men</crew>
+			<career>HMS <em>Dahlia</em> was one of 24 <em>Acacia</em>-class sloops launched in 1915. They were principally used for minesweeping, but were later employed as escort vessels to protect convoys transporting vital goods to Britain. After the war, the ship served in the Mediterranean. It was sold for scrap in 1932.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Dahlia.json</file>
 				<type>diamondMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>B05</ref>
-			<name>HMS <em>Glow-worm</em></name>
+		<badge ref="B05">
+			<name>HMS <em>Glowworm</em></name>
 			<objectID>AAA1601</objectID>
-			<date>1916-28</date>
-			<type>River gunboat</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 480 x 450 x 35 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows a black lantern glowing with silver beams of light. Glow-worms are a type of beetle. Female glow-worms emit light to attract a mate.</description>
+			<type>gunboat</type>
+			<launched>5 February 1916</launched>
+			<builder>Barclay Curle and Co., Glasgow</builder>
+			<length>237 feet (72 metres)</length>
+			<speed>14 knots</speed>
+			<crew>55 officers and men</crew>
+			<career>HMS <em>Glowworm</em> was one of 12 Insect-class gunboats launched during the First World War. They were designed for use on rivers and in shallow inshore waters. The ship was deployed off the east coast of England in the war on anti-Zeppelin duties. Most of the ships patrolled Chinese waterways in the Second World War, but HMS <em>Glowworm</em> was sold for scrap in 1928.</career>
 			<json>
-				<file>HMS_Rainbow.json</file>
+				<file>HMS_Glow-worm.json</file>
 				<type>diamondMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>B06</ref>
+		<badge ref="B06">
 			<name>HMS <em>Oxley</em></name>
 			<objectID>AAA1525</objectID>
-			<date>1926-39</date>
-			<type>Submarine (Australian navy, 1927-31)</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 480 x 450 x 35 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The ship badge shows the head of an ox in silver with its horns in gold. HMS <em>Oxley</em> was named after the explorer John Oxley, who surveyed areas of Australia in the early 19th century.</description>
+			<type>submarine</type>
+			<launched>30 June 1926</launched>
+			<builder>Vickers-Armstrong, Barrow-in-Furness</builder>
+			<length>275 feet (84 metres)</length>
+			<speed>15.5 knots on the surface; 9 knots submerged</speed>
+			<crew>54 officers and men</crew>
+			<career>HMS <em>Oxley</em> was originally built for the Royal Australian Navy, but it was transferred to Royal Navy in 1931. Just before the outbreak of the Second World War in 1939, the submarine was sent to patrol the coast of Norway. On 10 September 1939, HMS <em>Oxley</em> was out of position and was accidentally sunk by another British submarine, HMS <em>Triton</em>.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Oxley.json</file>
 				<type>diamondMedium</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
 <!-- ROW C -->
-		<badge>
-			<ref>C01</ref>
+		<badge ref="C01">
 			<name>HMS <em>Rainbow</em></name>
 			<objectID>AAA1943</objectID>
-			<date>1930-40</date>
-			<type>Submarine</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 165 x 165 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-					Ship's badge of HMS <em>Rainbow</em> 1930-40.
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a rainbow. Nine Royal Navy ships have been named the <em>Rainbow</em> – this was the last.</description>
+			<type>submarine</type>
+			<launched>14 May 1930</launched>
+			<builder>Chatham Dockyard, Kent</builder>
+			<length>287 feet (87 metres)</length>
+			<speed>17.5 knots on the surface; 8.5 knots submerged</speed>
+			<crew>53 officers and men</crew>
+			<career>HMS <em>Rainbow</em> was deployed in the Far East until 1940, when it was moved to the Mediterranean on Second World War duties. The submarine is believed to have been sunk on 4 October 1940, when it was struck by an Italian merchant ship, the <em>Antonietta Costa</em>.</career>
 			<json>
 				<file>HMS_Rainbow.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Rainbow.png</file>
+				<file>HMS_Moorhen.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C02</ref>
+		<badge ref="C02">
 			<name>HMS <em>Fisgard</em></name>
 			<objectID>AAA1965</objectID>
-			<date>1920-83</date>
-			<type>Training ship and shore establishment for engineers and artificiers</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-					Ship's badge of HMS <em>Fisgard</em> 1910.
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a human arm in armour holding a mallet, a reference to engineering.</description>
+			<type>shore station</type>
+			<career>HMS <em>Fisgard</em> was an establishment for the training of naval engineers and artificers, or naval mechanics. Originally based in the ship of that name at Woolwich, it closed in 1872. However, HMS <em>Fisgard</em> was revived in 1904, occupying a series of old warships at Portsmouth. In 1930, the training centre moved on land to Chatham in Kent, becoming a shore station, or ‘stone frigate’. It moved again to Torpoint in Cornwall in 1946 and closed in 1983.</career>
 			<json>
 				<file>HMS_Fisgard.json</file>
 				<type>diamondSmall</type>
@@ -303,19 +295,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C03</ref>
+		<badge ref="C03">
 			<name>HMS <em>Bee</em></name>
 			<objectID>AAA1944</objectID>
-			<date>1915-38</date>
-			<type>River gunboat</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 165 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-					Ship's badge of HMS <em>Bee</em> 1924-39.
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a beehive surrounded by four honeybees.</description>
+			<type>gunboat</type>
+			<launched>8 December 1915</launched>
+			<builder>Ailsa Shipbuilding Co., Troon</builder>
+			<length>237 feet (72 metres)</length>
+			<speed>14 knots</speed>
+			<crew>55 officers and men</crew>
+			<career>During the First World War, HMS <em>Bee</em> was deployed to Port Said in Egypt. After the war, it was sent to China, where it became the flagship of the Yangtze patrol, operating on rivers and inland waterways. A new flagship, HMS <em>Scorpion</em> came into service in 1938 and HMS <em>Bee</em> was sold for scrap in Shanghai the following year.</career>
 			<json>
 				<file>HMS_Bee.json</file>
 				<type>diamondSmall</type>
@@ -325,19 +315,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C04</ref>
+		<badge ref="C04">
 			<name>HMS <em>Maidstone</em></name>
 			<objectID>AAA1901</objectID>
-			<date>1912-29</date>
-			<type>Submarine depot ship</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-					Ship's badge of HMS <em>Maidstone</em> 1912-29.
-				</paragraph1>
-			</description>
+			<description>The boat badge is based on the coat of arms of the town of Maidstone in Kent. It shows a lion ‘passant’, a heraldic term meaning walking with the right front leg raised.</description>
+			<type>submarine depot ship</type>
+			<launched>29 April 1912</launched>
+			<builder>Scotts Shipbuilding &amp; Engineering Co., Greenock</builder>
+			<length>355 feet (108 metres)</length>
+			<speed>14 knots</speed>
+			<crew>159 officers and men</crew>
+			<career>HMS <em>Maidstone</em> was an unarmed depot ship built to supply submarines, which have limited space for bulky stores. In its career, the ship was variously based with submarine squadrons at Portsmouth, Harwich, Chatham, Rosyth and Devonport. It was sold for scrap in 1929.</career>
 			<json>
 				<file>HMS_Maidstone.json</file>
 				<type>diamondSmall</type>
@@ -347,19 +335,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C05</ref>
+		<badge ref="C05">
 			<name>HMS <em>Sandhurst</em></name>
 			<objectID>AAA1906</objectID>
-			<date>1915-46</date>
-			<type>Fleet repair ship</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge consists of an army officer’s star in gold, a reference to the Royal Military Academy at Sandhurst, after which the ship was named.</description>
+			<type>cargo-liner, converted to a naval repair and depot ship</type>
+			<launched>14 December 1904</launched>
+			<builder>Harland and Woolf, Belfast</builder>
+			<length>485 feet (148 metres)</length>
+			<speed>10.5 knots</speed>
+			<crew></crew>
+			<career>The ship was originally built as the cargo-liner SS <em>Manipur</em>. During the First World War, it was purchased by the Admiralty and converted into a destroyer repair and depot ship. In this role, HMS <em>Sandhurst</em> had facilities to repair and supply damaged destroyers without the need for vital warships to return to port. The ship saw further service in the Second World War and was sold for scrap in 1946.</career>
 			<json>
 				<file>HMS_Sandhurst.json</file>
 				<type>diamondSmall</type>
@@ -369,19 +355,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C06</ref>
+		<badge ref="C06">
 			<name>HMS <em>Egmont</em></name>
 			<objectID>AAA1936</objectID>
-			<date>1923-33</date>
-			<type>Base ship at Malta</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows an antelope’s head in silver, with gold horns. Around the antelope’s neck is a gold coronet and chain. The design is taken from the coat of arms of the Percival family, the Earls of Egmont.</description>
+			<type>gunboat</type>
+			<launched>3 February 1881</launched>
+			<builder>Pembroke Royal Dockyard</builder>
+			<length>125 feet (38 metres)</length>
+			<speed>9.5 knots</speed>
+			<crew>60 officers and men</crew>
+			<career>Originally named HMS <em>Bullfrog</em>, this gunboat was sent to Malta, where it was stationed as part of the harbour defences. The ship was renamed HMS <em>Egmont</em> in 1923 and sold for scrap in 1933.</career>
 			<json>
 				<file>HMS_Egmont.json</file>
 				<type>diamondSmall</type>
@@ -391,19 +375,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C07</ref>
+		<badge ref="C07">
 			<name>HMS <em>Chrysanthemum</em></name>
 			<objectID>AAA1916</objectID>
-			<date>1917-95</date>
-			<type>Sloop</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a stylised chrysanthemum flower in gold.</description>
+			<type>sloop</type>
+			<launched>10 November 1917</launched>
+			<builder>Armstrong Whitworth, Newcastle upon Tyne</builder>
+			<length>250 feet (76 metres)</length>
+			<speed>16 knots</speed>
+			<crew>93 officers and men</crew>
+			<career>HMS <em>Chrysanthemum</em> was deployed on convoy duties in the later stages of the First World War. The ship then joined the Mediterranean Fleet based at Malta. In 1936, it was used to evacuate British nations from Barcelona during the Spanish Civil War. Finally, HMS <em>Chrysanthemum</em> was moored on the Thames as the drill ship of the London Division of the Royal Naval Reserve. It was sold in 1988 and scrapped in 1995.</career>
 			<json>
 				<file>HMS_Chrysanthemum.json</file>
 				<type>diamondSmall</type>
@@ -413,19 +395,12 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C08</ref>
+		<badge ref="C08">
 			<name>HMS <em>Dryad</em></name>
 			<objectID>AAA1913</objectID>
-			<date>1919-2004</date>
-			<type>Training establishment, navigation school</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a sprig of oak leaves with golden acorns and a set of dividers, used in navigation. A ‘dryad’ is a mythical tree nymph. The name comes from the Greek <em>drys</em>, meaning oak.</description>
+			<type>shore station</type>
+			<career>HMS <em>Dryad</em> was a naval navigation school established in Portsmouth in 1919. It moved to Southwick House in Hampshire in 1941 to escape the heavy bombing raids targeting Portsmouth Dockyard. HMS <em>Dryad</em> moved again in 1943 as the house was used for the planning of the D-Day landings. It returned after the war and remained at Southwick until HMS <em>Dryad</em> closed in 2004.</career>
 			<json>
 				<file>HMS_Dryad.json</file>
 				<type>diamondSmall</type>
@@ -435,130 +410,118 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C09</ref>
+		<badge ref="C09">
 			<name>HMS <em>Wild Swan</em></name>
 			<objectID>AAA1982</objectID>
-			<date>1919-45</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 130 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a silver swan, wearing a collar. The broken cord indicates the swan is no longer captive and has become ‘wild’.</description>
+			<type>destroyer</type>
+			<launched>17 May 1919</launched>
+			<builder>Swan Hunter and Wigham Richardson, Wallsend on Tyne</builder>
+			<length>300 feet (91 metres)</length>
+			<speed>32 knots</speed>
+			<crew>127 officers and men</crew>
+			<career>HMS <em>Wild Swan</em> began naval service in 1920, being variously deployed in the Atlantic, the Baltic, the Mediterranean and at Hong Kong. In the Second World War, the ship undertook convoy duties. On 16 June 1942, it was attacked by German aircraft. Although six of the enemy planes were shot down by HMS <em>Wild Swan</em>, it sank as a result of damage received.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Wild_Swan.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Wild_Swan.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C10</ref>
+		<badge ref="C10">
 			<name>HMS <em>Malcolm</em></name>
 			<objectID>AAA1985</objectID>
-			<date>1919-45</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 130 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a silver tower on a green mount. This design is taken from the coat of arms of Admiral Sir Pulteney Malcolm (1768–1838), a noted naval commander.</description>
+			<type>destroyer</type>
+			<launched>29 May 1919</launched>
+			<builder>Cammell Laird, Birkenhead</builder>
+			<length>332 feet (101 metres)</length>
+			<speed>36.5 knots</speed>
+			<crew>164–183 officers and men</crew>
+			<career>Most of the early career of HMS <em>Malcolm</em> was spent in the reserve fleet of surplus warships. At the beginning of the Second World War, the ship was brought into active service escorting convoys. After seeing a good deal of wartime action, and suffering severe damage in fighting at Algiers, HMS <em>Malcolm</em> was sold for scrap in 1945.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Malcolm.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Malcolm.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C11</ref>
+		<badge ref="C11">
 			<name>HMS <em>Voyager</em></name>
 			<objectID>AAA1986</objectID>
-			<date>1916-42</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 130 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a red sailing ship upon three white waves.</description>
+			<type>destroyer</type>
+			<launched>8 May 1918</launched>
+			<builder>Alexander Stephens and Sons, Glasgow</builder>
+			<length>312 feet (95 metres)</length>
+			<speed>34 knots</speed>
+			<crew>119 officers and men</crew>
+			<career>HMS <em>Voyager</em> began its service in the Royal Navy and was transferred to the Royal Australian Navy in 1933. During the first half of the Second World War, the ship was on escort duty in the Mediterranean. It returned to patrolling Australian waters in 1942. In September that year, the <em>Voyager</em> ran aground in Timor and was damaged beyond repair by a Japanese air attack.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Voyager.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Voyager.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C12</ref>
-			<name>HMS <em>Wyvern</em></name>
+		<badge ref="C12">
+			<name>HMS <em>Wivern</em></name>
 			<objectID>AAA1978</objectID>
-			<date>1919-48</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 135 x 125 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a gold wyvern, a mythological winged creature. The ship’s name has the alternative spelling ‘wivern’.</description>
+			<type>destroyer</type>
+			<launched>16 April 1919</launched>
+			<builder>J. Samuel White, Cowes, Isle of Wight</builder>
+			<length>312 feet (95 metres)</length>
+			<speed>34 knots</speed>
+			<crew>127 officers and men</crew>
+			<career>Most of the early career of HMS <em>Wivern</em> was spent in the reserve fleet of surplus warships. At the beginning of the Second World War, the ship was brought into active service escorting convoys and patrolling in the North Sea, the Atlantic and the Mediterranean. It was sold for scrap in 1947.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Wivern.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Wivern.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>C13</ref>
+		<badge ref="C13">
 			<name>HMS <em>Whitehall</em></name>
 			<objectID>AAA1983</objectID>
-			<date>1919-45</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 135 x 125 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a winged heraldic seahorse holding an Admiralty badge. Although the seahorse is painted gold, according to the official design it should be silver.</description>
+			<type>destroyer</type>
+			<launched>11 September 1919</launched>
+			<builder>Swan Hunter &amp; Wigham Richardson, Wallsend on Tyne</builder>
+			<length>312 feet (95 metres)</length>
+			<speed>34 knots</speed>
+			<crew>127 officers and men</crew>
+			<career>Most of the early career of HMS <em>Whitehall</em> was spent in the reserve fleet of surplus warships. At the beginning of the Second World War, the ship was brought into active service, undertaking patrolling duties and escort work, the latter mainly in the North Atlantic and the Arctic. It was sold for scrap in 1945.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Whitehall.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Whitehall.png</file>
 			</png>
 		</badge>
 
 <!-- ROW D -->
-		<badge>
-			<ref>D01</ref>
+		<badge ref="D01">
 			<name>HMS <em>Argus</em></name>
 			<objectID>AAA1972</objectID>
-			<date>1917-46</date>
-			<type>Aircraft carrier</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 165 x 165 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a gold peacock. In Greek mythology, Argus, the watchman, had a hundred eyes. When he was killed by Hermes, the goddess Hera gave his eyes to the peacock, where they appear as patterns in the bird’s distinctive tail feathers.</description>
+			<type>aircraft carrier</type>
+			<launched>2 December 1917</launched>
+			<builder>William Beardmore and Co., Dalmuir</builder>
+			<length>565 feet (172 metres)</length>
+			<speed>20.5 knots</speed>
+			<crew>495 officers and men</crew>
+			<career>HMS <em>Argus</em> was converted into an aircraft carrier from an unfinished Italian passenger liner, the <em>Conte Rosso</em>. In the Second World War the ship was used as a training carrier for pilots to develop deck-landing skills. It also delivered aircraft to various places, including Malta, Iceland and Russia, and was involved in numerous naval operations. HMS <em>Argus</em> was sold for scrap in 1946.</career>
 			<json>
 				<file>HMS_Argus.json</file>
 				<type>diamondSmall</type>
@@ -568,19 +531,12 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D02</ref>
+		<badge ref="D02">
 			<name>HMS <em>Osprey</em></name>
 			<objectID>AAA1940</objectID>
-			<date>1924-41</date>
-			<type>Training establishment, torpedo and anti-submarine school</type>
-			<materials>coating: paint; copper alloy</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a gold osprey holding a silver fish.</description>
+			<type>shore station</type>
+			<career>Originally the command ship of the 1st Anti-Submarine Flotilla, HMS <em>Osprey</em> moved on land, becoming a shore station, specialising in anti-submarine training. It was based on the Isle of Portland in Dorset from 1927 to 1941 and from 1946 until its closure in 1999. In the Second World War it moved to Dunoon in Scotland because of heavy German bombing of the Portland naval base.</career>
 			<json>
 				<file>HMS_Osprey.json</file>
 				<type>diamondSmall</type>
@@ -590,19 +546,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D03</ref>
+		<badge ref="D03">
 			<name>HMS <em>Beaufort</em></name>
 			<objectID>AAA1941</objectID>
-			<date>1919-38</date>
-			<type>Minesweeper</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a mariner’s compass below a pair of dividers. These navigational instruments refer to Sir Francis Beaufort (1774–1857), a naval officer and hydrographer, who oversaw surveys of the world’s oceans to produce accurate charts. He also devised the Beaufort Scale for wind speeds.</description>
+			<type>minesweeper, converted to a survey ship</type>
+			<launched>21 February 1919</launched>
+			<builder>Ailsa Shipbuilding Co., Troon</builder>
+			<length>231 feet (70 metres)</length>
+			<speed>16 knots</speed>
+			<crew>74 officers and men</crew>
+			<career>HMS <em>Beaufort</em> was launched as a minesweeper, the <em>Ambleside</em>, and converted into a survey ship. It undertook extensive surveys around the British Isles to keep naval charts up-to-date. The ship was sold for scrap in 1938.</career>
 			<json>
 				<file>HMS_Beaufort.json</file>
 				<type>diamondSmall</type>
@@ -612,19 +566,12 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D04</ref>
+		<badge ref="D04">
 			<name>HMS <em>St Vincent</em></name>
 			<objectID>AAA1903</objectID>
-			<date>1927-69</date>
-			<type>Training establishment</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge features a silver winged horse with a gold mane and hooves and a gold <em>fleur de lys</em> on its wings. This mythological creature is taken from the coat of arms of the famous naval commander, Sir John Jervis, 1st Earl St Vincent (1735–1823).</description>
+			<type>shore station</type>
+			<career>Established in 1927 at Gosport, HMS <em>St Vincent</em> was a shore base for the training of boys for naval service. During the Second World War, it trained officers for the Fleet Air Arm. The boys were evacuated to the Isle of Man in the war, but returned in 1945. HMS <em>St Vincent</em> closed in 1969.</career>
 			<json>
 				<file>HMS_St_Vincent.json</file>
 				<type>diamondSmall</type>
@@ -634,19 +581,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D05</ref>
+		<badge ref="D05">
 			<name>HMS <em>Seamew</em></name>
 			<objectID>AAA1917</objectID>
-			<date>1928-47</date>
-			<type>River gunboat</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a seagull. A ‘seamew’ is another name for the common gull.</description>
+			<type>river gunboat</type>
+			<launched>16 January 1928</launched>
+			<builder>Yarrow Shipbuilders, Glasgow</builder>
+			<length>160 feet (49 metres)</length>
+			<speed>14 knots</speed>
+			<crew>55 officers and men</crew>
+			<career>After its launch, HMS <em>Seamew</em> was broken into sections, transported to Hong Kong and reassembled as a patrol boat on the West River in China. In 1940, the ship steamed from China to the Persian Gulf where it continued in service until it was sold for scrap at Basra in 1947.</career>
 			<json>
 				<file>HMS_Seamew.json</file>
 				<type>diamondSmall</type>
@@ -656,19 +601,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D06</ref>
+		<badge ref="D06">
 			<name>HMS <em>Pandora</em></name>
 			<objectID>AAA1939</objectID>
-			<date>1914-39</date>
-			<type>Submarine depot ship</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 165 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The badge shows a red casket with a gold key below. This imagery is related to the Greek myth of Pandora, the first woman created by the gods. She was given a container by Zeus, which she opened, realising all the evils of the world. Only Hope remained inside ‘Pandora’s Box’.</description>
+			<type>cargo ship, converted to a submarine depot ship</type>
+			<launched>5 July 1902</launched>
+			<builder>Raylton Dixon and Co., Middlesbrough</builder>
+			<length>330 feet (100 metres)</length>
+			<speed>11 knots</speed>
+			<crew>70 officers and men</crew>
+			<career>HMS <em>Pandora</em> was originally a cargo ship, the SS <em>Seti</em>. It was purchased by the Admiralty in 1913 and converted into a submarine depot ship. During the First World War it was based with the 8th and 9th Submarine Flotillas at Harwich. The ship was renamed HMS <em>Dolphin</em> in 1924. In 1939, it was sunk by a mine off Blyth in Northumberland.</career>
 			<json>
 				<file>HMS_Pandora.json</file>
 				<type>diamondSmall</type>
@@ -678,19 +621,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D07</ref>
+		<badge ref="D07">
 			<name>HMS <em>Penzance</em></name>
 			<objectID>AAA1915</objectID>
-			<date>1930-40</date>
-			<type>Sloop</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows the head of John the Baptist in gold on a silver salver. The design is taken from the 1614 seal of the town of Penzance in Cornwall.</description>
+			<type>sloop</type>
+			<launched>10 April 1930</launched>
+			<builder>Devonport Dockyard, Plymouth</builder>
+			<length>266 feet (81 metres)</length>
+			<speed>16.5 knots</speed>
+			<crew>104 officers and men</crew>
+			<career>HMS <em>Penzance</em> saw service around the world in the 1930s. The ship was stationed in the Persian Gulf and the Red Sea, then in South Africa, before crossing the Atlantic to Bermuda. On 14 August 1940, it was on escort duty south-west of Iceland when it was sunk by the German submarine <em>U-37</em>. Only 14 members of the crew survived.</career>
 			<json>
 				<file>HMS_Penzance.json</file>
 				<type>diamondSmall</type>
@@ -700,152 +641,138 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D08</ref>
+		<badge ref="D08">
 			<name>HMS <em>Ormonde</em></name>
 			<objectID>AAA1912</objectID>
-			<date>1918-37</date>
-			<type>Sloop</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a silver griffin in chains. The mythical creature is from the coat of arms of the Marquess of Ormonde.</description>
+			<type>sloop</type>
+			<launched>8 June 1918</launched>
+			<builder>Blyth Shipbuilding Co., Blyth</builder>
+			<length>267 feet (81 metres)</length>
+			<speed>17 knots</speed>
+			<crew>82 officers and men</crew>
+			<career>Completed towards the end of the First World War, HMS <em>Ormonde</em> was built as a minesweeper. Surplus to Royal Navy requirements, it was converted into a survey ship, undertaking the detailed hydrographical work necessary to produce accurate sea charts. The ship was sold for scrap in 1937.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Ormonde.json</file>
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Ormonde.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D09</ref>
+		<badge ref="D09">
 			<name>HMS <em>Sterling</em></name>
 			<objectID>AAA1979</objectID>
-			<date>1918-32</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 130 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows the familiar symbol of the British pound sterling – £. This, in fact, was a mistake as the ship was meant to be named after the naval commander Vice-Admiral Charles Stirling (1760–1833). However, the error was allowed to remain.</description>
+			<type>destroyer</type>
+			<launched>8 October 1918</launched>
+			<builder>Palmers Shipbuilding and Iron Co., Jarrow, County Durham</builder>
+			<length>276 feet (84 metres)</length>
+			<speed>36 knots</speed>
+			<crew>90 officers and men</crew>
+			<career>HMS <em>Sterling</em> was one of 67 S-class destroyers built for the Royal Navy at the end of the First World War. The ship was in service in the Atlantic Fleet and at Hong Kong. It was sold for scrap in 1932.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Sterling.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Sterling.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D10</ref>
+		<badge ref="D10">
 			<name>HMS <em>Windsor</em></name>
 			<objectID>AAA1975</objectID>
-			<date>1918-47</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 130 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a castle, in silver, with a gold crown above.</description>
+			<type>destroyer</type>
+			<launched>21 June 1918</launched>
+			<builder>Scotts Shipbuilding &amp; Engineering Co., Greenock</builder>
+			<length>300 feet</length>
+			<speed>34 knots</speed>
+			<crew>110 officers and men</crew>
+			<career>HMS <em>Windsor</em> served with the Grand Fleet at Scapa Flow in Orkney at the end of the First World War. Standard duties followed and the ship was a convoy escort in the Second World War. It helped evacuate Allied troops from Dunkirk in 1940, despite being damaged by enemy aircraft. Further war service included supporting the D-Day landings in June 1944. HMS <em>Windsor</em> was sold for scrap in 1947.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Windsor.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Windsor.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D11</ref>
+		<badge ref="D11">
 			<name>HMS <em>Trusty</em></name>
 			<objectID>AAA1881</objectID>
-			<date>1918-36</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 135 x 130 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge features the head of a bull terrier wearing a gold collar. The dog’s loyalty reflects the ship’s name.</description>
+			<type>destroyer</type>
+			<launched>11 April 1918</launched>
+			<builder>J. Samuel White, Cowes, Isle of Wight</builder>
+			<length>276 feet (84 metres)</length>
+			<speed>36 knots</speed>
+			<crew>90 officers and men</crew>
+			<career>HMS <em>Trusty</em> spent almost its entire career in the reserve fleet being surplus to the Royal Navy’s day-to-day requirements. The ship was one of 67 S-class destroyers build towards the end of the First World War. It was sold for scrap in 1936.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Trusty.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Trusty.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D12</ref>
+		<badge ref="D12">
 			<name>HMS <em>Winchelsea</em></name>
 			<objectID>AAA1973</objectID>
-			<date>1917-45</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 125 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a medieval ship in gold. This design is taken from the seal of the historic town of Winchelsea in East Sussex.</description>
+			<type>destroyer</type>
+			<launched>15 December 1917</launched>
+			<builder>J. Samuel White, Cowes, Isle of Wight</builder>
+			<length>312 feet (95 metres)</length>
+			<speed>34 knots</speed>
+			<crew>110 officers and men</crew>
+			<career>HMS <em>Winchelsea</em> served with the Atlantic and Mediterranean Fleet in the 1920s and 1930s. In the Second World War it was primarily used on transatlantic escorts and coastal patrol duties. The ship was sold for scrap in 1945.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Winchelsea.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Winchelsea.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>D13</ref>
+		<badge ref="D13">
 			<name>HMS <em>Warwick</em></name>
 			<objectID>AAA1974</objectID>
-			<date>1917-44</date>
-			<type>Destroyer</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 125 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a silver bear, chained and wearing a muzzle. The design is based on the coat of arms of the county town of Warwick.</description>
+			<type>destroyer</type>
+			<launched>28 December 1917</launched>
+			<builder>Hawthorn Leslie and Co., Hebburn, County Durham</builder>
+			<length>312 feet (95 metres)</length>
+			<speed>34 knots</speed>
+			<crew>110 officers and men</crew>
+			<career>HMS <em>Warwick</em> saw action in the First World War, taking part in raids on Zeebrugge and Ostende in 1918. In the 1920s, the ship served in the Mediterranean before being placed in the reserve fleet. During the Second World War it was on escort duty in the Atlantic and Caribbean. On 20 February 1944, HMS <em>Warwick</em> was sunk by the German submarine <em>U-413</em>, off the north coast of Cornwall, with the loss of more than half the crew.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Warwick.json</file>
 				<type>shieldSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Warwick.png</file>
 			</png>
 		</badge>
 
 <!-- ROW D -->
-		<badge>
-			<ref>E01</ref>
+		<badge ref="E01">
 			<name>HMS <em>Folkestone</em></name>
 			<objectID>AAA1954</objectID>
-			<date>1930-47</date>
-			<type>Sloop</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a medieval ship in gold floating on a sea of silver waves. The ship design is taken from Folkestone’s historic town seal.</description>
+			<type>sloop</type>
+			<launched>12 February 1930</launched>
+			<builder>Swan Hunter &amp; Wigham Richardson, Wallsend on Tyne</builder>
+			<length>250 feet (76 metres)</length>
+			<speed>16 knots</speed>
+			<crew>100 officers and men</crew>
+			<career>In the 1930s, HMS <em>Folkestone</em> served in the Persian Gulf and at Hong Kong. In 1939, it was scheduled to be converted into a survey ship to chart the coasts of New Zealand. However, the ship was required for active escort duties in the Second World War. HMS <em>Folkestone</em> was sold for scrap in 1947.</career>
 			<json>
 				<file>HMS_Folkestone.json</file>
 				<type>diamondSmall</type>
@@ -855,19 +782,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E02</ref>
+		<badge ref="E02">
 			<name>HMS <em>Hecla</em></name>
 			<objectID>AAA1964</objectID>
-			<date>1878-1926</date>
-			<type>Destroyer depot ship</type>
-			<materials>coating: paint; copper alloy</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows four red flames. The ship was named after the Icelandic volcano of Hecla</description>
+			<type>depot ship</type>
+			<launched>7 March 1878</launched>
+			<builder>Harland and Wolff, Belfast</builder>
+			<length>392 feet (120 metres)</length>
+			<speed>12 knots</speed>
+			<crew>277 officers and men</crew>
+			<career>HMS <em>Hecla</em> was being built as a merchant ship, the <em>British Crown</em>, when it was purchased by the Admiralty. It was converted into a depot ship, supplying and maintaining torpedo boats in the Mediterranean. In 1912 it was refitted as a destroyer depot ship. During the First World War HMS <em>Hecla</em> was based at Scapa Flow and at Belfast. It was sold for scrap in 1926.</career>
 			<json>
 				<file>HMS_Hecla.json</file>
 				<type>diamondSmall</type>
@@ -877,19 +802,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E03</ref>
+		<badge ref="E03">
 			<name>HMS <em>Hermes</em></name>
 			<objectID>AAA1899</objectID>
-			<date>1919-42</date>
-			<type>Aircraft carrier</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows the head of Hermes, the messenger of the gods in Greek mythology, wearing a winged helmet.</description>
+			<type>aircraft carrier</type>
+			<launched>11 September 1919</launched>
+			<builder>Armstrong Whitworth, Newcastle upon Tyne</builder>
+			<length>598 feet (182 metres)</length>
+			<speed>25 knots</speed>
+			<crew>664 officers and men</crew>
+			<career>HMS <em>Hermes</em> was the first ship specifically designed as an aircraft carrier. In the 1920s and 1930s it served in the Mediterranean and at Hong Kong. It returned to Britain in 1937 and was placed in the reserve fleet. The ship resumed active duties in the Second World War. While on patrol in the Indian Ocean, it was sunk by Japanese aircraft off the east coast of Ceylon (now Sri Lanka) with the loss of 307 men.</career>
 			<json>
 				<file>HMS_Hermes.json</file>
 				<type>diamondSmall</type>
@@ -899,19 +822,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E04</ref>
+		<badge ref="E04">
 			<name>HMS <em>Resource</em></name>
 			<objectID>AAA1904</objectID>
-			<date>1928-54</date>
-			<type>Fleet repair ship</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a silver sea-unicorn with a fish’s tail and webbed feet. The choice of creature relates to the capture of a British warship, the <em>Unicorn</em>, by the French Navy in 1780 and its recapture by the <em>Resource</em> the following year.</description>
+			<type>repair ship</type>
+			<launched>27 November 1928</launched>
+			<builder>Vickers-Armstrongs, Barrow-in-Furness</builder>
+			<length>530 feet (160 metres)</length>
+			<speed>15 knots</speed>
+			<crew>581 officers and men</crew>
+			<career>Designed to undertake repairs without the need for damaged vessels to return to port, HMS <em>Resource</em> helped keep British warships at sea for longer. It served in the Mediterranean and the Far East during the Second World War. The ship was sold for scrap in 1954.</career>
 			<json>
 				<file>HMS_Resource.json</file>
 				<type>diamondSmall</type>
@@ -921,19 +842,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E05</ref>
+		<badge ref="E05">
 			<name>HMS <em>Sandwich</em></name>
 			<objectID>AAA1909</objectID>
-			<date>1928-46</date>
-			<type>Sloop</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge features a demi-lion (meaning half) in gold joined to a ship’s stern in silver. The design is based on the coat of arms of the historic port town of Sandwich in Kent.</description>
+			<type>sloop</type>
+			<launched>28 September 1928</launched>
+			<builder>Hawthorn Leslie and Co., Hebburn, County Durham</builder>
+			<length>266 feet (81 metres)</length>
+			<speed>16.5 knots</speed>
+			<crew>100 officers and men</crew>
+			<career>HMS <em>Sandwich</em> began its naval service at Hong Kong. In the Second World War, the ship returned to Britain to undertake extensive convoy escort duties. It was sold for scrap in 1946.</career>
 			<json>
 				<file>HMS_Sandwich.json</file>
 				<type>diamondSmall</type>
@@ -943,19 +862,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E06</ref>
+		<badge ref="E06">
 			<name>HMS <em>Hastings</em></name>
 			<objectID>AAA1911</objectID>
-			<date>1930-46</date>
-			<type>Sloop</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a gold lion. The design is taken from the coat of arms of the town of Hastings in East Sussex.</description>
+			<type>sloop</type>
+			<launched>10 April 1930</launched>
+			<builder>Devonport Dockyard, Plymouth</builder>
+			<length>266 feet (81 metres)</length>
+			<speed>16.5 knots</speed>
+			<crew>100 officers and men</crew>
+			<career>HMS <em>Hastings</em> served in the Red Sea and the Persian Gulf in the 1930s. In the Second World War the ship escorted convoys carrying vital supplies to Britain. It was retired from active duty in 1943 and sold for scrap in 1946.</career>
 			<json>
 				<file>HMS_Hastings.json</file>
 				<type>diamondSmall</type>
@@ -965,19 +882,17 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E07</ref>
+		<badge ref="E07">
 			<name>HMS <em>Dundalk</em></name>
 			<objectID>AAA1914</objectID>
-			<date>1919-40</date>
-			<type>Minesweeper</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 160 x 160 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a gold hawk with a silver bell. The hawk does not, however, appear on the coat of arms of Dundalk in Ireland.</description>
+			<type>minesweeper</type>
+			<launched>31 January 1919</launched>
+			<builder>Clyde Shipbuilding Co., Glasgow</builder>
+			<length>213 feet (65 metres)</length>
+			<speed>16 knots</speed>
+			<crew>74 officers and men</crew>
+			<career>HMS <em>Dundalk</em> spent much of the early part of its career in the reserve fleet, being surplus to the Royal Navy’s day-to-day requirements. During the Second World War, however, the ship saw active service, evacuating more than a thousand Allied troops from Dunkirk in May and June 1940. On 16 October it struck a mine off Harwich and later sank while under tow.</career>
 			<json>
 				<file>HMS_Dundalk.json</file>
 				<type>diamondSmall</type>
@@ -987,135 +902,123 @@
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E08</ref>
+		<badge ref="E08">
 			<name>HMS <em>Curlew</em></name>
 			<objectID>AAA1891</objectID>
-			<date>1917-40</date>
-			<type>Light cruiser</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 145 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a gold curlew, a wading bird found around the British coast.</description>
+			<type>light cruiser</type>
+			<launched>5 July 1917</launched>
+			<builder>Vickers, Barrow-in-Furness</builder>
+			<length>450 feet (137 metres)</length>
+			<speed>29 knots</speed>
+			<crew>460 officers and men</crew>
+			<career>HMS <em>Curlew</em> was part of the 5th Light Cruiser Squadron at Harwich during latter stages of the First World War. The ship then saw service in the Atlantic and at Hong Kong before joining the reserve fleet in 1936. On 26 May 1940, while off the coast of Norway, it was attacked by German aircraft and sank near Narvik with the loss of nine men.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Curlew.json</file>
 				<type>pentagonSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Curlew.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E09</ref>
+		<badge ref="E09">
 			<name>HMS <em>Raleigh</em></name>
 			<objectID>AAA1892</objectID>
-			<date>1919-22</date>
-			<type>Heavy cruiser</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 145 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge consists of a roebuck’s head with a gold globe above. This is a reference to Sir Walter Ralegh (often spelled Raleigh), who wrote <em>The History of the World</em>, published in 1614. The roebuck is part of the family’s coat of arms.</description>
+			<type>heavy cruiser</type>
+			<launched>28 August 1919</launched>
+			<builder>William Beardmore and Co., Glasgow</builder>
+			<length>605 feet (184 metres)</length>
+			<speed>31 knots</speed>
+			<crew>690 officers and men</crew>
+			<career>In 1922 HMS <em>Raleigh</em> was made the flagship of Admiral Pakenham, commander of the North America and West Indies Fleet. On 8 August that year, the captain, Sir Arthur Bromley, ran the ship aground off the coast of Labrador in Canada while at speed in thick fog. Eleven men were drowned. The abandoned HMS <em>Raleigh</em> was stuck on the rocks for four years and eventually deliberately destroyed with explosives in 1926.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Raleigh.json</file>
 				<type>pentagonSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Raleigh.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E10</ref>
+		<badge ref="E10">
 			<name>HMS <em>Centaur</em></name>
 			<objectID>AAA1907</objectID>
-			<date>1916-34</date>
-			<type>Light cruiser</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 140 x 145 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a sea-centaur in gold blowing a silver shell trumpet. The mythical sea-centaur has a fish’s tail and webbed front feet instead of hooves.</description>
+			<type>light cruiser</type>
+			<launched>9 January 1916</launched>
+			<builder>Vickers, Barrow-in-Furness</builder>
+			<length>446 feet (136 metres)</length>
+			<speed>28.5 knots</speed>
+			<crew>329–336 officers and men</crew>
+			<career>During the First World War, HMS <em>Centaur</em> was part of the 5th Light Cruiser Squadron at Harwich. On 13 June 1918, the ship was damaged after hitting a mine. After later service in the Baltic and the Mediterranean, it was placed in the reserve fleet. HMS <em>Centaur</em> returned to the Atlantic Fleet in 1925, but was sold for scrap in 1934.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Centaur.json</file>
 				<type>pentagonSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Centaur.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E11</ref>
+		<badge ref="E11">
 			<name>HMS <em>Delhi</em></name>
 			<objectID>AAA1908</objectID>
-			<date>1918-48</date>
-			<type>Light cruiser</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 135 x 140 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows an elephant with a gold howdah and lotus flower below. The design is based on the former coat of arms of Delhi.</description>
+			<type>cruiser</type>
+			<launched>23 August 1918</launched>
+			<builder>Armstrong Whitworth, Newcastle upon Tyne</builder>
+			<length>472 feet (144 metres)</length>
+			<speed>29 knots</speed>
+			<crew>450–469 officers and men</crew>
+			<career>HMS <em>Delhi</em> began naval service in the 1st Light Cruiser Squadron of the Atlantic Fleet. The ship was part of the round-the-world British Empire cruise made by the battleships HMS <em>Hood</em> and <em>Repulse</em> in 1923–24. Deployment to the Caribbean and the Mediterranean followed. In the Second World War it saw considerable action and battle damage resulted in an end to naval service in 1945. HMS <em>Delhi</em> was sold for scrap in 1948.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Delhi.json</file>
 				<type>pentagonSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Delhi.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E12</ref>
+		<badge ref="E12">
 			<name>HMS <em>Calcutta</em></name>
 			<objectID>AAA1920</objectID>
-			<date>1918-41</date>
-			<type>Light cruiser</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 135 x 145 x 20 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a heraldic sea-lion in gold holding a lotus flower. The design is drawn from the former coat of arms of the Indian city of Calcutta (now Kolkata).</description>
+			<type>light cruiser</type>
+			<launched>9 July 1918</launched>
+			<builder>Vickers, Barrow-in-Furness</builder>
+			<length>451 feet (137 metres)</length>
+			<speed>29 knots</speed>
+			<crew>330–350 officers and men</crew>
+			<career>Launched too late to see action in the First World War, HMS <em>Calcutta</em> was deployed in the Caribbean and at Simon’s Town, South Africa. The ship returned to service from the reserve fleet at the outbreak of the Second World War in 1939. Having helped evacuate Allied troops from Dunkirk in May and June 1940, HMS <em>Calcutta</em> was sent to the Mediterranean. On 1 June 1941 it was sunk by German aircraft off Alexandria in Egypt with the loss of 107 men.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Calcutta.json</file>
 				<type>pentagonSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Calcutta.png</file>
 			</png>
 		</badge>
 
-		<badge>
-			<ref>E13</ref>
+		<badge ref="E13">
 			<name>HMS <em>Caradoc</em></name>
 			<objectID>AAA1918</objectID>
-			<date>1916-46</date>
-			<type>Light cruiser</type>
-			<materials>paint; metal: alloy, copper</materials>
-			<measurements>Overall: 135 x 140 x 15 mm</measurements>
-			<description>
-				<paragraph1>
-
-				</paragraph1>
-			</description>
+			<description>The boat badge shows a gold beast. This design is based on a lion that featured on early British coins. Caradoc (or Caractacus) was semi-mythical king of Gwent in the 5th or 6th century AD.</description>
+			<type>light cruiser</type>
+			<launched>23 December 1916</launched>
+			<builder>Scotts Shipbuilding &amp; Engineering Co., Greenock</builder>
+			<length>450 feet (137 metres)</length>
+			<speed>29 knots</speed>
+			<crew>438 officers and men</crew>
+			<career>HMS <em>Caradoc</em> saw action in the North Sea during the First World War. This was followed by service in the Baltic, the Mediterranean and the Caribbean and then at Hong Kong. The ship saw further action in the Second World War, including a mission to carry gold bullion to Canada. It was finally sold for scrap in 1946.</career>
 			<json>
-				<file>HMS_Bee.json</file>
+				<file>HMS_Caradoc.json</file>
 				<type>pentagonSmall</type>
 			</json>
 			<png>
-				<file>HMS_Bee.png</file>
+				<file>HMS_Caradoc.png</file>
 			</png>
 		</badge>
 

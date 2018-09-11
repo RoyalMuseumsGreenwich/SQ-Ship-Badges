@@ -117,10 +117,10 @@ body {
 .badge {
   position: relative;
   display: inline-block;
-  transition: all 0.1s ease-out;
+  transition: all 0.2s ease-out;
   vertical-align: middle; }
   .badge svg {
-    transition: all 0.1s ease-out;
+    transition: all 0.2s ease-out;
     transform: scale(1); }
   .badge.circleBig {
     width: 330px;
@@ -191,6 +191,13 @@ body {
     transform: scale(1.25); }
   .pngImg.big {
     transform: scale(1.1); }
+  .pngImg.focused {
+    transition: all 1s ease-out;
+    transform: scale(1) !important;
+    left: 150px !important;
+    top: 180px !important;
+    width: 720px !important;
+    height: 720px !important; }
 
 #outlineImg {
   opacity: 1; }
@@ -201,10 +208,6 @@ body {
   opacity: 0; }
   #colorImg.focused {
     opacity: 1; }
-
-.focused {
-  transition: all 1s ease-out;
-  transform: scale(1) !important; }
 
 #popupDiv {
   position: absolute;

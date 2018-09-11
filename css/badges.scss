@@ -7,7 +7,7 @@ $defaultTransition: all 0.4s ease-out;
 $badgeZoomTransition: all 1s ease-out;
 
 $badgeSelect: all 0.4s ease-out;
-$badgeDeselect: all 0.1s ease-out;
+$badgeDeselect: all 0.2s ease-out;
 
 
 $transShowNavBtns: all 0.2s 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
@@ -257,6 +257,14 @@ body {
 	&.big {
 		transform: scale(1.1);
 	}
+	&.focused {
+		transition: $badgeZoomTransition;
+		transform: scale(1) !important;
+		left: 150px !important;
+		top: 180px !important;
+		width: 720px !important;
+		height: 720px !important;
+	}
 }
 #outlineImg {
 	opacity: 1;
@@ -270,11 +278,6 @@ body {
 		opacity: 1;
 	}
 }
-.focused {
-	transition: $badgeZoomTransition;
-	transform: scale(1) !important;
-}
-
 #popupDiv {
 	position: absolute;
 	z-index: 2;

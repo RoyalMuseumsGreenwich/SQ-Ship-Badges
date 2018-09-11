@@ -74,7 +74,7 @@
 				<type>circleBig</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Renown.png</file>
 			</png>
 		</badge>
 
@@ -94,7 +94,7 @@
 				<type>circleBig</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Marlborough.png</file>
 			</png>
 		</badge>
 
@@ -110,11 +110,11 @@
 			<crew>112 officers and men</crew>
 			<career>HMS <i>Kenilworth Castle</i> was employed as a convoy escort during the Second World War. It took part in the sinking of two German U-boats. A total of 44 Castle-class corvettes were built during the war. HMS <i>Kenilworth Castle</i> was scrapped in 1959.</career>
 			<json>
-				<file>HMS_Kenilworth.json</file>
+				<file>HMS_Kenilworth_Castle.json</file>
 				<type>circleMedium</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Kenilworth_Castle.png</file>
 			</png>
 		</badge>
 
@@ -130,11 +130,11 @@
 			<crew>114 officers and men</crew>
 			<career>HMS <em>Loch More</em> was used on anti-submarine duties toward the end of the Second World War. The ship saw action in the Atlantic, the Indian Ocean and the Far East, being based at Singapore. However, its active career was short. In 1946 HMS <em>Loch More</em> was put into reserve and eventually broken up in 1963.</career>
 			<json>
-				<file>HMS_Lochmore.json</file>
+				<file>HMS_Loch_More.json</file>
 				<type>circleMedium</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Loch_More.png</file>
 			</png>
 		</badge>
 
@@ -155,7 +155,7 @@
 				<type>shieldMedium</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Rocket.png</file>
 			</png>
 		</badge>
 
@@ -175,7 +175,7 @@
 				<type>shieldMedium</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Sirdar.png</file>
 			</png>
 		</badge>
 
@@ -215,7 +215,7 @@
 				<type>diamondMedium</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Dahlia.png</file>
 			</png>
 		</badge>
 
@@ -231,11 +231,11 @@
 			<crew>55 officers and men</crew>
 			<career>HMS <em>Glowworm</em> was one of 12 Insect-class gunboats launched during the First World War. They were designed for use on rivers and in shallow inshore waters. The ship was deployed off the east coast of England in the war on anti-Zeppelin duties. Most of the ships patrolled Chinese waterways in the Second World War, but HMS <em>Glowworm</em> was sold for scrap in 1928.</career>
 			<json>
-				<file>HMS_Glow-worm.json</file>
+				<file>HMS_Glowworm.json</file>
 				<type>diamondMedium</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Glowworm.png</file>
 			</png>
 		</badge>
 
@@ -255,7 +255,7 @@
 				<type>diamondMedium</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Oxley.png</file>
 			</png>
 		</badge>
 
@@ -276,7 +276,7 @@
 				<type>diamondSmall</type>
 			</json>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<file>HMS_Rainbow.png</file>
 			</png>
 		</badge>
 

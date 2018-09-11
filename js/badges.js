@@ -115,7 +115,6 @@ $(function() {
 				}
 			}
 			badgeArray.push(thisBadgeObject);
-			// focusedFigurehead++;
 		});
 		badgeArray.sort(compare);
 		console.log(badgeArray);
@@ -187,13 +186,6 @@ $(function() {
 		createZoomImgs(badge);
 		revertJson(false, badge, function() {
 			$('.pngImg').addClass('focused');
-			var styles = {
-				'left': '150px',
-				'top': '180px',
-				'width': '720px',
-				'height': '720px'
-			}
-			$('.pngImg').css(styles);
 			$('#colorImg').one('transitionend', function() {
 				$('#colorImg').detach().appendTo('#popupDiv');
 				$('#outlineImg').remove();
@@ -219,6 +211,30 @@ $(function() {
 			}
 		});
 	}
+
+	function changeSelectedBadge(direction) {
+		var newBadgeRef;
+		if(direction === 'left') {
+			newBadgeRef = badgeArray.indexOf(selectedBadge) - 1;
+		} else if(direction === 'right') {
+			newBadgeRef = badgeArray.indexOf(selectedBadge) + 1;
+		}
+		if(newBadgeRef < 0) {
+			newBadgeRef = badgeArray.length - 1;
+		} else if(newBadgeRef >= badgeArray.length) {
+			newBadgeRef = 0;
+		}
+		console.log(newBadgeRef);
+		selectedBadge = badgeArray[newBadgeRef];
+		populatePopupText(selectedBadge);
+	}
+
+	$('#leftArrowBtn').click(function() {
+		changeSelectedBadge('left');
+	});
+	$('#rightArrowBtn').click(function() {
+		changeSelectedBadge('right');
+	});
 
 	function createZoomImgs(badge) {
 		var $originalJsonImg = $('*[data-ref="' + badge.ref + '"]');

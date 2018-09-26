@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="lib/bodymovin.js"></script>
 	<script type="text/javascript" src="js/badges.js"></script>
+	<script type="text/javascript" src="lib/imagesloaded.pkgd.js"></script>
 	<link rel="stylesheet" type="text/css" href="lib/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts_CeraPRO.css">
 	<link rel="stylesheet" type="text/css" href="css/badges.css">
@@ -75,60 +76,59 @@
 				<div id="rowE" class="row"></div>
 			</div>
 
+			<button id="leftArrowBtn" class="btn arrowBtn hidden"></button>
+			<button id="rightArrowBtn" class="btn arrowBtn hidden"></button>
+
+			<div id="popupImgDiv"></div>
+
 			<div id="popupDiv">
-				<div id="popupCard">
+				<div class="popupCard">
 					<button class="btn backToMenuBtn"></button>
-					<h1 id="textName"></h1>
-					<div id="badgeNameUnderline"></div>
+					<h1 class="textName"></h1>
+					<div class="badgeNameUnderline"></div>
 					<div class="popupHeaderDiv">
 						<span>The Badge</span>
 						<span class="popupHeaderDivUnderline"></span>
 					</div>
-					<div id="textDescription"></div>
+					<div class="textDescription"></div>
 					<div class="popupHeaderDiv">
-						<span>The Ship</span>
+						<span class="shipOrShoreStation">The Ship</span>
 						<span class="popupHeaderDivUnderline"></span>
 					</div>
-					<table id="topTrumpTable">
+					<table class="topTrumpTable">
 						<tr>
 							<td class="cell1">
 								<h5>Type</h5>
-								<span id="textType"></span>
+								<span class="textType"></span>
 							</td>
 							<td class="cell2">
 								<h5>Length</h5>
-								<span id="textLength"></span>
+								<span class="textLength"></span>
 							</td>
 							<td class="cell3">
 								<h5>Builder</h5>
-								<span id="textBuilder"></span>
+								<span class="textBuilder"></span>
 							</td>
 						</tr>
 						<tr>
 							<td class="cell1">
 								<h5>Launched</h5>
-								<span id="textLaunched"></span>
+								<span class="textLaunched"></span>
 							</td>
 							<td class="cell2">
 								<h5>Speed</h5>
-								<span id="textSpeed"></span>
+								<span class="textSpeed"></span>
 							</td>
 							<td class="cell3">
 								<h5>Crew</h5>
-								<span id="textCrew"></span>
+								<span class="textCrew"></span>
 							</td>
 						</tr>
 					</table>
-					<h5>Career</h5>
-					<div id="textCareer"></div>
+					<h5 class="careerLabel">Career</h5>
+					<div class="textCareer"></div>
 				</div>
 			</div>
-
-			<button id="leftArrowBtn" class="btn arrowBtn hidden"></button>
-			<button id="rightArrowBtn" class="btn arrowBtn hidden"></button>
-
-			<div id="popupImageDiv"></div>
-
 
 		</div>
 

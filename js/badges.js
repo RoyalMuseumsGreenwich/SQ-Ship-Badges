@@ -15,19 +15,18 @@ $(function() {
 	var $xmlDoc_Attractor;
 	var badgeArray = [];
 	var selectedBadge;
-	var folderPng, folderJson;
+	var folderColour, folderJson, folderOutlines;
 
 	//	Timers & handlers
 	var stillThereTimeMax, stillThereTime, inactivityTimerMax;
 	var stillThereHandler, inactivityHandler;
-	var selectedBadge;
-	var canvasColors = [];
 
 	//	Menu badge animation looping
 	var menuBadgeAnimHandler;
 	var menuBadgeAnimTimeMultiplier = 5000;
 	var menuBadgeAnimTimeMin = 3000;
 	var badgeAnimating;
+	var lockedControls = false;
 
 	//	Called on first load
 	function firstLoad() {
@@ -85,9 +84,9 @@ $(function() {
 		inactivityTimerMax = parseInt($xml.find('inactivityTimerMax').text()) * 1000;
 		stillThereTimeMax = parseInt($xml.find('stillThereTimeMax').text());
 
-		folderPng = $xml.find('folderPng').text();
-		folderJson = $xml.find('folderJson').text();
 		folderOutlines = $xml.find('folderOutlines').text();
+		folderColour = $xml.find('folderColour').text();
+		folderJson = $xml.find('folderJson').text();
 
 		//	Load XML slide data to slidesArray
 		$xml.find('badge').each(function(){
@@ -100,20 +99,19 @@ $(function() {
 				objectID: $thisBadge.find('objectID').html(),
 				description: $thisBadge.find('description').html(),
 				type: $thisBadge.find('type').html(),
-				launched: $thisBadge.find('launched').html(),
-				builder: $thisBadge.find('builder').html(),
-				length: $thisBadge.find('length').html(),
-				speed: $thisBadge.find('speed').html(),
-				crew: $thisBadge.find('crew').html(),
 				career: $thisBadge.find('career').html(),
-				json: {
-					file: $thisBadge.find('json file').text(),
-					type: $thisBadge.find('json type').text()
-				},
-				png: {
-					file: $thisBadge.find('png file').text(),
-				}
+				shape: $thisBadge.find('shape').text(),
+				json: $thisBadge.find('json').text(),
+				png: $thisBadge.find('png ref').text()
 			}
+			if(thisBadgeObject.type !== 'shore station') {
+				thisBadgeObject.launched = $thisBadge.find('launched').html();
+				thisBadgeObject.builder = $thisBadge.find('builder').html();
+				thisBadgeObject.length = $thisBadge.find('length').html();
+				thisBadgeObject.speed = $thisBadge.find('speed').html();
+				thisBadgeObject.crew = $thisBadge.find('crew').html();
+			}
+			console.log(thisBadgeObject);
 			badgeArray.push(thisBadgeObject);
 		});
 		badgeArray.sort(compare);
@@ -137,82 +135,167 @@ $(function() {
 	function addBadges() {
 		//	Add menu SVG images
 		badgeArray.forEach(function(badge) {
-			//	Add badge to correct row in div per first character of badge ref
-			var row = "row" + badge.ref.substr(0,1);
-			$('#' + row).append('<div data-ref="' + badge.ref + '" class="badge ' + badge.json.type + '">');
-			badge.anim = bodymovin.loadAnimation({
-				container: document.querySelectorAll('[data-ref="' + badge.ref + '"]')[0],
-				renderer: 'svg',
-				loop: true,
-				autoplay: false,
-				path: folderJson + '/' + badge.json.file
-			});
+			//	Add badge container to correct row in div per first character of badge ref
+			let row = "row" + badge.ref.substr(0,1);
+			$('#' + row).append('<div data-ref="' + badge.ref + '" class="badge">');
+			addBadgeImgs(badge, false, $('[data-ref="' + badge.ref + '"]'));
 		});
 		$('.badge').click(function() {
-			console.log("Selecting badge");
-			console.log(selectedBadge);
-			selectBadge(getBadge($(this).attr('data-ref')));
+			if(!lockedControls) {
+				selectBadge(getBadge($(this).attr('data-ref')));
+			}
 		});
+	}
+
+	function addBadgeImgs(badge, popup, $container) {
+		$container.empty();
+		$container.removeClass('circleBig circleMedium shieldMedium diamondMedium shieldSmall diamondSmall pentagonSmall');
+		$container.addClass(badge.shape);
+		//	Add 'outline' div to badge container
+		let outlineImg = '<div class="outlineImg"></div>';
+		let outlineImgPath = 'url("' + folderOutlines + '/' + badge.json + '.png")'
+		$container.append(outlineImg);
+		$container.find('.outlineImg').css({"background-image": outlineImgPath});
+		//	Add 'outline' div to badge container
+		let colourImg = '<div class="colourImg"></div>';
+		let colourImgPath = 'url("' + folderColour + '/' + badge.png.toLowerCase() + '.png")';
+		$container.append(colourImg);
+		$container.find('.colourImg').css({"background-image": colourImgPath});
+		//	Add 'svgHolder' div to badge container
+		let svgHolder = popup ? '<div class="svgHolder hidden popup"></div>' : '<div class="svgHolder"></div>';
+		console.log(svgHolder);
+		$container.append(svgHolder);
 	}
 
 	function selectBadge(badge) {
 		selectedBadge = badge;
-		populatePopupText(badge);
-		startAnim(badge, function() {
-			focusBadge(badge);
+		//	Highlight badge
+		$('[data-ref="' + badge.ref + '"]').addClass('highlight onTop zoomed');
+		//	Play animation
+		$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
+			playAnim(badge, $('[data-ref="' + badge.ref + '"] .svgHolder'), false, true, () => {
+				popupBadge(badge);
+			});
 		});
 	}
 
-	function startAnim(badge, callback) {
-		badgeAnimating = true;
-		$badge = $('*[data-ref="' + badge.ref + '"]');
-		$badge.addClass('highlight zoomed onTop');
-		$badge.one('transitionend', function() {
-			badge.anim.play();
-			console.log("Animating " + badge.name);
-			badge.anim.addEventListener('loopComplete', function() {
-				badge.anim.removeEventListener('loopComplete');
-				badge.anim.stop();
+	function playAnim(badge, $container, popupAnim, lockControls, callback) {
+		//	Add animation to .svgHolder within $container
+		console.log("Adding animation...");
+		if(lockControls) {
+			lockedControls = true;
+		}
+		badge.anim = bodymovin.loadAnimation({
+			container: $container.get(0),
+			renderer: 'svg',
+			loop: false,
+			autoplay: false,
+			path: folderJson + '/' + badge.json + '.json'
+		});
+		//	Play animation when DOM has loaded
+		badge.anim.addEventListener('DOMLoaded', () => {
+			if(popupAnim) {
+				$('.colourImg').addClass('hidden');
+				$container.removeClass('hidden');
+				$container.one('transitionend', () => {
+					badge.anim.play();
+				});
+			} else {
+				console.log("Animation playing");
+				badge.anim.play();
+			}
+			//	Remove animation when complete and execute callback
+			badge.anim.addEventListener('complete', function() {
 				console.log("Animation complete");
-				if(callback) {
-					callback();
+				badge.anim.removeEventListener('complete');
+				if(popupAnim) {
+					$container.addClass('hidden');
+					$('.colourImg').removeClass('hidden');
+					$container.one('transitionend', () => {
+						$container.children('svg').remove();
+						if(callback) {
+							callback();
+						}
+						if(lockControls) {
+							lockedControls = false;
+						}
+					});
+				} else {
+					$container.children('svg').remove();
+					if(callback) {
+						callback();
+					}
+					if(lockControls) {
+						lockedControls = false;
+					}
 				}
 			});
 		});
 	}
 
-	function focusBadge(badge) {
-		//	Append the colour and outline png representation of the selected badge to the overlay container and position
-		createZoomImgs(badge);
-		revertJson(false, badge, function() {
-			$('.pngImg').addClass('focused');
-			$('#colorImg').one('transitionend', function() {
-				$('#colorImg').detach().appendTo('#popupDiv');
-				$('#outlineImg').remove();
-			});
-			$('#popupDiv').addClass('displayed');
-			hideMenuScreen();
+	function popupBadge(badge) {
+		console.log("Popping up badge...");
+		populatePopupText(badge, $('#popupDiv'));
+		addBackToMenuBtnListener();
+		let $origBadge = $('[data-ref="' + badge.ref + '"]');
+		$origBadge.clone().addClass('zoomedBadge').appendTo('#popupImgDiv');
+		$origBadge.removeClass('highlight onTop zoomed');
+		$('.zoomedBadge').removeAttr('data-ref');
+		$('.zoomedBadge').offset($origBadge.offset());
+		$('.zoomedBadge .svgHolder').addClass('hidden');
+		flushCss($('.zoomedBadge').get(0));
+		// hideAnim(badge);
+		$('.zoomedBadge').addClass('focused');
+		$('.zoomedBadge').removeClass('highlight onTop zoomed');
+		$('.zoomedBadge').one('transitionend', () => {
+			$('.zoomedBadge').detach().appendTo('#popupDiv');
+			$('.zoomedBadge .svgHolder, .zoomedBadge .colourImg').addClass('popup');
+			addPopupAnimListener(badge);
 		});
+		$('#popupDiv').addClass('displayed');
+		hideMenuScreen();
 	}
 
-	function revertJson(instant, badge, callback) {
-		$badge = $('*[data-ref="' + badge.ref + '"]');
-		if(instant) {
-			$badge.addClass('noTransition');
-			$badge.removeClass('highlight zoomed onTop');
-			flushCss($badge.get(0));
-			$badge.removeClass('noTransition');
-		} else {
-			$badge.removeClass('highlight zoomed onTop');
-		}
-		$badge.one('transitionend', function() {
-			if(callback) {
-				callback();
+	function addPopupAnimListener(badge) {
+		$('.zoomedBadge').click(() => {
+			if(!lockedControls) {
+				playAnim(badge, $('.zoomedBadge .svgHolder'), true, true, () => {
+					console.log("Done!");
+				});
 			}
 		});
 	}
 
+
+	function attractBadgeAnim(badge) {
+		addBadgeAnim(badge, () => {
+			$('[data-ref="' + badge.ref + '"]').removeClass('highlight onTop zoomed');
+			$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
+				removeAnim(badge);
+			});
+		});
+	}
+
+	function backToMenu() {
+		lockedControls = true;
+		selectedBadge = undefined;
+		$('#sidebarContent').fadeIn('slow');
+		$('#menuBadges').fadeIn('slow');
+		$('#infoPane').fadeIn('slow');
+		$('.arrowBtn').addClass('hidden');
+		$('.arrowBtn').one('transitionend', function() {
+			$('.arrowBtn').removeClass('shown');
+		});
+		$('#popupDiv').removeClass('displayed');
+		$('#popupDiv').one('transitionend', function() {
+			console.log("Deleting cloned badge");
+			$('.zoomedBadge').remove();
+			lockedControls = false;
+		})
+	}
+
 	function changeSelectedBadge(direction) {
+		lockedControls = true;
 		var newBadgeRef;
 		if(direction === 'left') {
 			newBadgeRef = badgeArray.indexOf(selectedBadge) - 1;
@@ -224,46 +307,44 @@ $(function() {
 		} else if(newBadgeRef >= badgeArray.length) {
 			newBadgeRef = 0;
 		}
-		console.log(newBadgeRef);
 		selectedBadge = badgeArray[newBadgeRef];
-		populatePopupText(selectedBadge);
+		let cloneSide = direction === 'left' ? 'right' : 'left';
+		$('#popupDiv').addClass('fastTransition');
+		$('#popupDiv').clone().attr('id', 'clonedPopupDiv').addClass(direction).appendTo('#contentScreen');
+		addBadgeImgs(selectedBadge, true, $('#clonedPopupDiv .zoomedBadge'));
+		populatePopupText(selectedBadge, $('#clonedPopupDiv'));
+		addBackToMenuBtnListener();
+		// flushCss('#clonedPopupDiv');
+		// flushCss('#popupDiv');
+		$('#popupDiv').addClass(cloneSide);
+		console.log($('#popupDiv'));
+		$('#clonedPopupDiv').removeClass('left right');
+		console.log($('#clonedPopupDiv'));
+		$('#popupDiv').one('transitionend', (e) => {
+			console.log(e);
+			console.log("sdfsdfsdf");
+			$('#popupDiv').remove();
+			$('#clonedPopupDiv').attr('id', 'popupDiv');
+			$('.zoomedBadge').click(() => {
+				playAnim(selectedBadge, $('.zoomedBadge .svgHolder'), true, true, () => {
+					console.log("Done!");
+				});
+			});
+			console.log("Unlocking controls...");
+			lockedControls = false;
+		});
 	}
 
 	$('#leftArrowBtn').click(function() {
-		changeSelectedBadge('left');
+		if(!lockedControls) {
+			changeSelectedBadge('left');
+		}
 	});
 	$('#rightArrowBtn').click(function() {
-		changeSelectedBadge('right');
+		if(!lockedControls) {
+			changeSelectedBadge('right');
+		}
 	});
-
-	function createZoomImgs(badge) {
-		var $originalJsonImg = $('*[data-ref="' + badge.ref + '"]');
-		var marginLeft = parseInt($originalJsonImg.css('marginLeft'));
-		var marginTop = parseInt($originalJsonImg.css('marginTop'));
-		var styles = {
-			'left': $originalJsonImg.position().left + marginLeft, 
-			'top': $originalJsonImg.position().top + marginTop,
-			'height': $originalJsonImg.height(),
-			'width': $originalJsonImg.width()
-		}
-		var colorImg = '<div id="colorImg" class="pngImg zoomed onTop" style="background-image: url(' + "'" + folderPng + '/' + badge.png.file + "'" + '"></img>'
-		var outlineImg = '<div id="outlineImg" class="pngImg zoomed onTop" style="background-image: url(' + "'" + folderOutlines + '/' + badge.png.file + "'" + '"></img>'
-		// $('#popupImageDiv').append(colorImg);
-		$('#popupImageDiv').append(outlineImg);
-		$('#popupImageDiv').append(colorImg);
-		$('.pngImg').css(styles);
-		if($originalJsonImg.hasClass('circleBig')) {
-			$('.pngImg').addClass('big');
-		} else if($originalJsonImg.hasClass('circleMedium') || $originalJsonImg.hasClass('diamondMedium') || $originalJsonImg.hasClass('shieldMedium')) {
-			$('.pngImg').addClass('medium');
-		} else {
-			$('.pngImg').addClass('small');
-		}
-		// flushCss($('.pngImg').get(0));
-	}
-
-	function hideFocusBtns() {
-	}
 
 	function hideMenuScreen() {
 		$('#sidebarContent').fadeOut('slow');
@@ -276,36 +357,27 @@ $(function() {
 		});
 	}
 
-	function backToMenu() {
-		selectedBadge = undefined;
-		$('#sidebarContent').fadeIn('slow');
-		$('#menuBadges').fadeIn('slow');
-		$('#infoPane').fadeIn('slow');
-		$('.arrowBtn').addClass('hidden');
-		$('.arrowBtn').one('transitionend', function() {
-			$('.arrowBtn').removeClass('shown');
-		});
-		$('#popupDiv').removeClass('displayed');
-		$('#popupDiv').one('transitionend', function() {
-			console.log("Removing PNG images");
-			$('.pngImg').remove();
-		})
-	}
-
-	function populatePopupText(badge) {
+	function populatePopupText(badge, $container) {
 		console.log("Populating text...");
-		$('#textName').html(badge.name);
-		$('#textDescription').html(badge.description);
-		if(badge.type === 'shore station') {
-			//	Handle shore stations
+		$container.find('.textName').html(badge.name);
+		$container.find('.textDescription').html(badge.description);
+		$container.find('.textCareer').html(badge.career);
+		if(badge.type !== 'shore station') {
+			$container.find('.shipOrShoreStation').text('The Ship');
+			$container.find('.topTrumpTable').show();
+			$container.find('.careerLabel').show();
+			$container.find('.textType').html(badge.type);
+			$container.find('.textLength').html(badge.length);
+			$container.find('.textBuilder').html(badge.builder);
+			$container.find('.textLaunched').html(badge.launched);
+			$container.find('.textSpeed').html(badge.speed);
+			$container.find('.textCrew').html(badge.crew);
 		} else {
-			$('#textType').html(badge.type);
-			$('#textLength').html(badge.length);
-			$('#textBuilder').html(badge.builder);
-			$('#textLaunched').html(badge.launched);
-			$('#textSpeed').html(badge.speed);
-			$('#textCrew').html(badge.crew);
-			$('#textCareer').html(badge.career);
+			$container.find('.shipOrShoreStation').text('The Shore Station');
+			$container.find('.topTrumpTable').show();
+			$container.find('.careerLabel').show();
+			$container.find('.topTrumpTable').hide();
+			$container.find('.careerLabel').hide();
 		}
 	}
 
@@ -402,10 +474,6 @@ $(function() {
 
 
 
-	function zoomBadge(ref) {
-
-	}
-
 
 	function flushCss(element) {
 		element.offsetWidth;
@@ -442,9 +510,14 @@ $(function() {
 		restartInactivityTimer();
 	});
 
-	$('.backToMenuBtn').click(function() {
-		backToMenu();
-	});
+	function addBackToMenuBtnListener() {
+		$('.backToMenuBtn').click(function() {
+			if(!lockedControls) {
+				console.log("Clicked!");
+				backToMenu();
+			}
+		});
+	}
 
 
 	// function cycleMenuBadgeAnimations() {

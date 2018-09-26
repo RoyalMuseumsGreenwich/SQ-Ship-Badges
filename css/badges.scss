@@ -135,15 +135,16 @@ body {
 	padding-top: 50px;
 	.row {
 		width: 100%;
-		padding-left: 640px;
 		&#rowA {
 			height: 350px;
+			padding-left: 675px;
 		}
 		&#rowB {
 			height: 250px;
-			// margin-left: 20px;
+			padding-left: 675px;
 		}
 		&#rowC, &#rowD, &#rowE {
+			padding-left: 630px;
 			height: 130px;
 			line-height: 130px;
 			margin-left: 30px;
@@ -158,46 +159,94 @@ body {
 	display: inline-block;
 	transition: $badgeDeselect;
 	vertical-align: middle;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	.colourImg, .outlineImg, .svgHolder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		transition: $badgeZoomTransition;
+	}
+	.colourImg {
+		opacity: 0;
+	}
+	.outlineImg {
+		opacity: 1;
+	}
+	.svgHolder {
+		opacity: 1;
+		transition: $badgeZoomTransition;
+	}
+	.svgHolder, .colourImg {
+		&.popup {
+			transition: $defaultTransition !important;
+		}
+		&.hidden {
+			opacity: 0 !important;
+		}
+	}
 	svg {
 		transition: $badgeDeselect;
-		transform: scale(1);
 	}
 	&.circleBig {
-		width: 330px;
-		height: 330px;
-		margin-right: -60px;
+		width: 270px;
+		height: 310px;
+		svg {
+			transform: scale(1.205);
+		}
 	}
 	&.circleMedium {
-		width: 250px;
-		height: 250px;
-		margin-right: -60px;
+		width: 200px;
+		height: 230px;
 		margin-top: 30px;
+		svg {
+			transform: scale(1.27);
+		}
 	}
 	&.shieldMedium {
-		width: 200px;
-		height: 200px;
-		margin-right: -50px;
+		width: 160px;
+		height: 215px;
+		svg {
+			transform: scale(1.356);
+		}
 	}
 	&.diamondMedium {
-		margin-left: 20px;
-		margin-right: -20px;
-		width: 230px;
-		height: 230px;
+		width: 220px;
+		height: 225px;
+		svg {
+			transform: scale(1.038);
+		}
 	}
 	&.shieldSmall {
-		width: 95px;
-		height: 95px;
-		margin-right: -10px;
+		width: 92px;
+		height: 88px;
+		svg {
+			margin-top: -1px;
+			transform: scale(1.17);
+		}
 	}
 	&.diamondSmall {
-		width: 95px;
+		width: 93px;
 		height: 95px;
+		margin-right: 2px;
+		svg {
+			transform: scale(1.0);
+		}
 	}
 	&.pentagonSmall {
-		width: 97px;
-		height: 97px;
-		margin-left: -5px;
-		margin-right: -3px;
+		width: 91px;
+		height: 91px;
+		margin-right: 2px;
+		svg {
+			margin-top: 0.3px;
+			transform: scale(1.128);
+		}
 	}
 	&.highlight {
 		filter: drop-shadow(0 0 20px $mainColor);
@@ -216,23 +265,71 @@ body {
 		}
 	}
 	&.circleBig.zoomed {
-		svg {
-			transform: scale(1.1);
-		}
+		transform: scale(1.1);
 	}
 	&.circleMedium.zoomed, &.shieldMedium.zoomed, &.diamondMedium.zoomed {
-		svg {
-			transform: scale(1.25);
-		}
+		transform: scale(1.25);
 	}
 	&.diamondSmall.zoomed, &.shieldSmall.zoomed, &.pentagonSmall.zoomed {
-		svg {
-			transform: scale(2);
+		transform: scale(2);
+	}
+	&.focused {
+		transition: $badgeZoomTransition;
+		position: absolute;
+		transform: scale(1) !important;
+		left: 150px !important;
+		top: 180px !important;
+		width: 720px !important;
+		height: 720px !important;
+		.colourImg {
+			opacity: 1;
+		}
+		.outlineImg {
+			opacity: 0;
 		}
 	}
 }
 
-#popupImageDiv {
+.zoomedBadge {
+	pointer-events: auto;
+	&.circleBig {
+		svg {
+			transform: scale(1.051);
+		}
+	}
+	&.circleMedium {
+		svg {
+			transform: scale(1.1);
+		}
+	}
+	&.shieldMedium {
+		svg {
+			transform: scale(1.356);
+		}
+	}
+	&.diamondMedium {
+		svg {
+			transform: scale(1.038);
+		}
+	}
+	&.shieldSmall {
+		svg {
+			transform: scale(1.17);
+		}
+	}
+	&.diamondSmall {
+		svg {
+			transform: scale(1.0);
+		}
+	}
+	&.pentagonSmall {
+		svg {
+			transform: scale(1.128);
+		}
+	}
+}
+
+#popupImgDiv {
 	position: absolute;
 	z-index: 3;
 	top: 0;
@@ -242,43 +339,7 @@ body {
 	pointer-events: none;
 }
 
-.pngImg {
-	position: absolute;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 1;
-	&.small {
-		transform: scale(2);
-	}
-	&.medium {
-		transform: scale(1.25);
-	}
-	&.big {
-		transform: scale(1.1);
-	}
-	&.focused {
-		transition: $badgeZoomTransition;
-		transform: scale(1) !important;
-		left: 150px !important;
-		top: 180px !important;
-		width: 720px !important;
-		height: 720px !important;
-	}
-}
-#outlineImg {
-	opacity: 1;
-	&.focused {
-		opacity: 0;
-	}
-}
-#colorImg {
-	opacity: 0;
-	&.focused {
-		opacity: 1;
-	}
-}
-#popupDiv {
+#popupDiv, #clonedPopupDiv {
 	position: absolute;
 	z-index: 2;
 	width: 100%;
@@ -289,12 +350,24 @@ body {
 	opacity: 0;
 	pointer-events: none;
 	transition: all 0.3s ease-out;
+	&.fastTransition {
+		transition: $badgeDeselect !important;
+	}
 	&.displayed {
 		transition: all 1s ease-out;
 		transform: translateY(-100px);
 		opacity: 1;
 	}
-	#popupCard {
+	&.left, &.right {
+		opacity: 0;
+	}
+	&.left {
+		transform: translate(-800px, -100px);
+	}
+	&.right {
+		transform: translate(800px, -100px);
+	}
+	.popupCard {
 		width: 1200px;
 		height: 940px;
 		margin-top: 70px;
@@ -332,14 +405,14 @@ body {
 				margin-bottom: 10px;
 			}
 		}
-		#badgeNameUnderline {
+		.badgeNameUnderline {
 			width: 250px;
 			height: 7px;
 			margin-top: -40px;
 			margin-bottom: 30px;
 			background: $mainColor;
 		}
-		#topTrumpTable {
+		.topTrumpTable {
 			width: 100%;
 			margin-bottom: 10px;
 			td {
@@ -359,14 +432,6 @@ body {
 		}
 	}
 }
-
-
-
-
-
-
-
-
 
 .backToMenuBtn {
 	pointer-events: auto;

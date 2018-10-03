@@ -48,24 +48,29 @@ body {
 
 #sidebar {
   position: absolute;
-  left: 0;
+  right: 0;
+  top: 0;
   height: 100%;
-  padding-left: 100px;
-  padding-top: 100px;
+  padding-left: 60px;
   box-sizing: border-box;
-  width: 640px;
-  background: linear-gradient(to right, #f4612e 0%, #f4612e 90%, #d05227 100%);
-  z-index: 0; }
+  width: 600px;
+  background: white;
+  z-index: 0;
+  transition: all 0.1s ease-out; }
+  #sidebar .underliner {
+    height: 10px;
+    width: 180px;
+    background: #daa12e; }
   #sidebar #sidebarContent h1, #sidebar #sidebarContent h3 {
     color: #15232e;
     z-index: 2; }
   #sidebar #sidebarContent h1 {
     font-family: CeraProBlack;
+    color: black;
+    font-size: 82px;
     width: 650px;
-    letter-spacing: -5px;
     line-height: 1;
-    margin: 0;
-    font-size: 142px; }
+    margin: 80px 0 35px 0; }
   #sidebar #sidebarContent h3 {
     margin-top: 50px;
     font-size: 24px;
@@ -73,6 +78,26 @@ body {
     line-height: 1.5;
     font-weight: normal;
     font-family: CeraProRegular; }
+  #sidebar.hidden {
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all 0.1s ease-in; }
+
+#focusSidebar {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 700px;
+  background: #daa12e;
+  transform: translateX(-300px);
+  transition: all 0.1s ease-in;
+  opacity: 0; }
+  #focusSidebar.shown {
+    transition: all 0.1s ease-out;
+    transform: translateX(0);
+    opacity: 1; }
 
 #infoPane {
   position: absolute;
@@ -105,12 +130,12 @@ body {
     width: 100%; }
     #menuBadges .row#rowA {
       height: 350px;
-      padding-left: 675px; }
+      padding-left: 75px; }
     #menuBadges .row#rowB {
       height: 250px;
-      padding-left: 675px; }
+      padding-left: 75px; }
     #menuBadges .row#rowC, #menuBadges .row#rowD, #menuBadges .row#rowE {
-      padding-left: 630px;
+      padding-left: 30px;
       height: 130px;
       line-height: 130px;
       margin-left: 30px;
@@ -133,20 +158,25 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    transition: all 1s ease-out; }
+    transition: all 0.5s ease-out; }
   .badge .colourImg {
     opacity: 0; }
   .badge .outlineImg {
     opacity: 1; }
   .badge .svgHolder {
     opacity: 1;
-    transition: all 1s ease-out; }
+    transition: all 0.5s ease-out; }
   .badge .svgHolder.popup, .badge .colourImg.popup {
-    transition: all 0.4s ease-out !important; }
+    transition: all 0.1s linear !important; }
+  .badge .svgHolder.whiteout, .badge .colourImg.whiteout {
+    filter: contrast(0%) brightness(200%);
+    transition: all 0.1s linear; }
   .badge .svgHolder.hidden, .badge .colourImg.hidden {
     opacity: 0 !important; }
   .badge svg {
     transition: all 0.2s ease-out; }
+  .badge.diamondSmall:before, .badge.shieldSmall:before, .badge.pentagonSmall:before {
+    bottom: -3px; }
   .badge.circleBig {
     width: 270px;
     height: 310px; }
@@ -188,10 +218,12 @@ body {
       margin-top: 0.3px;
       transform: scale(1.128); }
   .badge.highlight {
-    filter: drop-shadow(0 0 20px #f4612e);
+    filter: drop-shadow(0 0 20px white);
     transition: all 0.4s ease-out; }
     .badge.highlight svg {
       transition: all 0.4s ease-out; }
+    .badge.highlight:before {
+      content: none; }
   .badge.onTop {
     z-index: 1; }
   .badge.noTransition {
@@ -205,7 +237,7 @@ body {
   .badge.diamondSmall.zoomed, .badge.shieldSmall.zoomed, .badge.pentagonSmall.zoomed {
     transform: scale(2); }
   .badge.focused {
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
     position: absolute;
     transform: scale(1) !important;
     left: 150px !important;
@@ -224,15 +256,15 @@ body {
   .zoomedBadge.circleMedium svg {
     transform: scale(1.1); }
   .zoomedBadge.shieldMedium svg {
-    transform: scale(1.356); }
+    transform: scale(1.013) translate(-1px, 2px); }
   .zoomedBadge.diamondMedium svg {
-    transform: scale(1.038); }
+    transform: scale(1.017) translateY(10px); }
   .zoomedBadge.shieldSmall svg {
     transform: scale(1.17); }
   .zoomedBadge.diamondSmall svg {
-    transform: scale(1); }
+    transform: scale(1) translateX(2px); }
   .zoomedBadge.pentagonSmall svg {
-    transform: scale(1.128); }
+    transform: scale(1.126) translateY(2px); }
 
 #popupImgDiv {
   position: absolute;
@@ -256,7 +288,7 @@ body {
   #popupDiv.fastTransition, #clonedPopupDiv.fastTransition {
     transition: all 0.2s ease-out !important; }
   #popupDiv.displayed, #clonedPopupDiv.displayed {
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
     transform: translateY(-100px);
     opacity: 1; }
   #popupDiv.left, #popupDiv.right, #clonedPopupDiv.left, #clonedPopupDiv.right {
@@ -303,7 +335,7 @@ body {
       height: 7px;
       margin-top: -40px;
       margin-bottom: 30px;
-      background: #f4612e; }
+      background: #daa12e; }
     #popupDiv .popupCard .topTrumpTable, #clonedPopupDiv .popupCard .topTrumpTable {
       width: 100%;
       margin-bottom: 10px; }
@@ -327,7 +359,7 @@ body {
   width: 105px;
   height: 105px;
   overflow: hidden;
-  background: #f4612e;
+  background: #daa12e;
   border-radius: 100px;
   box-shadow: 0 7px 16px rgba(244, 97, 46, 0.5); }
   .backToMenuBtn::before, .backToMenuBtn::after {

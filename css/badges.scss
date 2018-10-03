@@ -1,10 +1,11 @@
 $tableBorderColor: #f68d68;
-$mainColor: #f4612e;
+$mainColor: #daa12e;
+$bgColor: #f4f5fa;
 $textColor: #15232e;
 $textGrey: #a4a4a4;
-$sidebarWidth: 640px;
-$defaultTransition: all 0.4s ease-out;
-$badgeZoomTransition: all 1s ease-out;
+$sidebarWidth: 600px;
+$defaultTransition: all 0.2s ease-out;
+$badgeZoomTransition: all 0.5s ease-out;
 
 $badgeSelect: all 0.4s ease-out;
 $badgeDeselect: all 0.2s ease-out;
@@ -69,26 +70,33 @@ body {
 }
 #sidebar {
 	position: absolute;
-	left: 0;
+	right: 0;
+	top: 0;
 	height: 100%;
-	padding-left: 100px;
-	padding-top: 100px;
+	padding-left: 60px;
 	box-sizing: border-box;
 	width: $sidebarWidth;
-	background: linear-gradient(to right, $mainColor 0%, $mainColor 90%, rgba(208,82,39,1) 100%);
+	background: white;
+	// background: linear-gradient(to right, $mainColor 0%, $mainColor 90%, rgba(208,82,39,1) 100%);
 	z-index: 0;
+	transition: all 0.1s ease-out; 
+	.underliner {
+		height: 10px;
+		width: 180px;
+		background: $mainColor;
+	}
 	#sidebarContent {
 		h1, h3 {
 			color: $textColor;
 			z-index: 2;
 		}
 		h1 {
-	    font-family: CeraProBlack;
+			font-family: CeraProBlack;
+			color: black;
+			font-size: 82px;
 	    width: 650px;
-	    letter-spacing: -5px;
 	    line-height: 1;
-	    margin: 0;
-	    font-size: 142px;
+	    margin: 80px 0 35px 0;
 		}
 		h3 {
 			margin-top: 50px;
@@ -98,6 +106,28 @@ body {
 			font-weight: normal;
 			font-family: CeraProRegular;
 		}
+	}
+	&.hidden {
+		transform: translateX(200px);
+		opacity: 0;
+		transition: all 0.1s ease-in; 
+	}
+}
+#focusSidebar {
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 700px;
+	background: $mainColor;
+	transform: translateX(-300px);
+	transition: all 0.1s ease-in;
+	opacity: 0;
+	&.shown {
+		transition: all 0.1s ease-out;
+		transform: translateX(0);
+		opacity: 1;
 	}
 }
 
@@ -137,14 +167,14 @@ body {
 		width: 100%;
 		&#rowA {
 			height: 350px;
-			padding-left: 675px;
+			padding-left: 75px;
 		}
 		&#rowB {
 			height: 250px;
-			padding-left: 675px;
+			padding-left: 75px;
 		}
 		&#rowC, &#rowD, &#rowE {
-			padding-left: 630px;
+			padding-left: 30px;
 			height: 130px;
 			line-height: 130px;
 			margin-left: 30px;
@@ -162,6 +192,18 @@ body {
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
+	// &:before {
+	// 	content: ' ';
+	// 	position: absolute;
+	// 	bottom: -10px;
+	// 	left: 0;
+	// 	transform: translateX(12.5%);
+	// 	width: 80%;
+	// 	height: 20%;
+	// 	background: radial-gradient(closest-side at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	// 	filter: blur(10px);
+	// 	// border-radius: 40px;
+	// }
 	.colourImg, .outlineImg, .svgHolder {
 		position: absolute;
 		top: 0;
@@ -185,7 +227,12 @@ body {
 	}
 	.svgHolder, .colourImg {
 		&.popup {
-			transition: $defaultTransition !important;
+			transition: all 0.1s linear !important;
+			// transition: all 0.2s linear !important;
+		}
+		&.whiteout {
+			filter: contrast(0%) brightness(200%);
+			transition: all 0.1s linear;
 		}
 		&.hidden {
 			opacity: 0 !important;
@@ -193,6 +240,11 @@ body {
 	}
 	svg {
 		transition: $badgeDeselect;
+	}
+	&.diamondSmall, &.shieldSmall, &.pentagonSmall {
+		&:before {
+			bottom: -3px;
+		}
 	}
 	&.circleBig {
 		width: 270px;
@@ -249,10 +301,13 @@ body {
 		}
 	}
 	&.highlight {
-		filter: drop-shadow(0 0 20px $mainColor);
+		filter: drop-shadow(0 0 20px white);
 		transition: $badgeSelect;
 		svg {
 			transition: $badgeSelect;
+		}
+		&:before {
+			content: none;
 		}
 	}
 	&.onTop {
@@ -304,12 +359,12 @@ body {
 	}
 	&.shieldMedium {
 		svg {
-			transform: scale(1.356);
+			transform: scale(1.013) translate(-1px, 2px);
 		}
 	}
 	&.diamondMedium {
 		svg {
-			transform: scale(1.038);
+			transform: scale(1.017) translateY(10px);
 		}
 	}
 	&.shieldSmall {
@@ -319,12 +374,12 @@ body {
 	}
 	&.diamondSmall {
 		svg {
-			transform: scale(1.0);
+			transform: scale(1.0) translateX(2px);
 		}
 	}
 	&.pentagonSmall {
 		svg {
-			transform: scale(1.128);
+			transform: scale(1.126) translateY(2px);
 		}
 	}
 }
@@ -354,7 +409,7 @@ body {
 		transition: $badgeDeselect !important;
 	}
 	&.displayed {
-		transition: all 1s ease-out;
+		transition: all 0.5s ease-out;
 		transform: translateY(-100px);
 		opacity: 1;
 	}

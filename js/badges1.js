@@ -172,7 +172,6 @@ $(function() {
 		loadAnim(badge, $container, () => {
 			$('[data-ref="' + badge.ref + '"]').addClass('highlight onTop zoomed');
 			playAnim(badge, $('[data-ref="' + badge.ref + '"] .svgHolder'), false, true, () => {
-				$('[data-ref="' + badge.ref + '"] .svgHolder').empty();
 				popupBadge(badge);
 			});
 		});
@@ -272,22 +271,27 @@ $(function() {
 	function addPopupAnimListener(badge) {
 		$('.zoomedBadge').click(() => {
 			if(!lockedControls) {
-				$container = $('.zoomedBadge .svgHolder');
-				loadAnim(badge, $container, () => {
-					playAnim(badge, $container, true, true, () => {
-						console.log("Done!");
-					});
+				playAnim(badge, $('.zoomedBadge .svgHolder'), true, true, () => {
+					console.log("Done!");
 				});
 			}
+		});
+	}
+
+
+	function attractBadgeAnim(badge) {
+		addBadgeAnim(badge, () => {
+			$('[data-ref="' + badge.ref + '"]').removeClass('highlight onTop zoomed');
+			$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
+				removeAnim(badge);
+			});
 		});
 	}
 
 	function backToMenu() {
 		lockedControls = true;
 		selectedBadge = undefined;
-		// $('#sidebarContent').fadeIn('slow');
-		$('#sidebar').removeClass('hidden');
-		$('#focusSidebar').removeClass('shown');
+		$('#sidebarContent').fadeIn('slow');
 		$('#menuBadges').fadeIn('slow');
 		$('#infoPane').fadeIn('slow');
 		$('.arrowBtn').addClass('hidden');
@@ -333,7 +337,11 @@ $(function() {
 			console.log("sdfsdfsdf");
 			$('#popupDiv').remove();
 			$('#clonedPopupDiv').attr('id', 'popupDiv');
-			addPopupAnimListener(selectedBadge);
+			$('.zoomedBadge').click(() => {
+				playAnim(selectedBadge, $('.zoomedBadge .svgHolder'), true, true, () => {
+					console.log("Done!");
+				});
+			});
 			console.log("Unlocking controls...");
 			lockedControls = false;
 		});
@@ -351,9 +359,7 @@ $(function() {
 	});
 
 	function hideMenuScreen() {
-		// $('#sidebarContent').fadeOut('slow');
-		$('#sidebar').addClass('hidden');
-		$('#focusSidebar').addClass('shown');
+		$('#sidebarContent').fadeOut('slow');
 		$('#menuBadges').fadeOut('slow');
 		$('#infoPane').fadeOut('slow');
 		$('.arrowBtn').addClass('shown');

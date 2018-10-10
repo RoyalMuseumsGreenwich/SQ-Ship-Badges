@@ -12,7 +12,8 @@ body {
 #container {
   width: 1920px;
   height: 1080px;
-  background: #f4f5fa;
+  background: url("../img/old_wall.png");
+  background-repeat: repeat;
   position: relative;
   overflow: hidden; }
 
@@ -93,7 +94,8 @@ body {
   background: #daa12e;
   transform: translateX(-300px);
   transition: all 0.1s ease-in;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 2; }
   #focusSidebar.shown {
     transition: all 0.1s ease-out;
     transform: translateX(0);
@@ -125,7 +127,12 @@ body {
   animation-duration: 2s; }
 
 #menuBadges {
-  padding-top: 50px; }
+  padding-top: 50px;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0; }
   #menuBadges .row {
     width: 100%; }
     #menuBadges .row#rowA {
@@ -140,6 +147,10 @@ body {
       line-height: 130px;
       margin-left: 30px;
       margin-top: -25px; }
+    #menuBadges .row#rowZ {
+      height: 600px;
+      padding-left: 1300px;
+      margin-top: -450px; }
 
 .badge {
   position: relative;
@@ -162,17 +173,15 @@ body {
   .badge .colourImg {
     opacity: 0; }
   .badge .outlineImg {
-    opacity: 1; }
+    opacity: 1;
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: url(#drop-shadow);
+    filter: drop-shadow(0px 0px 1px #daa12e) drop-shadow(0px 0px 1px #daa12e) drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)); }
   .badge .svgHolder {
     opacity: 1;
     transition: all 0.5s ease-out; }
-  .badge .svgHolder.popup, .badge .colourImg.popup {
-    transition: all 0.1s linear !important; }
-  .badge .svgHolder.whiteout, .badge .colourImg.whiteout {
-    filter: contrast(0%) brightness(200%);
-    transition: all 0.1s linear; }
   .badge .svgHolder.hidden, .badge .colourImg.hidden {
-    opacity: 0 !important; }
+    opacity: 0.0 !important; }
   .badge svg {
     transition: all 0.2s ease-out; }
   .badge.diamondSmall:before, .badge.shieldSmall:before, .badge.pentagonSmall:before {
@@ -217,9 +226,15 @@ body {
     .badge.pentagonSmall svg {
       margin-top: 0.3px;
       transform: scale(1.128); }
+  .badge.bowater {
+    width: 350px;
+    height: 450px; }
+    .badge.bowater svg {
+      transform: scale(1.328) translate(-1px, -0.6px); }
   .badge.highlight {
     filter: drop-shadow(0 0 20px white);
-    transition: all 0.4s ease-out; }
+    transition: all 0.4s ease-out;
+    filter: drop-shadow(0px 0px 4px #daa12e); }
     .badge.highlight svg {
       transition: all 0.4s ease-out; }
     .badge.highlight:before {
@@ -240,35 +255,40 @@ body {
     transition: all 0.5s ease-out;
     position: absolute;
     transform: scale(1) !important;
-    left: 150px !important;
-    top: 180px !important;
-    width: 720px !important;
-    height: 720px !important; }
+    left: 190px !important;
+    top: 220px !important;
+    width: 560px !important;
+    height: 640px !important; }
     .badge.focused .colourImg {
       opacity: 1; }
     .badge.focused .outlineImg {
       opacity: 0; }
 
 .zoomedBadge {
-  pointer-events: auto; }
+  pointer-events: auto;
+  z-index: 2; }
+  .zoomedBadge .popup {
+    transition: all 0.1s linear !important; }
+  .zoomedBadge svg {
+    opacity: 1; }
   .zoomedBadge.circleBig svg {
-    transform: scale(1.051); }
+    transform: scale(1.19) translate(0, 2px); }
   .zoomedBadge.circleMedium svg {
-    transform: scale(1.1); }
+    transform: scale(1.26); }
   .zoomedBadge.shieldMedium svg {
-    transform: scale(1.013) translate(-1px, 2px); }
+    transform: scale(1.155) translate(-1px, 2px); }
   .zoomedBadge.diamondMedium svg {
-    transform: scale(1.017) translateY(10px); }
+    transform: scale(1.085) translateY(6px); }
   .zoomedBadge.shieldSmall svg {
     transform: scale(1.17); }
   .zoomedBadge.diamondSmall svg {
-    transform: scale(1) translateX(2px); }
+    transform: scale(1.013) translateX(2px); }
   .zoomedBadge.pentagonSmall svg {
     transform: scale(1.126) translateY(2px); }
 
 #popupImgDiv {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   left: 0;
   width: 100%;
@@ -277,7 +297,7 @@ body {
 
 #popupDiv, #clonedPopupDiv {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: 100%;
   top: 100px;
@@ -298,26 +318,31 @@ body {
   #popupDiv.right, #clonedPopupDiv.right {
     transform: translate(800px, -100px); }
   #popupDiv .popupCard, #clonedPopupDiv .popupCard {
-    width: 1200px;
+    position: absolute;
+    width: 1240px;
     height: 940px;
-    margin-top: 70px;
-    margin-left: 500px;
-    padding-left: 400px;
-    padding-right: 100px;
-    padding-top: 40px;
+    top: 70px;
+    left: 460px;
+    padding-left: 320px;
+    padding-right: 80px;
+    padding-top: 0;
     box-sizing: border-box;
     background: white;
     border-radius: 8px;
-    font-size: 20px;
-    line-height: 1.6; }
+    font-size: 22px;
+    line-height: 1.6;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     #popupDiv .popupCard h1, #clonedPopupDiv .popupCard h1 {
       margin-top: 0;
       font-size: 64px;
       font-family: CeraProBold; }
     #popupDiv .popupCard h3, #clonedPopupDiv .popupCard h3 {
-      font-size: 20px; }
+      font-size: 24px; }
     #popupDiv .popupCard h5, #clonedPopupDiv .popupCard h5 {
-      font-size: 16px;
+      font-size: 22px;
       color: #a4a4a4;
       margin: 0; }
     #popupDiv .popupCard .popupHeaderDiv, #clonedPopupDiv .popupCard .popupHeaderDiv {
@@ -343,18 +368,47 @@ body {
         vertical-align: top;
         padding-bottom: 10px;
         padding-right: 10px; }
-      #popupDiv .popupCard .topTrumpTable .cell1, #clonedPopupDiv .popupCard .topTrumpTable .cell1 {
-        width: 26%; }
-      #popupDiv .popupCard .topTrumpTable .cell2, #clonedPopupDiv .popupCard .topTrumpTable .cell2 {
-        width: 34%; }
-      #popupDiv .popupCard .topTrumpTable .cell3, #clonedPopupDiv .popupCard .topTrumpTable .cell3 {
-        width: 40%; }
+      #popupDiv .popupCard .topTrumpTable .col1, #clonedPopupDiv .popupCard .topTrumpTable .col1 {
+        width: 38%;
+        padding-right: 4%; }
+      #popupDiv .popupCard .topTrumpTable .col2, #clonedPopupDiv .popupCard .topTrumpTable .col2 {
+        width: 62%; }
+      #popupDiv .popupCard .topTrumpTable .span, #clonedPopupDiv .popupCard .topTrumpTable .span {
+        width: 100% !important; }
+    #popupDiv .popupCard .textCareer, #clonedPopupDiv .popupCard .textCareer {
+      padding-bottom: 20px; }
+
+#animLabel {
+  position: absolute;
+  top: 880px;
+  left: 250px; }
+  #animLabel img {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 3px; }
+  #animLabel span {
+    padding-left: 5px;
+    font-size: 20px;
+    font-family: CeraProBold;
+    color: white; }
+
+#popupShadow {
+  content: ' ';
+  position: absolute;
+  bottom: 50px;
+  left: 580px;
+  width: 900px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.3);
+  filter: blur(20px);
+  z-index: -1; }
 
 .backToMenuBtn {
   pointer-events: auto;
   position: absolute;
-  top: 25px;
-  right: 168px;
+  top: -30px;
+  right: -50px;
   display: inline-block;
   width: 105px;
   height: 105px;

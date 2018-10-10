@@ -23,7 +23,6 @@ $(function() {
 	var menuBadgeAnimHandler;
 	var menuBadgeAnimTimeMultiplier = 5000;
 	var menuBadgeAnimTimeMin = 3000;
-	var badgeAnimating;
 	var lockedControls = false;
 
 	//	Called on first load
@@ -85,6 +84,7 @@ $(function() {
 		folderOutlines = $xml.find('folderOutlines').text();
 		folderColour = $xml.find('folderColour').text();
 		folderJson = $xml.find('folderJson').text();
+		folderSvg = $xml.find('folderSvg').text();
 
 		//	Load XML slide data to slidesArray
 		$xml.find('badge').each(function(){
@@ -99,8 +99,8 @@ $(function() {
 				type: $thisBadge.find('type').html(),
 				career: $thisBadge.find('career').html(),
 				shape: $thisBadge.find('shape').text(),
-				json: $thisBadge.find('json').text(),
-				png: $thisBadge.find('png ref').text()
+				filename: $thisBadge.find('json').text(),
+				fileref: $thisBadge.find('png ref').text()
 			}
 			if(thisBadgeObject.type !== 'shore station') {
 				thisBadgeObject.launched = $thisBadge.find('launched').html();
@@ -153,12 +153,13 @@ $(function() {
 		$container.addClass(badge.shape);
 		//	Add 'outline' div to badge container
 		let outlineImg = '<div class="outlineImg"></div>';
-		let outlineImgPath = 'url("' + folderOutlines + '/' + badge.json + '.png")'
+		let outlineImgPath = 'url("' + folderSvg + '/' + badge.filename + '.svg")'
+		// let outlineImgPath = 'url("' + folderOutlines + '/' + badge.filename + '.png")'
 		$container.append(outlineImg);
 		$container.find('.outlineImg').css({"background-image": outlineImgPath});
 		//	Add 'outline' div to badge container
 		let colourImg = '<div class="colourImg"></div>';
-		let colourImgPath = 'url("' + folderColour + '/' + badge.png.toLowerCase() + '.png")';
+		let colourImgPath = 'url("' + folderColour + '/' + badge.fileref.toUpperCase() + '.png")';
 		$container.append(colourImg);
 		$container.find('.colourImg').css({"background-image": colourImgPath});
 		//	Add 'svgHolder' div to badge container
@@ -187,7 +188,7 @@ $(function() {
 			renderer: 'svg',
 			loop: false,
 			autoplay: false,
-			path: folderJson + '/' + badge.json + '.json'
+			path: folderJson + '/' + badge.fileref + '.json'
 		});
 		badge.anim.addEventListener('DOMLoaded', () => {
 			badge.anim.removeEventListener('DOMLoaded');
@@ -333,6 +334,7 @@ $(function() {
 			console.log("sdfsdfsdf");
 			$('#popupDiv').remove();
 			$('#clonedPopupDiv').attr('id', 'popupDiv');
+			$('.zoomedBadge .colourImg').addClass('popup');
 			addPopupAnimListener(selectedBadge);
 			console.log("Unlocking controls...");
 			lockedControls = false;
@@ -385,11 +387,20 @@ $(function() {
 			$container.find('.topTrumpTable').hide();
 			$container.find('.careerLabel').hide();
 		}
+		if(badge.ref === 'C05' || badge.ref === 'B03') {					//	Hack for HMS Sandhurst / HMS Moorhen
+			$container.find('.textCrew').parent().hide();
+			$container.find('.textType').parent().attr('colspan', '100%');
+			$container.find('.textType').addClass('span');
+		} else {
+			$container.find('.textCrew').parent().show();
+			$container.find('.textType').parent().attr('colspan', '1');
+			$container.find('.textType').removeClass('span');
+		}
 	}
 
 
 	function stopMenuBadgeAnimations() {
-		clearTimeout(menuBadgeAnimHandler);
+
 	}
 
 	//	Timers
@@ -441,7 +452,7 @@ $(function() {
 	function showAttractScreen(callback) {
 		console.log("Showing Attract screen");
 		clearInactivityTimer();
-		stopMenuBadgeAnimations();
+		// stopMenuBadgeAnimations();
 		$attractScreen.fadeIn('slow', function() {
 			backToMenu();
 			if(callback && typeof(callback) === 'function') {
@@ -524,18 +535,6 @@ $(function() {
 			}
 		});
 	}
-
-
-	// function cycleMenuBadgeAnimations() {
-	// 	var time = Math.floor(Math.random() * menuBadgeAnimTimeMultiplier + menuBadgeAnimTimeMin);
-	// 	var badge = badgeArray[Math.floor(Math.random() * badgeArray.length)];
-	// 	menuBadgeAnimHandler = setTimeout(function() {
-	// 		if(!badgeAnimating) {
-	// 			startAnim(badge);
-	// 		}
-	// 		cycleMenuBadgeAnimations();
-	// 	}, time);
-	// }
 
 	firstLoad();
 

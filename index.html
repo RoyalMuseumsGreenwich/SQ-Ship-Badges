@@ -65,6 +65,7 @@
 				<div id="rowC" class="row"></div>
 				<div id="rowD" class="row"></div>
 				<div id="rowE" class="row"></div>
+				<div id="rowZ" class="row"></div>
 			</div>
 
 			<button id="leftArrowBtn" class="btn arrowBtn hidden"></button>
@@ -75,53 +76,61 @@
 			<div id="popupDiv">
 				<div class="popupCard">
 					<button class="btn backToMenuBtn"></button>
-					<h1 class="textName"></h1>
-					<div class="badgeNameUnderline"></div>
-					<div class="popupHeaderDiv">
-						<span>The Badge</span>
-						<span class="popupHeaderDivUnderline"></span>
+					<div id="menuContent">
+						<h1 class="textName"></h1>
+						<div class="badgeNameUnderline"></div>
+						<div class="popupHeaderDiv">
+							<span>The Badge</span>
+							<span class="popupHeaderDivUnderline"></span>
+						</div>
+						<div class="textDescription"></div>
+						<div class="popupHeaderDiv">
+							<span class="shipOrShoreStation">The Ship</span>
+							<span class="popupHeaderDivUnderline"></span>
+						</div>
+						<table class="topTrumpTable">
+							<tr>
+								<td class="col1">
+									<h5>Type</h5>
+									<span class="textType"></span>
+								</td>
+								<td class="col2">
+									<h5>Crew</h5>
+									<span class="textCrew"></span>
+								</td>
+							</tr>
+							<tr>
+								<td class="col1">
+									<h5>Speed</h5>
+									<span class="textSpeed"></span>
+								</td>
+								<td class="col2">
+									<h5>Length</h5>
+									<span class="textLength"></span>
+								</td>
+							</tr>
+							<tr>
+								<td class="col1">
+									<h5>Launched</h5>
+									<span class="textLaunched"></span>
+								</td>
+								<td class="col2">
+									<h5>Builder</h5>
+									<span class="textBuilder"></span>
+								</td>
+							</tr>
+						</table>
+						<h5 class="careerLabel">Career</h5>
+						<div class="textCareer"></div>
 					</div>
-					<div class="textDescription"></div>
-					<div class="popupHeaderDiv">
-						<span class="shipOrShoreStation">The Ship</span>
-						<span class="popupHeaderDivUnderline"></span>
-					</div>
-					<table class="topTrumpTable">
-						<tr>
-							<td class="cell1">
-								<h5>Type</h5>
-								<span class="textType"></span>
-							</td>
-							<td class="cell2">
-								<h5>Length</h5>
-								<span class="textLength"></span>
-							</td>
-							<td class="cell3">
-								<h5>Builder</h5>
-								<span class="textBuilder"></span>
-							</td>
-						</tr>
-						<tr>
-							<td class="cell1">
-								<h5>Launched</h5>
-								<span class="textLaunched"></span>
-							</td>
-							<td class="cell2">
-								<h5>Speed</h5>
-								<span class="textSpeed"></span>
-							</td>
-							<td class="cell3">
-								<h5>Crew</h5>
-								<span class="textCrew"></span>
-							</td>
-						</tr>
-					</table>
-					<h5 class="careerLabel">Career</h5>
-					<div class="textCareer"></div>
 				</div>
+				<div id="animLabel">
+					<img src="img/Info-Icon.svg">
+					<span>Tap to animate!</span>
+				</div>
+				<div id="popupShadow"></div>
 			</div>
 
-			<!--	Common content -->
 			<div id="sidebar">
 				<div id="sidebarContent">
 					<h1>Ship badges</h1>
@@ -129,6 +138,7 @@
 					<h3>Discover more about the badges on display here. Some are ship badges, identifying particular vessels and giving their name. Others are boat badges, which identify the boats of a particular ship with a symbol only.</h3>
 				</div>
 			</div>
+
 			<div id="focusSidebar"></div>
 
 		</div>

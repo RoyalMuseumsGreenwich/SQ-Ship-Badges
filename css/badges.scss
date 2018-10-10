@@ -30,7 +30,9 @@ body {
 #container {
 	width: 1920px;
 	height: 1080px;
-	background: #f4f5fa;
+	// background: #f4f5fa;
+	background: url('../img/old_wall.png');
+	background-repeat: repeat;
 	position: relative;
 	overflow: hidden;
 }
@@ -124,6 +126,7 @@ body {
 	transform: translateX(-300px);
 	transition: all 0.1s ease-in;
 	opacity: 0;
+	z-index: 2;
 	&.shown {
 		transition: all 0.1s ease-out;
 		transform: translateX(0);
@@ -163,6 +166,11 @@ body {
 
 #menuBadges {
 	padding-top: 50px;
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
 	.row {
 		width: 100%;
 		&#rowA {
@@ -179,6 +187,11 @@ body {
 			line-height: 130px;
 			margin-left: 30px;
 			margin-top: -25px;
+		}
+		&#rowZ {
+			height: 600px;
+			padding-left: 1300px;
+			margin-top: -450px;
 		}
 	}
 }
@@ -220,26 +233,24 @@ body {
 	}
 	.outlineImg {
 		opacity: 1;
+		filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	  filter: url(#drop-shadow);
+	  filter: drop-shadow(0px 0px 1px $mainColor) drop-shadow(0px 0px 1px $mainColor) drop-shadow(0px 5px 5px rgba(0,0,0,0.2));
 	}
 	.svgHolder {
 		opacity: 1;
 		transition: $badgeZoomTransition;
 	}
 	.svgHolder, .colourImg {
-		&.popup {
-			transition: all 0.1s linear !important;
-			// transition: all 0.2s linear !important;
-		}
-		&.whiteout {
-			filter: contrast(0%) brightness(200%);
-			transition: all 0.1s linear;
-		}
 		&.hidden {
-			opacity: 0 !important;
+			opacity: 0.0 !important;
 		}
 	}
 	svg {
 		transition: $badgeDeselect;
+		// filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	 //  filter: url(#drop-shadow);
+	 //  filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.3));
 	}
 	&.diamondSmall, &.shieldSmall, &.pentagonSmall {
 		&:before {
@@ -300,9 +311,17 @@ body {
 			transform: scale(1.128);
 		}
 	}
+	&.bowater {
+		width: 350px;
+		height: 450px;
+		svg {
+			transform: scale(1.328) translate(-1px, -0.6px);
+		}
+	}
 	&.highlight {
 		filter: drop-shadow(0 0 20px white);
 		transition: $badgeSelect;
+	  filter: drop-shadow(0px 0px 4px $mainColor);
 		svg {
 			transition: $badgeSelect;
 		}
@@ -332,10 +351,10 @@ body {
 		transition: $badgeZoomTransition;
 		position: absolute;
 		transform: scale(1) !important;
-		left: 150px !important;
-		top: 180px !important;
-		width: 720px !important;
-		height: 720px !important;
+		left: 190px !important;
+		top: 220px !important;
+		width: 560px !important;
+		height: 640px !important;
 		.colourImg {
 			opacity: 1;
 		}
@@ -347,24 +366,31 @@ body {
 
 .zoomedBadge {
 	pointer-events: auto;
+	z-index: 2;
+	.popup {
+		transition: all 0.1s linear !important;
+	}
+	svg {
+		opacity: 1;
+	}
 	&.circleBig {
 		svg {
-			transform: scale(1.051);
+			transform: scale(1.19) translate(0, 2px);
 		}
 	}
 	&.circleMedium {
 		svg {
-			transform: scale(1.1);
+			transform: scale(1.26);
 		}
 	}
 	&.shieldMedium {
 		svg {
-			transform: scale(1.013) translate(-1px, 2px);
+			transform: scale(1.155) translate(-1px, 2px);
 		}
 	}
 	&.diamondMedium {
 		svg {
-			transform: scale(1.017) translateY(10px);
+			transform: scale(1.085) translateY(6px);
 		}
 	}
 	&.shieldSmall {
@@ -374,7 +400,7 @@ body {
 	}
 	&.diamondSmall {
 		svg {
-			transform: scale(1.0) translateX(2px);
+			transform: scale(1.013) translateX(2px);
 		}
 	}
 	&.pentagonSmall {
@@ -386,7 +412,7 @@ body {
 
 #popupImgDiv {
 	position: absolute;
-	z-index: 3;
+	z-index: 4;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -396,7 +422,7 @@ body {
 
 #popupDiv, #clonedPopupDiv {
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 	width: 100%;
 	height: 100%;
 	top: 100px;
@@ -423,28 +449,33 @@ body {
 		transform: translate(800px, -100px);
 	}
 	.popupCard {
-		width: 1200px;
+		position: absolute;
+		width: 1240px;
 		height: 940px;
-		margin-top: 70px;
-		margin-left: 500px;
-		padding-left: 400px;
-		padding-right: 100px;
-		padding-top: 40px;
+		top: 70px;
+		left: 460px;
+		padding-left: 320px;
+		padding-right: 80px;
+		padding-top: 0;
 		box-sizing: border-box;
 		background: white;
 		border-radius: 8px;
-		font-size: 20px;
+		font-size: 22px;
 		line-height: 1.6;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		h1 {
 			margin-top: 0;
 			font-size: 64px;
 			font-family: CeraProBold;
 		}
 		h3 {
-			font-size: 20px;
+			font-size: 24px;
 		}
 		h5 {
-			font-size: 16px;
+			font-size: 22px;
 			color: $textGrey;
 			margin: 0;
 		}
@@ -475,24 +506,58 @@ body {
 				padding-bottom: 10px;
 				padding-right: 10px;
 			}
-			.cell1 {
-				width: 26%;
+			.col1 {
+				width: 38%;
+				padding-right: 4%; 
 			}
-			.cell2 {
-				width: 34%;
+			.col2 {
+				width: 62%;
 			}
-			.cell3 {
-				width: 40%;
+			.span {
+				width: 100% !important;
 			}
 		}
+		.textCareer {
+			padding-bottom: 20px;
+		}
 	}
+}
+
+#animLabel {
+	position: absolute;
+	top: 880px;
+	left: 250px;
+	img {
+		position: relative;
+		width: 20px;
+		height: 20px;
+		top: 3px;
+	}
+	span {
+		padding-left: 5px;
+		font-size: 20px;
+		font-family: CeraProBold;
+		color: white;
+	}
+}
+
+#popupShadow {
+	content: ' ';
+	position: absolute;
+	bottom: 50px;
+	left: 580px;
+	width: 900px;
+	height: 80px;
+	background: rgba(0,0,0,0.3);
+	filter: blur(20px);
+	z-index: -1;
 }
 
 .backToMenuBtn {
 	pointer-events: auto;
   position: absolute;
-  top: 25px;
-  right: 168px;
+  top: -30px;
+  right: -50px;
   display: inline-block;
   width: 105px;
   height: 105px;

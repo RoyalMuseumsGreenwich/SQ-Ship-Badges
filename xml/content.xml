@@ -10,14 +10,15 @@
 		<folderOutlines>img/outlines</folderOutlines>
 		<folderColour>img/colour</folderColour>
 		<folderJson>img/json</folderJson>
+		<folderSvg>img/svg</folderSvg>
 
 	</settings>
 
 	<badges>
 
 <!-- SIDE -->
-<!--
-		<badge ref="S01">
+
+		<badge ref="Z01">
 			<name>SS <em>Nicolas Bowater</em></name>
 			<objectID>FHD1721</objectID>
 			<description>The ship badge shows a profile portrait of Nicolas Bowater, the schoolboy son of the ship’s owner Sir Eric Bowater. His fleet also included ships named after his daughters, Margaret and Sarah.</description>
@@ -28,15 +29,13 @@
 			<speed></speed>
 			<crew></crew>
 			<career>The <em>Nicolas Bowater</em> was built for Bowater’s, a major papermaking firm. The ship was used to transport raw materials and finished newsprint, huge rolls of cheap paper used by the press. It was sold in 1973 to a Liberian-registered company and renamed the <i>Vall Comet</i>. It retired from service and was broken up in 1978.</career>
-			<json>
-				<file>HMS_Benbow.json</file>
-				<shape>circleBig</shape>
-			</json>
+			<shape>bowater</shape>
 			<png>
-				<file>HMS_Moorhen.png</file>
+				<ref>Z1</ref>
 			</png>
+			<json>Nicolas_Bowater</json>
 		</badge>
--->
+
 <!-- ROW A -->
 		<badge ref="A01">
 			<name>HMS <em>Benbow</em></name>

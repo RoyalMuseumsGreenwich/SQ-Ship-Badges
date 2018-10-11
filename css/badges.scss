@@ -186,12 +186,12 @@ body {
 			height: 130px;
 			line-height: 130px;
 			margin-left: 30px;
-			margin-top: -25px;
+			margin-top: -5px;
 		}
 		&#rowZ {
 			height: 600px;
 			padding-left: 1300px;
-			margin-top: -450px;
+			margin-top: -480px;
 		}
 	}
 }
@@ -348,13 +348,17 @@ body {
 		transform: scale(2);
 	}
 	&.focused {
-		transition: $badgeZoomTransition;
+		transition: none;
 		position: absolute;
 		transform: scale(1) !important;
 		left: 190px !important;
 		top: 220px !important;
 		width: 560px !important;
 		height: 640px !important;
+		&.shieldSmall {
+			left: 220px !important;
+			width: 480px !important;
+		}
 		.colourImg {
 			opacity: 1;
 		}
@@ -367,11 +371,16 @@ body {
 .zoomedBadge {
 	pointer-events: auto;
 	z-index: 2;
+	margin-top: 0 !important;
+	.colourImg {
+	  filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.4)) drop-shadow(0px 10px 10px rgba(0,0,0,0.2)) drop-shadow(0px 20px 5px rgba(0,0,0,0.1));
+	}
 	.popup {
 		transition: all 0.1s linear !important;
 	}
 	svg {
 		opacity: 1;
+	  filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.4)) drop-shadow(0px 10px 10px rgba(0,0,0,0.2)) drop-shadow(0px 20px 5px rgba(0,0,0,0.1));
 	}
 	&.circleBig {
 		svg {
@@ -395,17 +404,22 @@ body {
 	}
 	&.shieldSmall {
 		svg {
-			transform: scale(1.17);
+			transform: scale(1.268) translateY(-2px);
 		}
 	}
 	&.diamondSmall {
 		svg {
-			transform: scale(1.013) translateX(2px);
+			transform: scale(1.0) translateX(2px);
 		}
 	}
 	&.pentagonSmall {
 		svg {
-			transform: scale(1.126) translateY(2px);
+			transform: scale(1.128) translateY(2px);
+		}
+	}
+	&.bowater {
+		svg {
+			transform: scale(1.18) translateY(-2px);
 		}
 	}
 }
@@ -523,10 +537,27 @@ body {
 	}
 }
 
-#animLabel {
+.animLabel {
 	position: absolute;
-	top: 880px;
-	left: 250px;
+	pointer-events: auto;
+	left: -110px;
+	background: $textGrey;
+	border-radius: 20px;
+	padding: 15px 40px;
+	// z-index: 3;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.1), 0px 5px 15px rgba(0,0,0,0.1);
+	&.circleBig, &.circleMedium, &.shieldMedium {
+		top: 810px;
+	}
+	&.diamondMedium {
+		top: 800px;
+	}
+	&.diamondSmall, &.shieldSmall, &.pentagonSmall {
+		top: 770px;
+	}
+	&.bowater {
+		top: 820px;
+	}
 	img {
 		position: relative;
 		width: 20px;
@@ -538,6 +569,10 @@ body {
 		font-size: 20px;
 		font-family: CeraProBold;
 		color: white;
+		transition: color 0.1s linear;
+	}
+	&.locked span {
+		color: rgb(200,200,200) !important;
 	}
 }
 
@@ -575,12 +610,18 @@ body {
     margin-top: -6px;
     background: white;
     border-radius: 5px;
+		transition: background 0.1s linear;			
   }
   &::before {
     transform: rotate(45deg);
   }
   &::after {
     transform: rotate(-45deg);
+  }
+  &.locked {
+	  &::before, &::after {
+	  	background: rgb(200,200,200);
+	  }
   }
 }
 .btn {
@@ -590,6 +631,11 @@ body {
 		transition: none !important;
 		transition-delay: none !important;
 	 	transform: scale(0.9);
+	}
+	&.locked {
+		&:active {
+		 	transform: none !important;
+		}
 	}
 }
 .arrowBtn {
@@ -607,6 +653,9 @@ body {
 	&.shown {
 		transition: $transShowNavBtns;
 	}
+	&.locked:before {
+		border-color: rgb(200,200,200);
+	}
 } .arrowBtn:before {
 	border-style: solid;
 	border-width: 5px 5px 0 0;
@@ -616,7 +665,8 @@ body {
 	height: 40px;
 	position: relative;
 	vertical-align: top;
-	width: 40px;					
+	width: 40px;
+	transition: border-color 0.1s linear;			
 }
 #leftArrowBtn {
 	left: 40px;

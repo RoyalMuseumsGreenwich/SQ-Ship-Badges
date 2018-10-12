@@ -21,8 +21,11 @@ $(function() {
 
 	//	Menu badge animation looping
 	var menuBadgeAnimHandler;
-	var menuBadgeAnimTimeMultiplier = 5000;
+	var menuBadgeAnimTimeMultiplier = 3000;
 	var menuBadgeAnimTimeMin = 3000;
+	var badgePlaying = undefined;
+	var lastPlayedBadge = undefined;
+
 	var lockedControls = false;
 
 	//	Called on first load
@@ -146,10 +149,6 @@ $(function() {
 		});
 	}
 
-	function addBadgeClickListeners() {
-
-	}
-
 	function addBadgeImgs(badge, popup, $container) {
 		$container.empty();
 		$container.removeClass('circleBig circleMedium shieldMedium diamondMedium shieldSmall diamondSmall pentagonSmall');
@@ -172,13 +171,31 @@ $(function() {
 
 	function selectBadge(badge, $container) {
 		selectedBadge = badge;
-		loadAnim(badge, $container, () => {
-			$('[data-ref="' + badge.ref + '"]').addClass('highlight onTop zoomed');
-			playAnim(badge, $('[data-ref="' + badge.ref + '"] .svgHolder'), false, () => {
-				$('[data-ref="' + badge.ref + '"] .svgHolder').empty();
+		console.log(badge.ref);
+		if(badgePlaying) {
+			console.log(badgePlaying.ref);
+		}
+		if(badgePlaying === badge) {
+			//	...else if badge selected is already animating, pop it up on animation complete...
+			console.log("Animating badge clicked!");
+			badge.anim.removeEventListener('complete');
+			badge.anim.addEventListener('complete', function() {
+				console.log("Animation complete");
+				badge.anim.removeEventListener('complete');
+				$container.children('svg').remove();
 				popupBadge(badge);
 			});
-		});
+		} else {
+			//	If no menu animation is playing, select & pop up badge normally...
+			stopMenuBadgeAnimations();
+			loadAnim(badge, $container, () => {
+				$('[data-ref="' + badge.ref + '"]').addClass('highlight onTop zoomed');
+				playAnim(badge, $('[data-ref="' + badge.ref + '"] .svgHolder'), false, () => {
+					$('[data-ref="' + badge.ref + '"] .svgHolder').empty();
+					popupBadge(badge);
+				});
+			});
+		}
 	}
 
 
@@ -276,6 +293,7 @@ $(function() {
 
 	function backToMenu() {
 		lockAllControls();
+		queueMenuBadgeAnimation();
 		// $('#sidebarContent').fadeIn('slow');
 		$('#sidebar').removeClass('hidden');
 		$('#focusSidebar').removeClass('shown');
@@ -346,6 +364,7 @@ $(function() {
 
 	function hideMenuScreen() {
 		// $('#sidebarContent').fadeOut('slow');
+		stopMenuBadgeAnimations();
 		$('#sidebar').addClass('hidden');
 		$('#focusSidebar').addClass('shown');
 		$('#menuBadges').fadeOut('slow');
@@ -402,9 +421,40 @@ $(function() {
 		lockedControls = false;
 	}
 
+	function playMenuBadgeAnimation() {
+		//	Choose a random badge from the array that is *not* the same as the last one played
+		let badge = badgeArray[Math.floor(badgeArray.length * Math.random())];
+		while(lastPlayedBadge !== undefined && badge.ref === lastPlayedBadge.ref) {
+			console.log("Regenerating!");
+			badge = badgeArray[Math.floor(badgeArray.length * Math.random())];
+		}
+		badgePlaying = badge;
+		let $container = $('[data-ref="' + badge.ref + '"] .svgHolder');
+		loadAnim(badge, $container, () => {
+			$('[data-ref="' + badge.ref + '"]').addClass('highlight onTop zoomed');
+			console.log("Animating " + badge.name);
+			playAnim(badge, $container, false, () => {
+				$('[data-ref="' + badge.ref + '"]').removeClass('highlight onTop zoomed');
+				$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
+					$('[data-ref="' + badge.ref + '"] .svgHolder').empty();
+					lastPlayedBadge = badge;
+					badgePlaying = undefined;
+					queueMenuBadgeAnimation();
+				});
+			});
+		});
+	}
+
+	function queueMenuBadgeAnimation() {
+		let timeToNextAnim = menuBadgeAnimTimeMin + Math.random() * menuBadgeAnimTimeMultiplier;
+		console.log("Next anim in " + Math.floor(timeToNextAnim) + "ms.");
+		menuBadgeAnimHandler = setTimeout(() => {
+			playMenuBadgeAnimation();
+		}, timeToNextAnim);
+	}
 
 	function stopMenuBadgeAnimations() {
-
+		clearTimeout(menuBadgeAnimHandler);
 	}
 
 	//	Timers
@@ -456,7 +506,7 @@ $(function() {
 	function showAttractScreen(callback) {
 		console.log("Showing Attract screen");
 		clearInactivityTimer();
-		// stopMenuBadgeAnimations();
+		stopMenuBadgeAnimations();
 		$attractScreen.fadeIn('slow', function() {
 			backToMenu();
 			if(callback && typeof(callback) === 'function') {
@@ -506,7 +556,7 @@ $(function() {
 	//	Event handlers
 	$attractScreen.click(function() {
 		$attractScreen.fadeOut('slow', function() {
-			// cycleMenuBadgeAnimations();
+			queueMenuBadgeAnimation();
 			restartInactivityTimer();
 		});
 	});

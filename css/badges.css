@@ -176,7 +176,7 @@ body {
     opacity: 1;
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: url(#drop-shadow);
-    filter: drop-shadow(0px 0px 1px #daa12e) drop-shadow(0px 0px 1px #daa12e) drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)); }
+    filter: drop-shadow(0px 0px 1px #daa12e) drop-shadow(0px 0px 1px #daa12e) drop-shadow(0px 0px 1px #daa12e) drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)); }
   .badge .svgHolder {
     opacity: 1;
     transition: all 0.5s ease-out; }
@@ -456,7 +456,7 @@ body {
   .backToMenuBtn::after {
     transform: rotate(-45deg); }
   .backToMenuBtn.locked::before, .backToMenuBtn.locked::after {
-    background: #c8c8c8; }
+    background: rgba(255, 255, 255, 0.5); }
 
 .btn {
   border: none;

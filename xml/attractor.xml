@@ -3,8 +3,8 @@
 
 	<xmlType>Attractor</xmlType>
 
-	<attractorHeadline>Ship's badges</attractorHeadline>
-	<attractorBodyText>Discover more about the ship badges displayed here.</attractorBodyText>
+	<attractorHeadline>Ship badges</attractorHeadline>
+	<attractorBodyText>Discover more about the ship badges and boat badges displayed here.</attractorBodyText>
 	<attractorVidPath>media/ship-badges-attract-screen.mp4</attractorVidPath>
 
 </document>

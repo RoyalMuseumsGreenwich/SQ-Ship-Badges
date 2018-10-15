@@ -245,6 +245,8 @@ body {
     transition: none !important; }
     .badge.noTransition svg {
       transition: none !important; }
+  .badge.bowater.zoomed {
+    transform: scale(1.08); }
   .badge.circleBig.zoomed {
     transform: scale(1.1); }
   .badge.circleMedium.zoomed, .badge.shieldMedium.zoomed, .badge.diamondMedium.zoomed {

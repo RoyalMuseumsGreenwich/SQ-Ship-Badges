@@ -338,6 +338,9 @@ body {
 			transition: none !important;
 		}
 	}
+	&.bowater.zoomed {
+		transform: scale(1.08);
+	}
 	&.circleBig.zoomed {
 		transform: scale(1.1);
 	}

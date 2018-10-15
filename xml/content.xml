@@ -4,7 +4,7 @@
 	<xmlType>Content</xmlType>
 
 	<settings>
-		<inactivityTimerMax>100</inactivityTimerMax>
+		<inactivityTimerMax>20</inactivityTimerMax>
 		<stillThereTimeMax>10</stillThereTimeMax>
 
 		<folderOutlines>img/outlines</folderOutlines>

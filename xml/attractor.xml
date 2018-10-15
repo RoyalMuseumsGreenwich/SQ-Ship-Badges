@@ -3,8 +3,12 @@
 
 	<xmlType>Attractor</xmlType>
 
-	<attractorHeadline>Ship badges</attractorHeadline>
-	<attractorBodyText>Discover more about the ship badges and boat badges displayed here.</attractorBodyText>
+	<attractorHeadline>Ship and boat badges</attractorHeadline>
+	<attractorBodyText>
+		<p>Discover more about the badges on display here.</p>
+		<p>Some are ship badges, identifying particular vessels and giving their name.</p>
+		<p>Others are boat badges, which identify the boats of a particular ship with a symbol only.</p>
+	</attractorBodyText>
 	<attractorVidPath>media/ship-badges-attract-screen.mp4</attractorVidPath>
 
 </document>

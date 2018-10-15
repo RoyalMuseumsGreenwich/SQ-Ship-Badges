@@ -86,6 +86,7 @@
 }
 .aboveBarViewport {
 	top: 140px;
+	width: 750px;
 	height: 300px;
 } .belowBarViewport {
 	top: 450px;
@@ -98,6 +99,7 @@
 }
 
 .aboveBar {
+	width: 750px;
 	align-items: flex-end;
 	padding-bottom: 30px;
 	animation: aboveBar 24s linear infinite;

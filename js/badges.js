@@ -434,8 +434,9 @@ $(function() {
 			$('[data-ref="' + badge.ref + '"]').addClass('onTop zoomed');
 			console.log("Animating " + badge.name);
 			playAnim(badge, $container, false, () => {
-				$('[data-ref="' + badge.ref + '"]').removeClass('onTop zoomed');
+				$('[data-ref="' + badge.ref + '"]').removeClass('zoomed');
 				$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
+					$('[data-ref="' + badge.ref + '"]').removeClass('onTop');
 					$('[data-ref="' + badge.ref + '"] .svgHolder').empty();
 					lastPlayedBadge = badge;
 					badgePlaying = undefined;

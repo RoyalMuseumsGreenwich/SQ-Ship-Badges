@@ -77,7 +77,7 @@ body {
 	right: 0;
 	top: 0;
 	height: 100%;
-	padding-left: 60px;
+	padding-left: 50px;
 	box-sizing: border-box;
 	width: $sidebarWidth;
 	background: white;
@@ -98,14 +98,14 @@ body {
 			font-family: CeraProBlack;
 			color: black;
 			font-size: 82px;
-	    width: 650px;
-	    line-height: 1;
-	    margin: 80px 0 35px 0;
+	    width: 500px;
+	    line-height: 1.2;
+	    margin: 80px 0 25px 0;
 		}
 		h3 {
-			margin-top: 50px;
+			margin-top: 40px;
 			font-size: 24px;
-			width: 470px;
+			width: 490px;
 			line-height: 1.5;
 			font-weight: normal;
 			font-family: CeraProRegular;
@@ -572,7 +572,7 @@ body {
 	}
 	span {
 		padding-left: 5px;
-		font-size: 20px;
+		font-size: 22px;
 		font-family: CeraProBold;
 		color: white;
 		transition: color 0.1s linear;
@@ -626,7 +626,7 @@ body {
   }
   &.locked {
 	  &::before, &::after {
-	  	background: rgba(255,255,255,0.5);
+	  	background: rgba(255,255,255,0.3);
 	  }
   }
 }

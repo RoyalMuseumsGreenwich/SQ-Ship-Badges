@@ -24,11 +24,13 @@ body {
   text-align: center; }
   #stillThereScreen h1 {
     margin-top: 380px;
+    text-shadow: 0 0 3px black, 0 0 10px black;
     font-family: CeraProMedium;
     font-size: 81px; }
   #stillThereScreen h3 {
+    text-shadow: 0 0 3px black, 0 0 10px black;
     margin-top: 30px;
-    margin-left: 635px;
+    margin-left: 645px;
     text-align: left;
     font-family: CeraProLight;
     font-size: 30px; }
@@ -159,7 +161,8 @@ body {
   vertical-align: middle;
   background-position: center;
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  will-change: transform; }
   .badge .colourImg, .badge .outlineImg, .badge .svgHolder {
     position: absolute;
     top: 0;

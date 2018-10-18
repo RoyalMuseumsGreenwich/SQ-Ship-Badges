@@ -21,10 +21,10 @@ $(function() {
 
 	//	Menu badge animation looping
 	var menuBadgeAnimHandler;
-	// var menuBadgeAnimTimeMultiplier = 3000;
-	var menuBadgeAnimTimeMultiplier = 0;
+	var menuBadgeAnimTimeMultiplier = 5000;
+	// var menuBadgeAnimTimeMultiplier = 0;
 	var menuBadgeAnimTimeMin = 3000;
-	var menuBadgeAnimTimeMin = 1000;
+	// var menuBadgeAnimTimeMin = 1000;
 	var animatingMenuBadges = false;
 	var badgePlaying = undefined;
 	var lastPlayedBadge = undefined;
@@ -180,6 +180,7 @@ $(function() {
 		if(badgePlaying === badge) {
 			//	...else if badge selected is already animating, pop it up on animation complete...
 			console.log("Animating badge clicked!");
+			$('[data-ref="' + badge.ref + '"]').addClass('highlight');
 			badge.anim.removeEventListener('complete');
 			badge.anim.addEventListener('complete', function() {
 				console.log("Animation complete");
@@ -397,14 +398,20 @@ $(function() {
 			$container.find('.topTrumpTable').hide();
 			$container.find('.careerLabel').hide();
 		}
+		//	Default layout
+		$container.find('.textSpeed').parent().parent().show();
+		$container.find('.textCrew').parent().find('h5').text('Crew');
+		$container.find('.textCrew').parent().show();
+		$container.find('.textType').parent().attr('colspan', '1');
+		$container.find('.textType').removeClass('span');
 		if(badge.ref === 'C05' || badge.ref === 'B03') {					//	Hack for HMS Sandhurst / HMS Moorhen
 			$container.find('.textCrew').parent().hide();
 			$container.find('.textType').parent().attr('colspan', '100%');
 			$container.find('.textType').addClass('span');
-		} else {
-			$container.find('.textCrew').parent().show();
-			$container.find('.textType').parent().attr('colspan', '1');
-			$container.find('.textType').removeClass('span');
+		} else if(badge.ref === 'Z01') {													//	Hack for Nicolas Bowater
+			$container.find('.textCrew').parent().find('h5').text('Length');
+			$container.find('.textCrew').html(badge.length);
+			$container.find('.textSpeed').parent().parent().hide();
 		}
 	}
 
@@ -583,6 +590,19 @@ $(function() {
 	});
 	$contentScreen.on('touchstart', function() {
 		restartInactivityTimer();
+	});
+
+	$('#container').swipeleft((e) => {
+		if(!lockedControls && selectedBadge !== undefined) {
+			lockAllControls();
+			changeSelectedBadge('right');
+		}
+	});
+	$('#container').swiperight((e) => {
+		if(!lockedControls && selectedBadge !== undefined) {
+			lockAllControls();
+			changeSelectedBadge('left');
+		}
 	});
 
 	function addBackToMenuBtnListener() {

@@ -3,7 +3,7 @@ $mainColor: #daa12e;
 $bgColor: #f4f5fa;
 $textColor: #15232e;
 $textGrey: #a4a4a4;
-$sidebarWidth: 600px;
+$sidebarWidth: 570px;
 $defaultTransition: all 0.2s ease-out;
 $badgeZoomTransition: all 0.5s ease-out;
 
@@ -13,6 +13,14 @@ $badgeDeselect: all 0.2s ease-out;
 
 $transShowNavBtns: all 0.2s 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
 $transHideNavBtns: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+
+
+* {
+	user-select: none;
+	touch-action: none;
+	// cursor: none;
+}
+
 
 body {
 	margin: 0;
@@ -31,7 +39,7 @@ body {
 	width: 1920px;
 	height: 1080px;
 	// background: #f4f5fa;
-	background: url('../img/old_wall.png');
+	background: url('../img/5008.png');
 	background-repeat: repeat;
 	position: relative;
 	overflow: hidden;
@@ -77,7 +85,7 @@ body {
 	right: 0;
 	top: 0;
 	height: 100%;
-	padding-left: 50px;
+	padding-left: 80px;
 	box-sizing: border-box;
 	width: $sidebarWidth;
 	background: white;
@@ -98,14 +106,14 @@ body {
 			font-family: CeraProBlack;
 			color: black;
 			font-size: 82px;
-	    width: 500px;
+	    width: 400px;
 	    line-height: 1.2;
 	    margin: 80px 0 25px 0;
 		}
 		h3 {
-			margin-top: 40px;
+			margin-top: 30px;
 			font-size: 24px;
-			width: 490px;
+			width: 410px;
 			line-height: 1.5;
 			font-weight: normal;
 			font-family: CeraProRegular;
@@ -236,9 +244,10 @@ body {
 	}
 	.outlineImg {
 		opacity: 1;
-		filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-	  filter: url(#drop-shadow);
-	  filter: drop-shadow(0px 0px 1px $mainColor) drop-shadow(0px 0px 1px $mainColor) drop-shadow(0px 0px 1px $mainColor) drop-shadow(0px 5px 5px rgba(0,0,0,0.2));
+		// filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	  // filter: url(#drop-shadow);
+	  // filter: drop-shadow(1px -1px 0px rgba(218,161,46,0.7)) drop-shadow(-1px 1px 0px rgba(218,161,46,0.7)) drop-shadow(-1px -1px 0px rgba(218,161,46,0.7)) drop-shadow(1px 1px 0px rgba(218,161,46,0.7)) drop-shadow(0px 5px 5px rgba(0,0,0,0.2));
+	  filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.3));
 	}
 	.svgHolder {
 		opacity: 1;
@@ -251,9 +260,6 @@ body {
 	}
 	svg {
 		transition: $badgeDeselect;
-		// filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-	 //  filter: url(#drop-shadow);
-	 //  filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.3));
 	}
 	&.diamondSmall, &.shieldSmall, &.pentagonSmall {
 		&:before {
@@ -421,6 +427,7 @@ body {
 	&.pentagonSmall {
 		svg {
 			transform: scale(1.128) translateY(2px);
+			// transform: scale(1.07) translateY(-5px);
 		}
 	}
 	&.bowater {

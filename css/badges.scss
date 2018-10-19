@@ -39,7 +39,7 @@ body {
 	width: 1920px;
 	height: 1080px;
 	// background: #f4f5fa;
-	background: url('../img/5008.png');
+	background: url('../img/5008b.png');
 	background-repeat: repeat;
 	position: relative;
 	overflow: hidden;
@@ -328,9 +328,9 @@ body {
 		}
 	}
 	&.highlight {
-		filter: drop-shadow(0 0 20px white);
+		filter: drop-shadow(0 0 3px rgba(255,255,255,0.4)) drop-shadow(0 0 6px rgba(255,255,255,0.4));
 		transition: $badgeSelect;
-	  filter: drop-shadow(0px 0px 4px $mainColor);
+	  // filter: drop-shadow(0px 0px 4px white);
 		svg {
 			transition: $badgeSelect;
 		}

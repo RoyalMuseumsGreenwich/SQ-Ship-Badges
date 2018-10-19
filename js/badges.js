@@ -102,13 +102,13 @@ $(function() {
 				name: $thisBadge.find('name').html(),
 				objectID: $thisBadge.find('objectID').html(),
 				description: $thisBadge.find('description').html(),
-				type: $thisBadge.find('type').html(),
+				type: $thisBadge.find('type').html().charAt(0).toUpperCase() + $thisBadge.find('type').html().substr(1),
 				career: $thisBadge.find('career').html(),
 				shape: $thisBadge.find('shape').text(),
 				filename: $thisBadge.find('json').text(),
 				fileref: $thisBadge.find('png ref').text()
 			}
-			if(thisBadgeObject.type !== 'shore station') {
+			if(thisBadgeObject.type.toLowerCase() !== 'shore station') {
 				thisBadgeObject.launched = $thisBadge.find('launched').html();
 				thisBadgeObject.builder = $thisBadge.find('builder').html();
 				thisBadgeObject.length = $thisBadge.find('length').html();
@@ -381,7 +381,7 @@ $(function() {
 		$container.find('.textName').html(badge.name);
 		$container.find('.textDescription').html(badge.description);
 		$container.find('.textCareer').html(badge.career);
-		if(badge.type !== 'shore station') {
+		if(badge.type.toLowerCase() !== 'shore station') {
 			$container.find('.shipOrShoreStation').text('The Ship');
 			$container.find('.topTrumpTable').show();
 			$container.find('.careerLabel').show();

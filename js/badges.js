@@ -281,6 +281,7 @@ $(function() {
 	function addPopupAnimListener(badge) {
 		$('.zoomedBadge, .animLabel').off('click');
 		$('.zoomedBadge, .animLabel').click(() => {
+			console.log("Label click!");
 			if(!lockedControls) {
 				lockAllControls();
 				$container = $('.zoomedBadge .svgHolder');
@@ -295,6 +296,7 @@ $(function() {
 
 	function backToMenu() {
 		lockAllControls();
+		$('.zoomedBadge, .animLabel').off('click');
 		// $('#sidebarContent').fadeIn('slow');
 		$('#sidebar').removeClass('hidden');
 		$('#focusSidebar').removeClass('shown');
@@ -460,6 +462,7 @@ $(function() {
 			console.log("***Queueing");
 			let timeToNextAnim = menuBadgeAnimTimeMin + Math.random() * menuBadgeAnimTimeMultiplier;
 			console.log("Next anim in " + Math.floor(timeToNextAnim) + "ms.");
+			clearTimeout(menuBadgeAnimHandler);
 			menuBadgeAnimHandler = setTimeout(() => {
 				playMenuBadgeAnimation();
 			}, timeToNextAnim);

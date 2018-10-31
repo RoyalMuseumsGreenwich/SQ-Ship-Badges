@@ -16,7 +16,7 @@ body {
 #container {
   width: 1920px;
   height: 1080px;
-  background: url("../img/5008b.png");
+  background: #EAF0FB;
   background-repeat: repeat;
   position: relative;
   overflow: hidden; }
@@ -181,7 +181,9 @@ body {
     opacity: 0; }
   .badge .outlineImg {
     opacity: 1;
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3)); }
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: url(#drop-shadow);
+    filter: drop-shadow(1px -1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(-1px 1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(-1px -1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(1px 1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(0px 5px 5px rgba(96, 103, 117, 0.4)); }
   .badge .svgHolder {
     opacity: 1;
     transition: all 0.5s ease-out; }

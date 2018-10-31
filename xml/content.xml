@@ -8,7 +8,8 @@
 		<stillThereTimeMax>10</stillThereTimeMax>
 
 		<folderOutlines>img/outlines</folderOutlines>
-		<folderColour>img/colour</folderColour>
+<!-- 		<folderColour>img/colour</folderColour> -->
+		<folderColour>img/colour_Claudio</folderColour>
 		<folderJson>img/json</folderJson>
 		<folderSvg>img/svg</folderSvg>
 
@@ -46,7 +47,7 @@
 			<builder>William Beardmore and Co., Glasgow</builder>
 			<length>623 feet (190 metres)</length>
 			<speed>21.25 knots</speed>
-			<crew>995–1022 officers and men</crew>
+			<crew>995–1022</crew>
 			<career>HMS <em>Benbow</em> saw action in the First World War and was present at the Battle of Jutland in 1916. After the war, it was deployed in the Mediterranean and the Atlantic. HMS <em>Benbow</em> was decommissioned in 1929 and sold for scrap in March 1931.</career>
 			<shape>circleBig</shape>
 			<png>
@@ -64,7 +65,7 @@
 			<builder>Fairfield Shipbuilding Co., Govan</builder>
 			<length>794 feet (242 metres)</length>
 			<speed>32.5 knots</speed>
-			<crew>953–1223 officers and men</crew>
+			<crew>953–1223</crew>
 			<career>Although built during the First World War, HMS <em>Renown</em> saw no action in the conflict. After the war, the ship was used to take the Prince of Wales on a royal tour of India and Japan in 1921–22. Following an extensive refit in 1936, HMS <em>Renown</em> was extensively deployed in the Second World War, being engaged in the North Sea, the Atlantic, the Mediterranean and the Indian Ocean. The ship was decommissioned and sold for scrap in 1948.</career>
 			<shape>circleBig</shape>
 			<png>
@@ -82,8 +83,8 @@
 			<builder>Devonport Dockyard, Plymouth</builder>
 			<length>623 feet (190 metres)</length>
 			<speed>21.25 knots</speed>
-			<crew>995–1022 officers and men</crew>
-			<career>HMS <em>Marlborough</em> was the flagship of the 1st Battle Squadron at the Battle of Jutland in 1916. The ship was hit by a German torpedo during the engagement, causing significant damage and reducing its speed. After the war, HMS <em>Marlborough</em> was deployed the Mediterranean and the Black Sea, where it evacuated members of the deposed Russian royal family in 1919. The ship was decommissioned and sold for scrap in 1932.</career>
+			<crew>995–1022</crew>
+			<career>HMS <em>Marlborough</em> was the flagship of the 1st Battle Squadron at the Battle of Jutland in 1916. The ship was hit by a German torpedo during the engagement, causing significant damage and reducing its speed. After the war, HMS <em>Marlborough</em> was deployed in the Mediterranean and the Black Sea, where it evacuated members of the deposed Russian royal family in 1919. The ship was decommissioned and sold for scrap in 1932.</career>
 			<shape>circleBig</shape>
 			<png>
 				<ref>X3</ref>
@@ -100,8 +101,8 @@
 			<builder>Smiths Dock Co., Middlesbrough</builder>
 			<length>252 feet (77 metres)</length>
 			<speed>16.5 knots</speed>
-			<crew>112 officers and men</crew>
-			<career>HMS <i>Kenilworth Castle</i> was employed as a convoy escort during the Second World War. It took part in the sinking of two German U-boats. A total of 44 Castle-class corvettes were built during the war. HMS <i>Kenilworth Castle</i> was scrapped in 1959.</career>
+			<crew>112</crew>
+			<career>HMS <i>Kenilworth Castle</i> was employed as a convoy escort during the Second World War. It took part in the sinking of two German U-boats. A total of 44 <span style="white-space: nowrap">Castle-class</span> corvettes were built during the war. HMS <i>Kenilworth Castle</i> was scrapped in 1959.</career>
 			<shape>circleMedium</shape>
 			<png>
 				<ref>X4</ref>
@@ -118,7 +119,7 @@
 			<builder>Caledon Shipbuilding Co., Dundee</builder>
 			<length>308 feet (94 metres)</length>
 			<speed>20 knots</speed>
-			<crew>114 officers and men</crew>
+			<crew>114</crew>
 			<career>HMS <em>Loch More</em> was used on anti-submarine duties toward the end of the Second World War. The ship saw action in the Atlantic, the Indian Ocean and the Far East, being based at Singapore. However, its active career was short. In 1946 HMS <em>Loch More</em> was put into reserve and eventually broken up in 1963.</career>
 			<shape>circleMedium</shape>
 			<png>
@@ -137,7 +138,7 @@
 			<builder>William Denny and Brothers, Dumbarton</builder>
 			<length>276 feet (84 metres)</length>
 			<speed>34 knots</speed>
-			<crew>82 officers and men</crew>
+			<crew>82</crew>
 			<career>A total of 62 R-class destroyers were built for the Royal Navy between 1916 and 1917. HMS <em>Rocket</em> was attached to the 15th Destroyer Flotilla. The ship was sold for breaking up in 1926.</career>
 			<shape>shieldMedium</shape>
 			<png>
@@ -155,8 +156,8 @@
 			<builder>Fairfield Shipbuilding Co., Govan</builder>
 			<length>265 feet (81 metres)</length>
 			<speed>36 knots</speed>
-			<crew>90 officers and men</crew>
-			<career>Completed as the First World War ended, HMS <em>Sirdar</em> saw service in the Mediterranean and on the China Station in the 1920s. The ship was one of 67 S-class destroyers built for the Royal Navy. It was sold for scrap in 1934.</career>
+			<crew>90</crew>
+			<career>Completed as the First World War ended, HMS <em>Sirdar</em> saw service in the Mediterranean and on the China Station in the 1920s. The ship was one of 67 <span style="white-space: nowrap">S-class</span> destroyers built for the Royal Navy. It was sold for scrap in 1934.</career>
 			<shape>shieldMedium</shape>
 			<png>
 				<ref>Y2</ref>
@@ -191,7 +192,7 @@
 			<builder>Barclay Curle and Co., Glasgow</builder>
 			<length>250 feet (76 metres)</length>
 			<speed>17 knots</speed>
-			<crew>77 officers and men</crew>
+			<crew>77</crew>
 			<career>HMS <em>Dahlia</em> was one of 24 <em>Acacia</em>-class sloops launched in 1915. They were principally used for minesweeping, but were later employed as escort vessels to protect convoys transporting vital goods to Britain. After the war, the ship served in the Mediterranean. It was sold for scrap in 1932.</career>
 			<shape>diamondMedium</shape>
 			<png>
@@ -209,7 +210,7 @@
 			<builder>Barclay Curle and Co., Glasgow</builder>
 			<length>237 feet (72 metres)</length>
 			<speed>14 knots</speed>
-			<crew>55 officers and men</crew>
+			<crew>55</crew>
 			<career>HMS <em>Glowworm</em> was one of 12 Insect-class gunboats launched during the First World War. They were designed for use on rivers and in shallow inshore waters. The ship was deployed off the east coast of England in the war on anti-Zeppelin duties. Most of the ships patrolled Chinese waterways in the Second World War, but HMS <em>Glowworm</em> was sold for scrap in 1928.</career>
 			<shape>diamondMedium</shape>
 			<png>
@@ -227,8 +228,8 @@
 			<builder>Vickers-Armstrong, Barrow-in-Furness</builder>
 			<length>275 feet (84 metres)</length>
 			<speed>15.5 knots on the surface;<br/> 9 knots submerged</speed>
-			<crew>54 officers and men</crew>
-			<career>HMS <em>Oxley</em> was originally built for the Royal Australian Navy, but it was transferred to Royal Navy in 1931. Just before the outbreak of the Second World War in 1939, the submarine was sent to patrol the coast of Norway. On 10 September 1939, HMS <em>Oxley</em> was out of position and was accidentally sunk by another British submarine, HMS <em>Triton</em>.</career>
+			<crew>54</crew>
+			<career>HMS <em>Oxley</em> was originally built for the Royal Australian Navy, but it was transferred to the Royal Navy in 1931. Just before the outbreak of the Second World War in 1939, the submarine was sent to patrol the coast of Norway. On 10 September 1939, HMS <em>Oxley</em> was out of position and was accidentally sunk by another British submarine, HMS <em>Triton</em>.</career>
 			<shape>diamondMedium</shape>
 			<png>
 				<ref>Y6</ref>
@@ -246,7 +247,7 @@
 			<builder>Chatham Dockyard, Kent</builder>
 			<length>287 feet (87 metres)</length>
 			<speed>17.5 knots on the surface; 8.5 knots submerged</speed>
-			<crew>53 officers and men</crew>
+			<crew>53</crew>
 			<career>HMS <em>Rainbow</em> was deployed in the Far East until 1940, when it was moved to the Mediterranean on Second World War duties. The submarine is believed to have been sunk on 4 October 1940, when it was struck by an Italian merchant ship, the <em>Antonietta Costa</em>.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -277,7 +278,7 @@
 			<builder>Ailsa Shipbuilding Co., Troon</builder>
 			<length>237 feet (72 metres)</length>
 			<speed>14 knots</speed>
-			<crew>55 officers and men</crew>
+			<crew>55</crew>
 			<career>During the First World War, HMS <em>Bee</em> was deployed to Port Said in Egypt. After the war, it was sent to China, where it became the flagship of the Yangtze patrol, operating on rivers and inland waterways. A new flagship, HMS <em>Scorpion</em> came into service in 1938 and HMS <em>Bee</em> was sold for scrap in Shanghai the following year.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -295,7 +296,7 @@
 			<builder>Scotts Shipbuilding &amp; Engineering Co., Greenock</builder>
 			<length>355 feet (108 metres)</length>
 			<speed>14 knots</speed>
-			<crew>159 officers and men</crew>
+			<crew>159</crew>
 			<career>HMS <em>Maidstone</em> was an unarmed depot ship built to supply submarines, which have limited space for bulky stores. In its career, the ship was variously based with submarine squadrons at Portsmouth, Harwich, Chatham, Rosyth and Devonport. It was sold for scrap in 1929.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -331,7 +332,7 @@
 			<builder>Pembroke Royal Dockyard</builder>
 			<length>125 feet (38 metres)</length>
 			<speed>9.5 knots</speed>
-			<crew>60 officers and men</crew>
+			<crew>60</crew>
 			<career>Originally named HMS <em>Bullfrog</em>, this gunboat was sent to Malta, where it was stationed as part of the harbour defences. The ship was renamed HMS <em>Egmont</em> in 1923 and sold for scrap in 1933.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -349,7 +350,7 @@
 			<builder>Armstrong Whitworth, Newcastle upon Tyne</builder>
 			<length>250 feet (76 metres)</length>
 			<speed>16 knots</speed>
-			<crew>93 officers and men</crew>
+			<crew>93</crew>
 			<career>HMS <em>Chrysanthemum</em> was deployed on convoy duties in the later stages of the First World War. The ship then joined the Mediterranean Fleet based at Malta. In 1936, it was used to evacuate British nations from Barcelona during the Spanish Civil War. Finally, HMS <em>Chrysanthemum</em> was moored on the Thames as the drill ship of the London Division of the Royal Naval Reserve. It was sold in 1988 and scrapped in 1995.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -380,7 +381,7 @@
 			<builder>Swan Hunter and Wigham Richardson, Wallsend on Tyne</builder>
 			<length>300 feet (91 metres)</length>
 			<speed>32 knots</speed>
-			<crew>127 officers and men</crew>
+			<crew>127</crew>
 			<career>HMS <em>Wild Swan</em> began naval service in 1920, being variously deployed in the Atlantic, the Baltic, the Mediterranean and at Hong Kong. In the Second World War, the ship undertook convoy duties. On 16 June 1942, it was attacked by German aircraft. Although six of the enemy planes were shot down by HMS <em>Wild Swan</em>, it sank as a result of damage received.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -398,7 +399,7 @@
 			<builder>Cammell Laird, Birkenhead</builder>
 			<length>332 feet (101 metres)</length>
 			<speed>36.5 knots</speed>
-			<crew>164–183 officers and men</crew>
+			<crew>164–183</crew>
 			<career>Most of the early career of HMS <em>Malcolm</em> was spent in the reserve fleet of surplus warships. At the beginning of the Second World War, the ship was brought into active service escorting convoys. After seeing a good deal of wartime action, and suffering severe damage in fighting at Algiers, HMS <em>Malcolm</em> was sold for scrap in 1945.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -416,7 +417,7 @@
 			<builder>Alexander Stephens and Sons, Glasgow</builder>
 			<length>312 feet (95 metres)</length>
 			<speed>34 knots</speed>
-			<crew>119 officers and men</crew>
+			<crew>119</crew>
 			<career>HMS <em>Voyager</em> began its service in the Royal Navy and was transferred to the Royal Australian Navy in 1933. During the first half of the Second World War, the ship was on escort duty in the Mediterranean. It returned to patrolling Australian waters in 1942. In September that year, the <em>Voyager</em> ran aground in Timor and was damaged beyond repair by a Japanese air attack.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -434,7 +435,7 @@
 			<builder>J. Samuel White, Cowes, Isle of Wight</builder>
 			<length>312 feet (95 metres)</length>
 			<speed>34 knots</speed>
-			<crew>127 officers and men</crew>
+			<crew>127</crew>
 			<career>Most of the early career of HMS <em>Wivern</em> was spent in the reserve fleet of surplus warships. At the beginning of the Second World War, the ship was brought into active service escorting convoys and patrolling in the North Sea, the Atlantic and the Mediterranean. It was sold for scrap in 1947.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -452,7 +453,7 @@
 			<builder>Swan Hunter &amp; Wigham Richardson, Wallsend on Tyne</builder>
 			<length>312 feet (95 metres)</length>
 			<speed>34 knots</speed>
-			<crew>127 officers and men</crew>
+			<crew>127</crew>
 			<career>Most of the early career of HMS <em>Whitehall</em> was spent in the reserve fleet of surplus warships. At the beginning of the Second World War, the ship was brought into active service, undertaking patrolling duties and escort work, the latter mainly in the North Atlantic and the Arctic. It was sold for scrap in 1945.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -471,7 +472,7 @@
 			<builder>William Beardmore and Co., Dalmuir</builder>
 			<length>565 feet (172 metres)</length>
 			<speed>20.5 knots</speed>
-			<crew>495 officers and men</crew>
+			<crew>495</crew>
 			<career>HMS <em>Argus</em> was converted into an aircraft carrier from an unfinished Italian passenger liner, the <em>Conte Rosso</em>. In the Second World War the ship was used as a training carrier for pilots to develop deck-landing skills. It also delivered aircraft to various places, including Malta, Iceland and Russia, and was involved in numerous naval operations. HMS <em>Argus</em> was sold for scrap in 1946.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -502,7 +503,7 @@
 			<builder>Ailsa Shipbuilding Co., Troon</builder>
 			<length>231 feet (70 metres)</length>
 			<speed>16 knots</speed>
-			<crew>74 officers and men</crew>
+			<crew>74</crew>
 			<career>HMS <em>Beaufort</em> was launched as a minesweeper, the <em>Ambleside</em>, and converted into a survey ship. It undertook extensive surveys around the British Isles to keep naval charts up-to-date. The ship was sold for scrap in 1938.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -533,7 +534,7 @@
 			<builder>Yarrow Shipbuilders, Glasgow</builder>
 			<length>160 feet (49 metres)</length>
 			<speed>14 knots</speed>
-			<crew>55 officers and men</crew>
+			<crew>55</crew>
 			<career>After its launch, HMS <em>Seamew</em> was broken into sections, transported to Hong Kong and reassembled as a patrol boat on the West River in China. In 1940, the ship steamed from China to the Persian Gulf where it continued in service until it was sold for scrap at Basra in 1947.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -545,13 +546,13 @@
 		<badge ref="D06">
 			<name>HMS <em>Pandora</em></name>
 			<objectID>AAA1939</objectID>
-			<description>The badge shows a red casket with a gold key below. This imagery is related to the Greek myth of Pandora, the first woman created by the gods. She was given a container by Zeus, which she opened, realising all the evils of the world. Only Hope remained inside ‘Pandora’s Box’.</description>
+			<description>The badge shows a red casket with a gold key below. This imagery is related to the Greek myth of Pandora, the first woman created by the gods. She was given a container by Zeus, which she opened, releasing all the evils of the world. Only Hope remained inside ‘Pandora’s Box’.</description>
 			<type>cargo ship, converted to a submarine depot ship</type>
 			<launched>5 July 1902</launched>
 			<builder>Raylton Dixon and Co., Middlesbrough</builder>
 			<length>330 feet (100 metres)</length>
 			<speed>11 knots</speed>
-			<crew>70 officers and men</crew>
+			<crew>70</crew>
 			<career>HMS <em>Pandora</em> was originally a cargo ship, the SS <em>Seti</em>. It was purchased by the Admiralty in 1913 and converted into a submarine depot ship. During the First World War it was based with the 8th and 9th Submarine Flotillas at Harwich. The ship was renamed HMS <em>Dolphin</em> in 1924. In 1939, it was sunk by a mine off Blyth in Northumberland.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -569,7 +570,7 @@
 			<builder>Devonport Dockyard, Plymouth</builder>
 			<length>266 feet (81 metres)</length>
 			<speed>16.5 knots</speed>
-			<crew>104 officers and men</crew>
+			<crew>104</crew>
 			<career>HMS <em>Penzance</em> saw service around the world in the 1930s. The ship was stationed in the Persian Gulf and the Red Sea, then in South Africa, before crossing the Atlantic to Bermuda. On 14 August 1940, it was on escort duty south-west of Iceland when it was sunk by the German submarine <em>U-37</em>. Only 14 members of the crew survived.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -587,7 +588,7 @@
 			<builder>Blyth Shipbuilding Co., Blyth</builder>
 			<length>267 feet (81 metres)</length>
 			<speed>17 knots</speed>
-			<crew>82 officers and men</crew>
+			<crew>82</crew>
 			<career>Completed towards the end of the First World War, HMS <em>Ormonde</em> was built as a minesweeper. Surplus to Royal Navy requirements, it was converted into a survey ship, undertaking the detailed hydrographical work necessary to produce accurate sea charts. The ship was sold for scrap in 1937.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -605,7 +606,7 @@
 			<builder>Palmers Shipbuilding and Iron Co., Jarrow, County Durham</builder>
 			<length>276 feet (84 metres)</length>
 			<speed>36 knots</speed>
-			<crew>90 officers and men</crew>
+			<crew>90</crew>
 			<career>HMS <em>Sterling</em> was one of 67 S-class destroyers built for the Royal Navy at the end of the First World War. The ship was in service in the Atlantic Fleet and at Hong Kong. It was sold for scrap in 1932.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -623,7 +624,7 @@
 			<builder>Scotts Shipbuilding &amp; Engineering Co., Greenock</builder>
 			<length>300 feet</length>
 			<speed>34 knots</speed>
-			<crew>110 officers and men</crew>
+			<crew>110</crew>
 			<career>HMS <em>Windsor</em> served with the Grand Fleet at Scapa Flow in Orkney at the end of the First World War. Standard duties followed and the ship was a convoy escort in the Second World War. It helped evacuate Allied troops from Dunkirk in 1940, despite being damaged by enemy aircraft. Further war service included supporting the D-Day landings in June 1944. HMS <em>Windsor</em> was sold for scrap in 1947.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -641,8 +642,8 @@
 			<builder>J. Samuel White, Cowes, Isle of Wight</builder>
 			<length>276 feet (84 metres)</length>
 			<speed>36 knots</speed>
-			<crew>90 officers and men</crew>
-			<career>HMS <em>Trusty</em> spent almost its entire career in the reserve fleet being surplus to the Royal Navy’s day-to-day requirements. The ship was one of 67 S-class destroyers build towards the end of the First World War. It was sold for scrap in 1936.</career>
+			<crew>90</crew>
+			<career>HMS <em>Trusty</em> spent almost its entire career in the reserve fleet being surplus to the Royal Navy’s day-to-day requirements. The ship was one of 67 S-class destroyers built towards the end of the First World War. It was sold for scrap in 1936.</career>
 			<shape>shieldSmall</shape>
 			<png>
 				<ref>B11</ref>
@@ -659,7 +660,7 @@
 			<builder>J. Samuel White, Cowes, Isle of Wight</builder>
 			<length>312 feet (95 metres)</length>
 			<speed>34 knots</speed>
-			<crew>110 officers and men</crew>
+			<crew>110</crew>
 			<career>HMS <em>Winchelsea</em> served with the Atlantic and Mediterranean Fleet in the 1920s and 1930s. In the Second World War it was primarily used on transatlantic escorts and coastal patrol duties. The ship was sold for scrap in 1945.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -677,7 +678,7 @@
 			<builder>Hawthorn Leslie and Co., Hebburn, County Durham</builder>
 			<length>312 feet (95 metres)</length>
 			<speed>34 knots</speed>
-			<crew>110 officers and men</crew>
+			<crew>110</crew>
 			<career>HMS <em>Warwick</em> saw action in the First World War, taking part in raids on Zeebrugge and Ostende in 1918. In the 1920s, the ship served in the Mediterranean before being placed in the reserve fleet. During the Second World War it was on escort duty in the Atlantic and Caribbean. On 20 February 1944, HMS <em>Warwick</em> was sunk by the German submarine <em>U-413</em>, off the north coast of Cornwall, with the loss of more than half the crew.</career>
 			<shape>shieldSmall</shape>
 			<png>
@@ -696,8 +697,8 @@
 			<builder>Swan Hunter &amp; Wigham Richardson, Wallsend on Tyne</builder>
 			<length>250 feet (76 metres)</length>
 			<speed>16 knots</speed>
-			<crew>100 officers and men</crew>
-			<career>In the 1930s, HMS <em>Folkestone</em> served in the Persian Gulf and at Hong Kong. In 1939, it was scheduled to be converted into a survey ship to chart the coasts of New Zealand. However, the ship was required for active escort duties in the Second World War. HMS <em>Folkestone</em> was sold for scrap in 1947.</career>
+			<crew>100</crew>
+			<career>In the 1930s, HMS <em>Folkestone</em> served in the Persian Gulf and at Hong Kong. In 1939, it was scheduled to be converted into a survey ship to chart the coasts of Aotearoa, New Zealand. However, the ship was required for active escort duties in the Second World War. HMS <em>Folkestone</em> was sold for scrap in 1947.</career>
 			<shape>diamondSmall</shape>
 			<png>
 				<ref>C1</ref>
@@ -714,7 +715,7 @@
 			<builder>Harland and Wolff, Belfast</builder>
 			<length>392 feet (120 metres)</length>
 			<speed>12 knots</speed>
-			<crew>277 officers and men</crew>
+			<crew>277</crew>
 			<career>HMS <em>Hecla</em> was being built as a merchant ship, the <em>British Crown</em>, when it was purchased by the Admiralty. It was converted into a depot ship, supplying and maintaining torpedo boats in the Mediterranean. In 1912 it was refitted as a destroyer depot ship. During the First World War HMS <em>Hecla</em> was based at Scapa Flow and at Belfast. It was sold for scrap in 1926.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -732,7 +733,7 @@
 			<builder>Armstrong Whitworth, Newcastle upon Tyne</builder>
 			<length>598 feet (182 metres)</length>
 			<speed>25 knots</speed>
-			<crew>664 officers and men</crew>
+			<crew>664</crew>
 			<career>HMS <em>Hermes</em> was the first ship specifically designed as an aircraft carrier. In the 1920s and 1930s it served in the Mediterranean and at Hong Kong. It returned to Britain in 1937 and was placed in the reserve fleet. The ship resumed active duties in the Second World War. While on patrol in the Indian Ocean, it was sunk by Japanese aircraft off the east coast of Ceylon (now Sri Lanka) with the loss of 307 men.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -750,7 +751,7 @@
 			<builder>Vickers-Armstrongs, Barrow-in-Furness</builder>
 			<length>530 feet (160 metres)</length>
 			<speed>15 knots</speed>
-			<crew>581 officers and men</crew>
+			<crew>581</crew>
 			<career>Designed to undertake repairs without the need for damaged vessels to return to port, HMS <em>Resource</em> helped keep British warships at sea for longer. It served in the Mediterranean and the Far East during the Second World War. The ship was sold for scrap in 1954.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -768,7 +769,7 @@
 			<builder>Hawthorn Leslie and Co., Hebburn, County Durham</builder>
 			<length>266 feet (81 metres)</length>
 			<speed>16.5 knots</speed>
-			<crew>100 officers and men</crew>
+			<crew>100</crew>
 			<career>HMS <em>Sandwich</em> began its naval service at Hong Kong. In the Second World War, the ship returned to Britain to undertake extensive convoy escort duties. It was sold for scrap in 1946.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -786,7 +787,7 @@
 			<builder>Devonport Dockyard, Plymouth</builder>
 			<length>266 feet (81 metres)</length>
 			<speed>16.5 knots</speed>
-			<crew>100 officers and men</crew>
+			<crew>100</crew>
 			<career>HMS <em>Hastings</em> served in the Red Sea and the Persian Gulf in the 1930s. In the Second World War the ship escorted convoys carrying vital supplies to Britain. It was retired from active duty in 1943 and sold for scrap in 1946.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -804,7 +805,7 @@
 			<builder>Clyde Shipbuilding Co., Glasgow</builder>
 			<length>213 feet (65 metres)</length>
 			<speed>16 knots</speed>
-			<crew>74 officers and men</crew>
+			<crew>74</crew>
 			<career>HMS <em>Dundalk</em> spent much of the early part of its career in the reserve fleet, being surplus to the Royal Navy’s day-to-day requirements. During the Second World War, however, the ship saw active service, evacuating more than a thousand Allied troops from Dunkirk in May and June 1940. On 16 October it struck a mine off Harwich and later sank while under tow.</career>
 			<shape>diamondSmall</shape>
 			<png>
@@ -822,7 +823,7 @@
 			<builder>Vickers, Barrow-in-Furness</builder>
 			<length>450 feet (137 metres)</length>
 			<speed>29 knots</speed>
-			<crew>460 officers and men</crew>
+			<crew>460</crew>
 			<career>HMS <em>Curlew</em> was part of the 5th Light Cruiser Squadron at Harwich during latter stages of the First World War. The ship then saw service in the Atlantic and at Hong Kong before joining the reserve fleet in 1936. On 26 May 1940, while off the coast of Norway, it was attacked by German aircraft and sank near Narvik with the loss of nine men.</career>
 			<shape>pentagonSmall</shape>
 			<png>
@@ -840,7 +841,7 @@
 			<builder>William Beardmore and Co., Glasgow</builder>
 			<length>605 feet (184 metres)</length>
 			<speed>31 knots</speed>
-			<crew>690 officers and men</crew>
+			<crew>690</crew>
 			<career>In 1922 HMS <em>Raleigh</em> was made the flagship of Admiral Pakenham, commander of the North America and West Indies Fleet. On 8 August that year, the captain, Sir Arthur Bromley, ran the ship aground off the coast of Labrador in Canada while at speed in thick fog. Eleven men were drowned. The abandoned HMS <em>Raleigh</em> was stuck on the rocks for four years and eventually deliberately destroyed with explosives in 1926.</career>
 			<shape>pentagonSmall</shape>
 			<png>
@@ -858,7 +859,7 @@
 			<builder>Vickers, Barrow-in-Furness</builder>
 			<length>446 feet (136 metres)</length>
 			<speed>28.5 knots</speed>
-			<crew>329–336 officers and men</crew>
+			<crew>329–336</crew>
 			<career>During the First World War, HMS <em>Centaur</em> was part of the 5th Light Cruiser Squadron at Harwich. On 13 June 1918, the ship was damaged after hitting a mine. After later service in the Baltic and the Mediterranean, it was placed in the reserve fleet. HMS <em>Centaur</em> returned to the Atlantic Fleet in 1925, but was sold for scrap in 1934.</career>
 			<shape>pentagonSmall</shape>
 			<png>
@@ -876,7 +877,7 @@
 			<builder>Armstrong Whitworth, Newcastle upon Tyne</builder>
 			<length>472 feet (144 metres)</length>
 			<speed>29 knots</speed>
-			<crew>450–469 officers and men</crew>
+			<crew>450–469</crew>
 			<career>HMS <em>Delhi</em> began naval service in the 1st Light Cruiser Squadron of the Atlantic Fleet. The ship was part of the round-the-world British Empire cruise made by the battleships HMS <em>Hood</em> and <em>Repulse</em> in 1923–24. Deployment to the Caribbean and the Mediterranean followed. In the Second World War it saw considerable action and battle damage resulted in an end to naval service in 1945. HMS <em>Delhi</em> was sold for scrap in 1948.</career>
 			<shape>pentagonSmall</shape>
 			<png>
@@ -894,7 +895,7 @@
 			<builder>Vickers, Barrow-in-Furness</builder>
 			<length>451 feet (137 metres)</length>
 			<speed>29 knots</speed>
-			<crew>330–350 officers and men</crew>
+			<crew>330–350</crew>
 			<career>Launched too late to see action in the First World War, HMS <em>Calcutta</em> was deployed in the Caribbean and at Simon’s Town, South Africa. The ship returned to service from the reserve fleet at the outbreak of the Second World War in 1939. Having helped evacuate Allied troops from Dunkirk in May and June 1940, HMS <em>Calcutta</em> was sent to the Mediterranean. On 1 June 1941 it was sunk by German aircraft off Alexandria in Egypt with the loss of 107 men.</career>
 			<shape>pentagonSmall</shape>
 			<png>
@@ -912,7 +913,7 @@
 			<builder>Scotts Shipbuilding &amp; Engineering Co., Greenock</builder>
 			<length>450 feet (137 metres)</length>
 			<speed>29 knots</speed>
-			<crew>438 officers and men</crew>
+			<crew>438</crew>
 			<career>HMS <em>Caradoc</em> saw action in the North Sea during the First World War. This was followed by service in the Baltic, the Mediterranean and the Caribbean and then at Hong Kong. The ship saw further action in the Second World War, including a mission to carry gold bullion to Canada. It was finally sold for scrap in 1946.</career>
 			<shape>pentagonSmall</shape>
 			<png>

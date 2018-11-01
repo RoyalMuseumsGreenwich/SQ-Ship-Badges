@@ -52,12 +52,12 @@ body {
 	text-align: center;
 	h1 {
 		margin-top: 380px;
-		text-shadow: 0 0 3px black, 0 0 10px black;
+		// text-shadow: 0 0 3px black, 0 0 10px black;
 		font-family: CeraProMedium;
 		font-size: 81px;
 	}
 	h3 {
-		text-shadow: 0 0 3px black, 0 0 10px black;
+		// text-shadow: 0 0 3px black, 0 0 10px black;
 		margin-top: 30px;
 		margin-left: 645px;
 		text-align: left;
@@ -112,9 +112,9 @@ body {
 		}
 		h3 {
 			margin-top: 30px;
-			font-size: 24px;
+			font-size: 22px;
 			width: 410px;
-			line-height: 1.5;
+			line-height: 140%;
 			font-weight: normal;
 			font-family: CeraProRegular;
 		}

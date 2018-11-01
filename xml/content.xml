@@ -202,7 +202,7 @@
 		</badge>
 
 		<badge ref="B05">
-			<name>HMS <em>Glowworm</em></name>
+			<name>HMS <em>Glow-worm</em></name>
 			<objectID>AAA1601</objectID>
 			<description>The ship badge shows a black lantern glowing with silver beams of light. Glow-worms are a type of beetle. Female glow-worms emit light to attract a mate.</description>
 			<type>gunboat</type>
@@ -211,7 +211,7 @@
 			<length>237 feet (72 metres)</length>
 			<speed>14 knots</speed>
 			<crew>55</crew>
-			<career>HMS <em>Glowworm</em> was one of 12 Insect-class gunboats launched during the First World War. They were designed for use on rivers and in shallow inshore waters. The ship was deployed off the east coast of England in the war on anti-Zeppelin duties. Most of the ships patrolled Chinese waterways in the Second World War, but HMS <em>Glowworm</em> was sold for scrap in 1928.</career>
+			<career>HMS <em>Glow-worm</em> was one of 12 Insect-class gunboats launched during the First World War. They were designed for use on rivers and in shallow inshore waters. The ship was deployed off the east coast of England in the war on anti-Zeppelin duties. Most of the ships patrolled Chinese waterways in the Second World War, but HMS <em>Glow-worm</em> was sold for scrap in 1928.</career>
 			<shape>diamondMedium</shape>
 			<png>
 				<ref>Y5</ref>

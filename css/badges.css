@@ -6,7 +6,8 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: CeraProRegular; }
+  font-family: CeraProRegular;
+  overflow: hidden; }
 
 .screen {
   position: absolute;
@@ -16,10 +17,9 @@ body {
 #container {
   width: 1920px;
   height: 1080px;
-  background: #EAF0FB;
+  background: #DEDDD2;
   background-repeat: repeat;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 /*	Still There screen */
 #stillThereScreen {
@@ -181,7 +181,7 @@ body {
     opacity: 1;
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: url(#drop-shadow);
-    filter: drop-shadow(1px -1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(-1px 1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(-1px -1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(1px 1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(0px 5px 5px rgba(96, 103, 117, 0.4)); }
+    filter: drop-shadow(1px -1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(-1px 1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(-1px -1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(1px 1px 0px rgba(218, 161, 46, 0.7)) drop-shadow(0px 5px 5px rgba(96, 103, 117, 0.5)); }
   .badge .svgHolder {
     opacity: 1;
     transition: all 0.5s ease-out; }
@@ -455,7 +455,7 @@ body {
   overflow: hidden;
   background: #daa12e;
   border-radius: 100px;
-  box-shadow: 0 7px 16px rgba(244, 97, 46, 0.5); }
+  box-shadow: 0 7px 16px rgba(218, 161, 46, 0.5); }
   .backToMenuBtn::before, .backToMenuBtn::after {
     content: '';
     position: absolute;

@@ -143,7 +143,7 @@ $(function() {
 			$('#' + row).append('<div data-ref="' + badge.ref + '" class="badge">');
 			addBadgeImgs(badge, false, $('[data-ref="' + badge.ref + '"]'));
 		});
-		$('.badge').click(function() {
+		$('.badge').on('touchend', function() {
 			if(!lockedControls && !selectedBadge) {
 				lockAllControls();
 				selectBadge(getBadge($(this).attr('data-ref')), $(this).find('.svgHolder'));
@@ -279,8 +279,8 @@ $(function() {
 	}
 
 	function addPopupAnimListener(badge) {
-		$('.zoomedBadge, .animLabel').off('click');
-		$('.zoomedBadge, .animLabel').click(() => {
+		$('.zoomedBadge, .animLabel').off('touchend');
+		$('.zoomedBadge, .animLabel').on('touchend', () => {
 			console.log("Label click!");
 			if(!lockedControls) {
 				lockAllControls();
@@ -296,7 +296,7 @@ $(function() {
 
 	function backToMenu() {
 		lockAllControls();
-		$('.zoomedBadge, .animLabel').off('click');
+		$('.zoomedBadge, .animLabel').off('touchend');
 		// $('#sidebarContent').fadeIn('slow');
 		$('#sidebar').removeClass('hidden');
 		$('#focusSidebar').removeClass('shown');
@@ -352,13 +352,13 @@ $(function() {
 		$container.find('.animLabel').addClass(badge.shape)
 	}
 
-	$('#leftArrowBtn').click(function() {
+	$('#leftArrowBtn').on('touchend', function() {
 		if(!lockedControls) {
 			lockAllControls();
 			changeSelectedBadge('left');
 		}
 	});
-	$('#rightArrowBtn').click(function() {
+	$('#rightArrowBtn').on('touchend', function() {
 		if(!lockedControls) {
 			lockAllControls();
 			changeSelectedBadge('right');
@@ -570,28 +570,28 @@ $(function() {
 
 
 	//	Event handlers
-	$attractScreen.click(function() {
+	$attractScreen.on('touchend', function() {
 		$attractScreen.fadeOut('slow', function() {
 			startMenuBadgeAnimations();
 			restartInactivityTimer();
 		});
 	});
 
-	$stillThereScreen.click(function() {
-		hideStillThereScreen();
-		clearStillThereTimer();
-		restartInactivityTimer();
-	});
-	$stillThereScreen.on('touchstart', function() {
+	// $stillThereScreen.click(function() {
+	// 	hideStillThereScreen();
+	// 	clearStillThereTimer();
+	// 	restartInactivityTimer();
+	// });
+	$stillThereScreen.on('touchend', function() {
 		hideStillThereScreen();
 		clearStillThereTimer();
 		restartInactivityTimer();
 	});
 
-	$contentScreen.click(function() {
-		restartInactivityTimer();
-	});
-	$contentScreen.on('touchstart', function() {
+	// $contentScreen.click(function() {
+	// 	restartInactivityTimer();
+	// });
+	$contentScreen.on('touchend', function() {
 		restartInactivityTimer();
 	});
 
@@ -609,7 +609,7 @@ $(function() {
 	});
 
 	function addBackToMenuBtnListener() {
-		$('.backToMenuBtn').click(function() {
+		$('.backToMenuBtn').on('touchend', function() {
 			if(!lockedControls) {
 				startMenuBadgeAnimations();
 				console.log("Back to menu button clicked");

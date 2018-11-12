@@ -597,12 +597,14 @@ $(function() {
 
 	$('#container').swipeleft((e) => {
 		if(!lockedControls && selectedBadge !== undefined) {
+			restartInactivityTimer();
 			lockAllControls();
 			changeSelectedBadge('right');
 		}
 	});
 	$('#container').swiperight((e) => {
 		if(!lockedControls && selectedBadge !== undefined) {
+			restartInactivityTimer();
 			lockAllControls();
 			changeSelectedBadge('left');
 		}

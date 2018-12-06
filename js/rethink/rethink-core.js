@@ -26,7 +26,7 @@ var rethink = {
 			'message': event.message,
 			'timestamp': new Date().toISOString()
 		}
-		console.log(request);
+		// console.log(request);
 		request = this.jwtEncode(request, this.ENCODING);
 		return request;
 	},
@@ -41,7 +41,7 @@ var rethink = {
 					if(!event.message.hasOwnProperty(required_property)) {
 						console.log("Event message lacks required property: " + required_property);
 					} else {
-						console.log("Event message includes required property: " + required_property);
+						// console.log("Event message includes required property: " + required_property);
 					}
 				});
 			} else {
@@ -50,7 +50,7 @@ var rethink = {
 				} else if(typeof event.message !== this.events[event.class]) {
 					console.log("Invalid message type!");
 				} else {
-					console.log(`Valid message type: ${this.events[event.class]}`);
+					// console.log(`Valid message type: ${this.events[event.class]}`);
 				}
 			}
 		} else {
@@ -60,14 +60,15 @@ var rethink = {
 	},
 
 	sendToServer(data, callback) {
-		console.log(data);
+		// console.log(data);
 		$.ajax({
 			data: data,
 			url: this.ENDPOINT,
 			type: 'POST',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res) {
-				console.log(res);
+				// console.log(res);
+				console.log("Re:think - event posted: " + res.note.processed_events[0].class + ", " + res.note.processed_events[0].message)
 				if(res.note.message) {
 					//	Fix any Ruby JSON syntax
 					res.note.message = res.note.message.split('=>').join(':');
@@ -79,7 +80,7 @@ var rethink = {
 					}
 				} else if(res.note.processed_events && Array.isArray(res.note.processed_events)) {
 					res.note.processed_events.forEach(processed_event => {
-						console.log(processed_event);
+						// console.log(processed_event);
 					});
 				}
 				if(callback && typeof callback === 'function') callback(res);
@@ -102,8 +103,7 @@ var rethink = {
 			payload.iss = data.exhibit;
 			payload.event = data;
 			let sJWT = KJUR.jws.JWS.sign("HS256", header, payload, this.HS256SECRET);
-			console.log(sJWT);
-			console.log(typeof sJWT);
+			// console.log(sJWT);
 			return JSON.stringify({'events': [sJWT]});
 		} else if(encoding === 'RS256') {
 			//	Handle RS256 encoding here...

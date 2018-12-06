@@ -1,5 +1,10 @@
 $(function() {
 
+	//	Production safety function
+	document.addEventListener('contextmenu', function(e) {
+		e.preventDefault();
+	});
+
 	//	DOM variables
 	var $stillThereScreen = $('#stillThereScreen'),
 			$attractScreen = $('#attractScreen'),
@@ -151,7 +156,7 @@ $(function() {
 
 	function addBadgeImgs(badge, popup, $container) {
 		$container.empty();
-		$container.removeClass('circleBig circleMedium shieldMedium diamondMedium shieldSmall diamondSmall pentagonSmall');
+		$container.removeClass('circleBig circleMedium shieldMedium diamondMedium shieldSmall diamondSmall pentagonSmall bowater');
 		$container.addClass(badge.shape);
 		//	Add 'outline' div to badge container
 		let outlineImg = '<div class="outlineImg"></div>';
@@ -547,7 +552,9 @@ $(function() {
 	}
 
 	function hideStillThereScreen() {
-		$stillThereScreen.fadeOut('fast');
+		$stillThereScreen.fadeOut('fast', () => {
+			lockedControls = false;
+		});
 	}
 
 	function getRethinkBadgeString(badge) {
@@ -574,11 +581,15 @@ $(function() {
 
 	//	Event handlers
 	$attractScreen.on('touchend', function() {
-		rethink.submit('SessionStart');
-		$attractScreen.fadeOut('slow', function() {
-			startMenuBadgeAnimations();
-			restartInactivityTimer();
-		});
+		if(!lockedControls) {
+			lockedControls = true;
+			rethink.submit('SessionStart');
+			$attractScreen.fadeOut('slow', function() {
+				startMenuBadgeAnimations();
+				restartInactivityTimer();
+				lockedControls = false;
+			});
+		}
 	});
 
 	// $stillThereScreen.click(function() {
@@ -587,10 +598,13 @@ $(function() {
 	// 	restartInactivityTimer();
 	// });
 	$stillThereScreen.on('touchend', function() {
-		rethink.submit('SessionTimeoutCancel');
-		hideStillThereScreen();
-		clearStillThereTimer();
-		restartInactivityTimer();
+		if(!lockedControls) {
+			lockedControls = true;
+			rethink.submit('SessionTimeoutCancel');
+			hideStillThereScreen();
+			clearStillThereTimer();
+			restartInactivityTimer();
+		}
 	});
 
 	// $contentScreen.click(function() {

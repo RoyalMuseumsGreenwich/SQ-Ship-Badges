@@ -1,6 +1,7 @@
 * {
   user-select: none;
-  touch-action: none; }
+  touch-action: none;
+  cursor: none; }
 
 body {
   margin: 0;

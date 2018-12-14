@@ -234,7 +234,7 @@ $(function() {
 
 	function playAnim(badge, $container, popupAnim, callback) {
 		//	Add animation to .svgHolder within $container
-		console.log("Adding animation...");
+		// console.log("Adding animation...");
 		if(popupAnim) {
 			$('.colourImg').addClass('hidden');
 			$container.removeClass('hidden');
@@ -325,26 +325,39 @@ $(function() {
 		}
 	}
 
-	function backToMenu() {
-		lockAllControls();
-		$('.zoomedBadge, .animLabel').off('touchend');
-		$('.zoomedBadge, .animLabel').off('click');
-		// $('#sidebarContent').fadeIn('slow');
-		$('#sidebar').removeClass('hidden');
-		$('#focusSidebar').removeClass('shown');
-		$('#menuBadges').fadeIn('slow');
-		$('#infoPane').fadeIn('slow');
-		$('.arrowBtn').addClass('hidden');
-		$('.arrowBtn').one('transitionend', function() {
+	function backToMenu(instant) {
+		if(instant) {
+			$('.zoomedBadge, .animLabel').off('touchend');
+			$('.zoomedBadge, .animLabel').off('click');
+			$('#sidebar').removeClass('hidden');
+			$('#focusSidebar').removeClass('shown');
+			$('#menuBadges').show();
+			$('#infoPane').show();
+			$('.arrowBtn').addClass('hidden');
 			$('.arrowBtn').removeClass('shown');
-		});
-		$('#popupDiv').removeClass('displayed');
-		$('#popupDiv').one('transitionend', function() {
-			// console.log("Deleting cloned badge");
+			$('#popupDiv').removeClass('displayed');
 			$('.zoomedBadge').remove();
 			selectedBadge = undefined;
-			unlockAllControls();
-		})
+		} else {
+			lockAllControls();
+			$('.zoomedBadge, .animLabel').off('touchend');
+			$('.zoomedBadge, .animLabel').off('click');
+			$('#sidebar').removeClass('hidden');
+			$('#focusSidebar').removeClass('shown');
+			$('#menuBadges').fadeIn('slow');
+			$('#infoPane').fadeIn('slow');
+			$('.arrowBtn').addClass('hidden');
+			$('.arrowBtn').one('transitionend', function() {
+				$('.arrowBtn').removeClass('shown');
+			});
+			$('#popupDiv').removeClass('displayed');
+			$('#popupDiv').one('transitionend', function() {
+				// console.log("Deleting cloned badge");
+				$('.zoomedBadge').remove();
+				selectedBadge = undefined;
+				unlockAllControls();
+			});
+		}
 	}
 
 	function changeSelectedBadge(direction) {
@@ -578,7 +591,7 @@ $(function() {
 		// console.log("Showing Attract screen");
 		clearInactivityTimer();
 		$attractScreen.fadeIn('slow', function() {
-			backToMenu();
+			backToMenu(true);
 			if(callback && typeof(callback) === 'function') {
 				callback();
 			}
@@ -586,17 +599,19 @@ $(function() {
 	}
 
 	function showStillThereScreen() {
+		lockAllControls();
 		// console.log("Showing Still There screen");
 		stillThereTime = stillThereTimeMax;
 		$('#stillThereSpan').text(stillThereTime);
 		$stillThereScreen.fadeIn('fast', function() {
+			unlockAllControls();
 			startStillThereTimer();
 		});
 	}
 
 	function hideStillThereScreen() {
 		$stillThereScreen.fadeOut('fast', () => {
-			lockedControls = false;
+			unlockAllControls();
 		});
 	}
 
@@ -624,53 +639,35 @@ $(function() {
 
 	//	Event handlers
 
-	if(mouseEnabled) {
-		$attractScreen.on('click', function() {
-			if(!lockedControls) {
-				lockedControls = true;
-				rethink.submit('SessionStart');
-				$attractScreen.fadeOut('slow', function() {
-					startMenuBadgeAnimations();
-					restartInactivityTimer();
-					lockedControls = false;
-				});
-			}
-		});
-		$stillThereScreen.on('click', function() {
-			if(!lockedControls) {
-				lockedControls = true;
-				rethink.submit('SessionTimeoutCancel');
-				hideStillThereScreen();
-				clearStillThereTimer();
-				restartInactivityTimer();
-			}
-		});
-		$contentScreen.on('click', function() {
-			restartInactivityTimer();
-		});
-	}
-
-
 	$attractScreen.on('touchend', function() {
 		if(!lockedControls) {
-			lockedControls = true;
+			lockAllControls();
 			rethink.submit('SessionStart');
 			$attractScreen.fadeOut('slow', function() {
 				startMenuBadgeAnimations();
 				restartInactivityTimer();
-				lockedControls = false;
+				unlockAllControls();
 			});
 		}
 	});
 
-	// $stillThereScreen.click(function() {
-	// 	hideStillThereScreen();
-	// 	clearStillThereTimer();
-	// 	restartInactivityTimer();
-	// });
+	if(mouseEnabled) {
+		$attractScreen.on('click', function() {
+			if(!lockedControls) {
+				lockAllControls();
+				rethink.submit('SessionStart');
+				$attractScreen.fadeOut('slow', function() {
+					startMenuBadgeAnimations();
+					restartInactivityTimer();
+					unlockAllControls();
+				});
+			}
+		});
+	}
+
 	$stillThereScreen.on('touchend', function() {
 		if(!lockedControls) {
-			lockedControls = true;
+			lockAllControls();
 			rethink.submit('SessionTimeoutCancel');
 			hideStillThereScreen();
 			clearStillThereTimer();
@@ -678,12 +675,27 @@ $(function() {
 		}
 	});
 
-	// $contentScreen.click(function() {
-	// 	restartInactivityTimer();
-	// });
+	if(mouseEnabled) {
+		$stillThereScreen.on('click', function() {
+			if(!lockedControls) {
+				lockAllControls();
+				rethink.submit('SessionTimeoutCancel');
+				hideStillThereScreen();
+				clearStillThereTimer();
+				restartInactivityTimer();
+			}
+		});
+	}
+
 	$contentScreen.on('touchend', function() {
 		restartInactivityTimer();
 	});
+
+	if(mouseEnabled) {
+		$contentScreen.on('click', function() {
+			restartInactivityTimer();
+		});
+	}
 
 	$('#container').swipeleft((e) => {
 		if(!lockedControls && selectedBadge !== undefined) {
@@ -707,7 +719,7 @@ $(function() {
 				startMenuBadgeAnimations();
 				// console.log("Back to menu button clicked");
 				rethink.submit('ContentItemExit', getRethinkBadgeString(selectedBadge));
-				backToMenu();
+				backToMenu(false);
 			}
 		});
 		if(mouseEnabled) {
@@ -717,7 +729,7 @@ $(function() {
 					startMenuBadgeAnimations();
 					// console.log("Back to menu button clicked");
 					rethink.submit('ContentItemExit', getRethinkBadgeString(selectedBadge));
-					backToMenu();
+					backToMenu(false);
 				}
 			});
 		}

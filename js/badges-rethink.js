@@ -599,6 +599,7 @@ $(function() {
 	}
 
 	function showStillThereScreen() {
+		stopMenuBadgeAnimations();
 		lockAllControls();
 		// console.log("Showing Still There screen");
 		stillThereTime = stillThereTimeMax;
@@ -668,6 +669,7 @@ $(function() {
 	$stillThereScreen.on('touchend', function() {
 		if(!lockedControls) {
 			lockAllControls();
+			startMenuBadgeAnimations();
 			rethink.submit('SessionTimeoutCancel');
 			hideStillThereScreen();
 			clearStillThereTimer();
@@ -679,6 +681,7 @@ $(function() {
 		$stillThereScreen.on('click', function() {
 			if(!lockedControls) {
 				lockAllControls();
+				startMenuBadgeAnimations();
 				rethink.submit('SessionTimeoutCancel');
 				hideStillThereScreen();
 				clearStillThereTimer();

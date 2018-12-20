@@ -150,15 +150,19 @@ $(function() {
 			addBadgeImgs(badge, false, $('[data-ref="' + badge.ref + '"]'));
 		});
 		$('.badge').on('touchend', function() {
+			if(lockedControls) {
+				console.log("Clicked - controls locked...");
+			}
 			if(!lockedControls && !selectedBadge) {
-				lockAllControls();
 				selectBadge(getBadge($(this).attr('data-ref')), $(this).find('.svgHolder'));
 			}
 		});
 		if(mouseEnabled) {
 			$('.badge').on('click', function() {
+				if(lockedControls) {
+					console.log("Clicked - controls locked...");
+				}
 				if(!lockedControls && !selectedBadge) {
-					lockAllControls();
 					selectBadge(getBadge($(this).attr('data-ref')), $(this).find('.svgHolder'));
 				}
 			});
@@ -186,15 +190,13 @@ $(function() {
 	}
 
 	function selectBadge(badge, $container) {
+		lockAllControls();
 		selectedBadge = badge;
 		rethink.submit('ContentItemSelectInformed', getRethinkBadgeString(badge));
 		stopMenuBadgeAnimations();
-		if(badgePlaying) {
-			// console.log(badgePlaying.ref);
-		}
 		if(badgePlaying === badge) {
 			//	...else if badge selected is already animating, pop it up on animation complete...
-			// console.log("Animating badge clicked!");
+			console.log("Animating badge clicked!");
 			$('[data-ref="' + badge.ref + '"]').addClass('highlight');
 			badge.anim.removeEventListener('complete');
 			badge.anim.addEventListener('complete', function() {
@@ -479,13 +481,13 @@ $(function() {
 	}
 
 	function lockAllControls() {
-		// console.log("Locking controls");
+		console.log("Locking controls");
 		$('.btn').addClass('locked');
 		lockedControls = true;
 	}
 
 	function unlockAllControls() {
-		// console.log("Unlocking controls");
+		console.log("Unlocking controls");
 		$('.btn').removeClass('locked');
 		lockedControls = false;
 	}
@@ -500,13 +502,18 @@ $(function() {
 		badgePlaying = badge;
 		let $container = $('[data-ref="' + badge.ref + '"] .svgHolder');
 		loadAnim(badge, $container, () => {
+			lockAllControls();
 			$('[data-ref="' + badge.ref + '"]').addClass('onTop zoomed');
+			$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
+				unlockAllControls();
+			});
 			// console.log("Animating " + badge.name);
 			rethink.submit('ContentAnimationStartAuto', getRethinkBadgeString(badge));
 			playAnim(badge, $container, false, () => {
+				lockAllControls();
 				$('[data-ref="' + badge.ref + '"]').removeClass('zoomed');
 				$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
-					$('[data-ref="' + badge.ref + '"]').removeClass('onTop');
+					unlockAllControls();
 					$('[data-ref="' + badge.ref + '"] .svgHolder').empty();
 					lastPlayedBadge = badge;
 					badgePlaying = undefined;

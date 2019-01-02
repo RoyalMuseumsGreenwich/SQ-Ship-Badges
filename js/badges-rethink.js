@@ -208,6 +208,7 @@ $(function() {
 		} else {
 			//	If no menu animation is playing, select & pop up badge normally...
 			loadAnim(badge, $container, () => {
+				$('.badge').removeClass('zoomed');
 				$('[data-ref="' + badge.ref + '"]').addClass('highlight onTop zoomed');
 				playAnim(badge, $('[data-ref="' + badge.ref + '"] .svgHolder'), false, () => {
 					$('[data-ref="' + badge.ref + '"] .svgHolder').empty();
@@ -503,6 +504,7 @@ $(function() {
 		let $container = $('[data-ref="' + badge.ref + '"] .svgHolder');
 		loadAnim(badge, $container, () => {
 			lockAllControls();
+			$('.badge').removeClass('onTop');
 			$('[data-ref="' + badge.ref + '"]').addClass('onTop zoomed');
 			$('[data-ref="' + badge.ref + '"]').one('transitionend', () => {
 				unlockAllControls();
